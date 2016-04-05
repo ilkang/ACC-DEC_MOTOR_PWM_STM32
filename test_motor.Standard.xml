@@ -1,0 +1,790 @@
+<!-- DWF2XML 2.00.01 - Raisonance Dwarf information extractor -->
+<aoffile Filename="test_motor" dwarf="1">
+ <modulelist>
+  <module Name="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" >
+   <type Family="Base" Name="signed char" ID="356"/>
+   <type Family="Base" Name="unsigned char" ID="374"/>
+   <type Family="typedef" Name="uint8_t" Line="46" ID="363" toTI="374"/>
+   <type Family="Base" Name="short int" ID="392"/>
+   <type Family="typedef" Name="int16_t" Line="57" ID="381" toTI="392"/>
+   <type Family="Base" Name="short unsigned int" ID="410"/>
+   <type Family="typedef" Name="uint16_t" Line="58" ID="399" toTI="410"/>
+   <type Family="Base" Name="long int" ID="428"/>
+   <type Family="typedef" Name="int32_t" Line="83" ID="417" toTI="428"/>
+   <type Family="Base" Name="long unsigned int" ID="446"/>
+   <type Family="typedef" Name="uint32_t" Line="84" ID="435" toTI="446"/>
+   <type Family="Base" Name="long long int" ID="453"/>
+   <type Family="Base" Name="long long unsigned int" ID="460"/>
+   <type Family="Base" Name="int" ID="467"/>
+   <type Family="Base" Name="unsigned int" ID="474"/>
+   <type Family="ComponentList" Line="366" ID="494">
+    <Component Name="CTRL" TI="503" Line="367" Offs="0"/>
+    <Component Name="LOAD" TI="518" Line="368" Offs="4"/>
+    <Component Name="VAL" TI="533" Line="369" Offs="8"/>
+    <Component Name="CALIB" TI="548" Line="370" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="FunctionalState" Line="521" ID="613" toTI="591"/>
+   <type Family="ComponentList" Line="1002" ID="625">
+    <Component Name="CRL" TI="634" Line="1003" Offs="0"/>
+    <Component Name="CRH" TI="649" Line="1004" Offs="4"/>
+    <Component Name="IDR" TI="664" Line="1005" Offs="8"/>
+    <Component Name="ODR" TI="679" Line="1006" Offs="12"/>
+    <Component Name="BSRR" TI="694" Line="1007" Offs="16"/>
+    <Component Name="BRR" TI="709" Line="1008" Offs="20"/>
+    <Component Name="LCKR" TI="724" Line="1009" Offs="24"/>
+   </type>
+   <type Family="ComponentList" Line="1187" ID="740">
+    <Component Name="CR1" TI="749" Line="1188" Offs="0"/>
+    <Component Name="RESERVED0" TI="764" Line="1189" Offs="2"/>
+    <Component Name="CR2" TI="779" Line="1190" Offs="4"/>
+    <Component Name="RESERVED1" TI="794" Line="1191" Offs="6"/>
+    <Component Name="SMCR" TI="809" Line="1192" Offs="8"/>
+    <Component Name="RESERVED2" TI="824" Line="1193" Offs="10"/>
+    <Component Name="DIER" TI="839" Line="1194" Offs="12"/>
+    <Component Name="RESERVED3" TI="854" Line="1195" Offs="14"/>
+    <Component Name="SR" TI="869" Line="1196" Offs="16"/>
+    <Component Name="RESERVED4" TI="883" Line="1197" Offs="18"/>
+    <Component Name="EGR" TI="898" Line="1198" Offs="20"/>
+    <Component Name="RESERVED5" TI="913" Line="1199" Offs="22"/>
+    <Component Name="CCMR1" TI="928" Line="1200" Offs="24"/>
+    <Component Name="RESERVED6" TI="943" Line="1201" Offs="26"/>
+    <Component Name="CCMR2" TI="958" Line="1202" Offs="28"/>
+    <Component Name="RESERVED7" TI="973" Line="1203" Offs="30"/>
+    <Component Name="CCER" TI="988" Line="1204" Offs="32"/>
+    <Component Name="RESERVED8" TI="1003" Line="1205" Offs="34"/>
+    <Component Name="CNT" TI="1018" Line="1206" Offs="36"/>
+    <Component Name="RESERVED9" TI="1033" Line="1207" Offs="38"/>
+    <Component Name="PSC" TI="1048" Line="1208" Offs="40"/>
+    <Component Name="RESERVED10" TI="1063" Line="1209" Offs="42"/>
+    <Component Name="ARR" TI="1078" Line="1210" Offs="44"/>
+    <Component Name="RESERVED11" TI="1093" Line="1211" Offs="46"/>
+    <Component Name="RCR" TI="1108" Line="1212" Offs="48"/>
+    <Component Name="RESERVED12" TI="1123" Line="1213" Offs="50"/>
+    <Component Name="CCR1" TI="1138" Line="1214" Offs="52"/>
+    <Component Name="RESERVED13" TI="1153" Line="1215" Offs="54"/>
+    <Component Name="CCR2" TI="1168" Line="1216" Offs="56"/>
+    <Component Name="RESERVED14" TI="1183" Line="1217" Offs="58"/>
+    <Component Name="CCR3" TI="1198" Line="1218" Offs="60"/>
+    <Component Name="RESERVED15" TI="1213" Line="1219" Offs="62"/>
+    <Component Name="CCR4" TI="1228" Line="1220" Offs="64"/>
+    <Component Name="RESERVED16" TI="1243" Line="1221" Offs="66"/>
+    <Component Name="BDTR" TI="1258" Line="1222" Offs="68"/>
+    <Component Name="RESERVED17" TI="1273" Line="1223" Offs="70"/>
+    <Component Name="DCR" TI="1288" Line="1224" Offs="72"/>
+    <Component Name="RESERVED18" TI="1303" Line="1225" Offs="74"/>
+    <Component Name="DMAR" TI="1318" Line="1226" Offs="76"/>
+    <Component Name="RESERVED19" TI="1333" Line="1227" Offs="78"/>
+   </type>
+   <type Family="ComponentList" Line="1235" ID="1349">
+    <Component Name="SR" TI="1358" Line="1236" Offs="0"/>
+    <Component Name="RESERVED0" TI="1372" Line="1237" Offs="2"/>
+    <Component Name="DR" TI="1387" Line="1238" Offs="4"/>
+    <Component Name="RESERVED1" TI="1401" Line="1239" Offs="6"/>
+    <Component Name="BRR" TI="1416" Line="1240" Offs="8"/>
+    <Component Name="RESERVED2" TI="1431" Line="1241" Offs="10"/>
+    <Component Name="CR1" TI="1446" Line="1242" Offs="12"/>
+    <Component Name="RESERVED3" TI="1461" Line="1243" Offs="14"/>
+    <Component Name="CR2" TI="1476" Line="1244" Offs="16"/>
+    <Component Name="RESERVED4" TI="1491" Line="1245" Offs="18"/>
+    <Component Name="CR3" TI="1506" Line="1246" Offs="20"/>
+    <Component Name="RESERVED5" TI="1521" Line="1247" Offs="22"/>
+    <Component Name="GTPR" TI="1536" Line="1248" Offs="24"/>
+    <Component Name="RESERVED6" TI="1551" Line="1249" Offs="26"/>
+   </type>
+   <type Family="array" ID="1567" toTI="363"/>
+   <type Family="typedef" Name="EXTIMode_TypeDef" Line="54" ID="1604" toTI="1583"/>
+   <type Family="typedef" Name="EXTITrigger_TypeDef" Line="67" ID="1642" toTI="1615"/>
+   <type Family="ComponentList" Line="77" ID="1653">
+    <Component Name="EXTI_Line" TI="1661" Line="78" Offs="0"/>
+    <Component Name="EXTI_Mode" TI="1675" Line="81" Offs="4"/>
+    <Component Name="EXTI_Trigger" TI="1689" Line="84" Offs="5"/>
+    <Component Name="EXTI_LineCmd" TI="1703" Line="87" Offs="6"/>
+   </type>
+   <type Family="typedef" Name="EXTI_InitTypeDef" Line="89" ID="1718" toTI="1653"/>
+   <type Family="typedef" Name="GPIOSpeed_TypeDef" Line="63" ID="1756" toTI="1729"/>
+   <type Family="typedef" Name="GPIOMode_TypeDef" Line="80" ID="1825" toTI="1767"/>
+   <type Family="ComponentList" Line="92" ID="1836">
+    <Component Name="GPIO_Pin" TI="1844" Line="93" Offs="0"/>
+    <Component Name="GPIO_Speed" TI="1858" Line="96" Offs="2"/>
+    <Component Name="GPIO_Mode" TI="1872" Line="99" Offs="3"/>
+   </type>
+   <type Family="typedef" Name="GPIO_InitTypeDef" Line="101" ID="1887" toTI="1836"/>
+   <type Family="ComponentList" Line="52" ID="1898">
+    <Component Name="TIM_Prescaler" TI="1906" Line="53" Offs="0"/>
+    <Component Name="TIM_CounterMode" TI="1920" Line="56" Offs="2"/>
+    <Component Name="TIM_Period" TI="1934" Line="59" Offs="4"/>
+    <Component Name="TIM_ClockDivision" TI="1948" Line="63" Offs="6"/>
+    <Component Name="TIM_RepetitionCounter" TI="1962" Line="66" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="TIM_TimeBaseInitTypeDef" Line="74" ID="1977" toTI="1898"/>
+   <type Family="ComponentList" Line="81" ID="1988">
+    <Component Name="TIM_OCMode" TI="1996" Line="82" Offs="0"/>
+    <Component Name="TIM_OutputState" TI="2010" Line="85" Offs="2"/>
+    <Component Name="TIM_OutputNState" TI="2024" Line="88" Offs="4"/>
+    <Component Name="TIM_Pulse" TI="2038" Line="92" Offs="6"/>
+    <Component Name="TIM_OCPolarity" TI="2052" Line="95" Offs="8"/>
+    <Component Name="TIM_OCNPolarity" TI="2066" Line="98" Offs="10"/>
+    <Component Name="TIM_OCIdleState" TI="2080" Line="102" Offs="12"/>
+    <Component Name="TIM_OCNIdleState" TI="2094" Line="106" Offs="14"/>
+   </type>
+   <type Family="typedef" Name="TIM_OCInitTypeDef" Line="109" ID="2109" toTI="1988"/>
+   <type Family="ComponentList" Line="116" ID="2120">
+    <Component Name="TIM_Channel" TI="2128" Line="118" Offs="0"/>
+    <Component Name="TIM_ICPolarity" TI="2142" Line="121" Offs="2"/>
+    <Component Name="TIM_ICSelection" TI="2156" Line="124" Offs="4"/>
+    <Component Name="TIM_ICPrescaler" TI="2170" Line="127" Offs="6"/>
+    <Component Name="TIM_ICFilter" TI="2184" Line="130" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="TIM_ICInitTypeDef" Line="132" ID="2199" toTI="2120"/>
+   <type Family="ComponentList" Line="51" ID="2210">
+    <Component Name="USART_BaudRate" TI="2218" Line="52" Offs="0"/>
+    <Component Name="USART_WordLength" TI="2232" Line="57" Offs="4"/>
+    <Component Name="USART_StopBits" TI="2246" Line="60" Offs="6"/>
+    <Component Name="USART_Parity" TI="2260" Line="63" Offs="8"/>
+    <Component Name="USART_Mode" TI="2274" Line="70" Offs="10"/>
+    <Component Name="USART_HardwareFlowControl" TI="2288" Line="73" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="USART_InitTypeDef" Line="76" ID="2303" toTI="2210"/>
+   <type Family="ComponentList" Line="51" ID="2314">
+    <Component Name="NVIC_IRQChannel" TI="2322" Line="52" Offs="0"/>
+    <Component Name="NVIC_IRQChannelPreemptionPriority" TI="2336" Line="57" Offs="1"/>
+    <Component Name="NVIC_IRQChannelSubPriority" TI="2350" Line="61" Offs="2"/>
+    <Component Name="NVIC_IRQChannelCmd" TI="2364" Line="65" Offs="3"/>
+   </type>
+   <type Family="typedef" Name="NVIC_InitTypeDef" Line="68" ID="2379" toTI="2314"/>
+   <type Family="Base" Name="char" ID="2390"/>
+   <function Name="main" TI="0" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="87">
+   </function >
+   <function Name="TIM1_UP_IRQHandler" TI="0" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="99">
+   </function >
+   <function Name="USART1_IRQHandler" TI="0" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="126">
+    <variable Name="val" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="127" Addr="0x1C000007" TI="363"/>
+   </function >
+   <function Name="USART3_IRQHandler" TI="0" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="138">
+    <variable Name="val" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="139" Addr="0x1C000007" TI="363"/>
+   </function >
+   <function Name="init_mcu" TI="0" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="197">
+   </function >
+   <function Name="delay_ms_sys" TI="0" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="394">
+    <parameter Name="val" TI="435" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="394" Addr="0x1C000004" Param="Yes"/>
+   </function >
+   <function Name="Wtire_Motor" TI="0" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="428">
+    <parameter Name="Focus_Ref" TI="399" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="428" Addr="0x1C000006" Param="Yes"/>
+   </function >
+   <function Name="TIM3_Init" TI="0" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="536">
+    <parameter Name="Period" TI="399" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="536" Addr="0x1C000006" Param="Yes"/>
+   </function >
+   <variable Name="TimingDelay" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="19" Addr="0x20000078" TI="484"/>
+   <variable Name="GPIO_InitType" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="11" Addr="0x200000C4" TI="1887"/>
+   <variable Name="EXTI_InitType" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="12" Addr="0x200000A8" TI="1718"/>
+   <variable Name="TIM_TimeBaseInitType" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="13" Addr="0x200000B0" TI="1977"/>
+   <variable Name="TIM_OCInitType" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="14" Addr="0x20000082" TI="2109"/>
+   <variable Name="TIM_ICInitStructure" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="15" Addr="0x200000BA" TI="2199"/>
+   <variable Name="USART_InitType" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="16" Addr="0x20000094" TI="2303"/>
+   <variable Name="NVIC_InitType" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="17" Addr="0x200000A4" TI="2379"/>
+   <variable Name="STATUS" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="23" Addr="0x20000000" TI="363"/>
+   <variable Name="MOTOR1_STATUS" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="25" Addr="0x20000034" TI="363"/>
+   <variable Name="MOTOR2_STATUS" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="26" Addr="0x20000035" TI="363"/>
+   <variable Name="PHOTO1_STATUS" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="27" Addr="0x20000002" TI="399"/>
+   <variable Name="PHOTO2_STATUS" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="28" Addr="0x20000004" TI="399"/>
+   <variable Name="T3_PWM" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="31" Addr="0x20000036" TI="399"/>
+   <variable Name="T3_PWM_Acc" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="32" Addr="0x20000006" TI="399"/>
+   <variable Name="T3_PWM_Dec" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="33" Addr="0x20000008" TI="399"/>
+   <variable Name="T3_PWM_Period" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="34" Addr="0x2000000A" TI="399"/>
+   <variable Name="MOTORT3_STATUS" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="36" Addr="0x20000038" TI="363"/>
+   <variable Name="Com" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="46" Addr="0x20000039" TI="363"/>
+   <variable Name="Focus_dir" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="46" Addr="0x2000003A" TI="363"/>
+   <variable Name="Zoom_dir" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="46" Addr="0x2000003B" TI="363"/>
+   <variable Name="ref_Value_3" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="47" Addr="0x2000003C" TI="363"/>
+   <variable Name="ref_Value_4" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="47" Addr="0x2000003D" TI="363"/>
+   <variable Name="ref_Value_1" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="48" Addr="0x2000003E" TI="381"/>
+   <variable Name="ref_Value_2" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="49" Addr="0x20000040" TI="417"/>
+   <variable Name="velc" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="50" Addr="0x20000044" TI="363"/>
+   <variable Name="velr" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="50" Addr="0x20000045" TI="363"/>
+   <variable Name="Enc_count" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="51" Addr="0x20000046" TI="399"/>
+   <variable Name="COM_status" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="54" Addr="0x20000048" TI="363"/>
+   <type Family="array" ID="3349" toTI="363"/>
+   <variable Name="MSG" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="55" Addr="0x20000049" TI="3349"/>
+   <type Family="array" ID="3383" toTI="363"/>
+   <variable Name="DATA" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="56" Addr="0x2000004C" TI="3383"/>
+   <variable Name="msg_count" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="57" Addr="0x20000051" TI="363"/>
+   <variable Name="data_count" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="58" Addr="0x20000052" TI="363"/>
+   <variable Name="COM_status3" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="61" Addr="0x20000053" TI="363"/>
+   <variable Name="MSG3" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="62" Addr="0x20000054" TI="1567"/>
+   <variable Name="msg_count3" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="63" Addr="0x2000005C" TI="363"/>
+   <variable Name="Focus_STEP" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="65" Addr="0x2000005E" TI="399"/>
+   <variable Name="Focus_Ref_STEP" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="65" Addr="0x20000060" TI="399"/>
+   <variable Name="First_Focus_STEP" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="65" Addr="0x20000062" TI="399"/>
+   <variable Name="Second_Focus_STEP" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="65" Addr="0x20000080" TI="399"/>
+   <variable Name="Mid_Focus_Ref_STEP" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="65" Addr="0x20000064" TI="399"/>
+   <variable Name="Zoom_STEP" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="66" Addr="0x20000066" TI="399"/>
+   <variable Name="Zoom_Ref_STEP" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="66" Addr="0x20000068" TI="399"/>
+   <variable Name="First_Zoom_STEP" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="66" Addr="0x2000006A" TI="399"/>
+   <variable Name="Second_Zoom_STEP" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="66" Addr="0x2000006C" TI="399"/>
+   <variable Name="MSG_ID" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="67" Addr="0x2000006E" TI="363"/>
+   <variable Name="MSG_LENGTH" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="67" Addr="0x2000006F" TI="363"/>
+   <type Family="Base" Name="float" ID="3723"/>
+   <variable Name="Focus_Value" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="68" Addr="0x20000070" TI="3723"/>
+   <variable Name="i" FileName="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" Line="69" Addr="0x20000074" TI="467"/>
+  </module>
+  <module Name="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" >
+   <type Family="Base" Name="signed char" ID="3784"/>
+   <type Family="Base" Name="unsigned char" ID="3802"/>
+   <type Family="typedef" Name="uint8_t" Line="46" ID="3791" toTI="3802"/>
+   <type Family="Base" Name="short int" ID="3809"/>
+   <type Family="Base" Name="short unsigned int" ID="3816"/>
+   <type Family="Base" Name="long int" ID="3823"/>
+   <type Family="Base" Name="long unsigned int" ID="3841"/>
+   <type Family="typedef" Name="uint32_t" Line="84" ID="3830" toTI="3841"/>
+   <type Family="Base" Name="long long int" ID="3848"/>
+   <type Family="Base" Name="long long unsigned int" ID="3855"/>
+   <type Family="Base" Name="int" ID="3862"/>
+   <type Family="Base" Name="unsigned int" ID="3869"/>
+   <type Family="ComponentList" Line="156" ID="3884">
+    <Component Name="CPUID" TI="3892" Line="157" Offs="0"/>
+    <Component Name="ICSR" TI="3906" Line="158" Offs="4"/>
+    <Component Name="VTOR" TI="3920" Line="159" Offs="8"/>
+    <Component Name="AIRCR" TI="3934" Line="160" Offs="12"/>
+    <Component Name="SCR" TI="3948" Line="161" Offs="16"/>
+    <Component Name="CCR" TI="3962" Line="162" Offs="20"/>
+   <type Family="array" ID="4164" toTI="3791"/>
+    <Component Name="SHP" TI="3976" Line="163" Offs="24"/>
+    <Component Name="SHCSR" TI="3990" Line="164" Offs="36"/>
+    <Component Name="CFSR" TI="4004" Line="165" Offs="40"/>
+    <Component Name="HFSR" TI="4018" Line="166" Offs="44"/>
+    <Component Name="DFSR" TI="4032" Line="167" Offs="48"/>
+    <Component Name="MMFAR" TI="4046" Line="168" Offs="52"/>
+    <Component Name="BFAR" TI="4060" Line="169" Offs="56"/>
+    <Component Name="AFSR" TI="4074" Line="170" Offs="60"/>
+   <type Family="array" ID="4185" toTI="3830"/>
+    <Component Name="PFR" TI="4088" Line="171" Offs="64"/>
+    <Component Name="DFR" TI="4102" Line="172" Offs="72"/>
+    <Component Name="ADR" TI="4116" Line="173" Offs="76"/>
+   <type Family="array" ID="4211" toTI="3830"/>
+    <Component Name="MMFR" TI="4130" Line="174" Offs="80"/>
+   <type Family="array" ID="4237" toTI="3830"/>
+    <Component Name="ISAR" TI="4144" Line="175" Offs="96"/>
+   </type>
+   <type Family="ComponentList" Line="902" ID="4285">
+    <Component Name="ACR" TI="4294" Line="903" Offs="0"/>
+    <Component Name="KEYR" TI="4309" Line="904" Offs="4"/>
+    <Component Name="OPTKEYR" TI="4324" Line="905" Offs="8"/>
+    <Component Name="SR" TI="4339" Line="906" Offs="12"/>
+    <Component Name="CR" TI="4353" Line="907" Offs="16"/>
+    <Component Name="AR" TI="4367" Line="908" Offs="20"/>
+    <Component Name="RESERVED" TI="4381" Line="909" Offs="24"/>
+    <Component Name="OBR" TI="4396" Line="910" Offs="28"/>
+    <Component Name="WRPR" TI="4411" Line="911" Offs="32"/>
+   </type>
+   <type Family="ComponentList" Line="1077" ID="4427">
+    <Component Name="CR" TI="4436" Line="1078" Offs="0"/>
+    <Component Name="CFGR" TI="4450" Line="1079" Offs="4"/>
+    <Component Name="CIR" TI="4465" Line="1080" Offs="8"/>
+    <Component Name="APB2RSTR" TI="4480" Line="1081" Offs="12"/>
+    <Component Name="APB1RSTR" TI="4495" Line="1082" Offs="16"/>
+    <Component Name="AHBENR" TI="4510" Line="1083" Offs="20"/>
+    <Component Name="APB2ENR" TI="4525" Line="1084" Offs="24"/>
+    <Component Name="APB1ENR" TI="4540" Line="1085" Offs="28"/>
+    <Component Name="BDCR" TI="4555" Line="1086" Offs="32"/>
+    <Component Name="CSR" TI="4570" Line="1087" Offs="36"/>
+   </type>
+   <function Name="SystemInit" TI="0" FileName="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" Line="213">
+   </function >
+   <function Name="SetSysClock" TI="0" FileName="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" Line="420">
+   </function >
+   <function Name="SetSysClockTo72" TI="0" FileName="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" Line="988">
+    <variable Name="StartUpCounter" FileName="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" Line="989" Addr="0x1C000004" TI="3879"/>
+    <variable Name="HSEStatus" FileName="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" Line="989" Addr="0x1C000000" TI="3879"/>
+   </function >
+   <variable Name="SystemCoreClock" FileName="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" Line="162" Addr="0x2000000C" TI="3830"/>
+   <type Family="array" ID="4793" toTI="3791"/>
+   <variable Name="AHBPrescTable" FileName="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" Line="167" Addr="0x20000010" TI="4827"/>
+  </module>
+  <module Name="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" >
+   <type Family="Base" Name="signed char" ID="4875"/>
+   <type Family="Base" Name="unsigned char" ID="4893"/>
+   <type Family="typedef" Name="uint8_t" Line="46" ID="4882" toTI="4893"/>
+   <type Family="Base" Name="short int" ID="4900"/>
+   <type Family="Base" Name="short unsigned int" ID="4907"/>
+   <type Family="Base" Name="long int" ID="4914"/>
+   <type Family="Base" Name="long unsigned int" ID="4932"/>
+   <type Family="typedef" Name="uint32_t" Line="84" ID="4921" toTI="4932"/>
+   <type Family="Base" Name="long long int" ID="4939"/>
+   <type Family="Base" Name="long long unsigned int" ID="4946"/>
+   <type Family="Base" Name="int" ID="4953"/>
+   <type Family="Base" Name="unsigned int" ID="4960"/>
+   <type Family="typedef" Name="FlagStatus" Line="519" ID="4997" toTI="4975"/>
+   <type Family="typedef" Name="ITStatus" Line="519" ID="5009" toTI="4975"/>
+   <type Family="typedef" Name="FunctionalState" Line="521" ID="5043" toTI="5021"/>
+   <type Family="typedef" Name="ErrorStatus" Line="524" ID="5077" toTI="5055"/>
+   <type Family="ComponentList" Line="1077" ID="5089">
+    <Component Name="CR" TI="5098" Line="1078" Offs="0"/>
+    <Component Name="CFGR" TI="5112" Line="1079" Offs="4"/>
+    <Component Name="CIR" TI="5127" Line="1080" Offs="8"/>
+    <Component Name="APB2RSTR" TI="5142" Line="1081" Offs="12"/>
+    <Component Name="APB1RSTR" TI="5157" Line="1082" Offs="16"/>
+    <Component Name="AHBENR" TI="5172" Line="1083" Offs="20"/>
+    <Component Name="APB2ENR" TI="5187" Line="1084" Offs="24"/>
+    <Component Name="APB1ENR" TI="5202" Line="1085" Offs="28"/>
+    <Component Name="BDCR" TI="5217" Line="1086" Offs="32"/>
+    <Component Name="CSR" TI="5232" Line="1087" Offs="36"/>
+   </type>
+   <type Family="ComponentList" Line="47" ID="5248">
+    <Component Name="SYSCLK_Frequency" TI="5256" Line="48" Offs="0"/>
+    <Component Name="HCLK_Frequency" TI="5270" Line="49" Offs="4"/>
+    <Component Name="PCLK1_Frequency" TI="5284" Line="50" Offs="8"/>
+    <Component Name="PCLK2_Frequency" TI="5298" Line="51" Offs="12"/>
+    <Component Name="ADCCLK_Frequency" TI="5312" Line="52" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="RCC_ClocksTypeDef" Line="53" ID="5327" toTI="5248"/>
+   <function Name="RCC_GetClocksFreq" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="909">
+   <type Family="Pointer" TI="6370" toTI="5327"/>
+    <parameter Name="RCC_Clocks" TI="6370" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="909" Addr="0x1C000004" Param="Yes"/>
+    <variable Name="tmp" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="910" Addr="0x1C000008" TI="4921"/>
+    <variable Name="pllmull" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="910" Addr="0x1C00000C" TI="4921"/>
+    <variable Name="pllsource" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="910" Addr="0x1C000010" TI="4921"/>
+    <variable Name="presc" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="910" Addr="0x1C000014" TI="4921"/>
+   </function >
+   <function Name="RCC_APB2PeriphClockCmd" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="1096">
+    <parameter Name="RCC_APB2Periph" TI="4921" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="1096" Addr="0x1C000004" Param="Yes"/>
+    <parameter Name="NewState" TI="5043" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="1096" Addr="0x1C000003" Param="Yes"/>
+   </function >
+   <function Name="RCC_APB1PeriphClockCmd" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="1127">
+    <parameter Name="RCC_APB1Periph" TI="4921" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="1127" Addr="0x1C000004" Param="Yes"/>
+    <parameter Name="NewState" TI="5043" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="1127" Addr="0x1C000003" Param="Yes"/>
+   </function >
+   <type Family="array" ID="7003" toTI="4882"/>
+   <variable Name="APBAHBPrescTable" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="193" Addr="0x20000020" TI="7036"/>
+   <type Family="array" ID="7046" toTI="4882"/>
+   <variable Name="ADCPrescTable" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Line="194" Addr="0x20000030" TI="7079"/>
+  </module>
+  <module Name="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" >
+   <type Family="Base" Name="signed char" ID="7146"/>
+   <type Family="Base" Name="unsigned char" ID="7164"/>
+   <type Family="typedef" Name="uint8_t" Line="46" ID="7153" toTI="7164"/>
+   <type Family="Base" Name="short int" ID="7171"/>
+   <type Family="Base" Name="short unsigned int" ID="7189"/>
+   <type Family="typedef" Name="uint16_t" Line="58" ID="7178" toTI="7189"/>
+   <type Family="Base" Name="long int" ID="7196"/>
+   <type Family="Base" Name="long unsigned int" ID="7214"/>
+   <type Family="typedef" Name="uint32_t" Line="84" ID="7203" toTI="7214"/>
+   <type Family="Base" Name="long long int" ID="7221"/>
+   <type Family="Base" Name="long long unsigned int" ID="7228"/>
+   <type Family="Base" Name="int" ID="7235"/>
+   <type Family="Base" Name="unsigned int" ID="7242"/>
+   <type Family="array" ID="7257" toTI="7203"/>
+   <type Family="typedef" Name="FunctionalState" Line="521" ID="7295" toTI="7273"/>
+   <type Family="ComponentList" Line="1002" ID="7307">
+    <Component Name="CRL" TI="7316" Line="1003" Offs="0"/>
+    <Component Name="CRH" TI="7331" Line="1004" Offs="4"/>
+    <Component Name="IDR" TI="7346" Line="1005" Offs="8"/>
+    <Component Name="ODR" TI="7361" Line="1006" Offs="12"/>
+    <Component Name="BSRR" TI="7376" Line="1007" Offs="16"/>
+    <Component Name="BRR" TI="7391" Line="1008" Offs="20"/>
+    <Component Name="LCKR" TI="7406" Line="1009" Offs="24"/>
+   </type>
+   <type Family="typedef" Name="GPIO_TypeDef" Line="1010" ID="7422" toTI="7307"/>
+   <type Family="ComponentList" Line="1017" ID="7434">
+    <Component Name="EVCR" TI="7443" Line="1018" Offs="0"/>
+    <Component Name="MAPR" TI="7458" Line="1019" Offs="4"/>
+    <Component Name="EXTICR" TI="7473" Line="1020" Offs="8"/>
+    <Component Name="RESERVED0" TI="7488" Line="1021" Offs="24"/>
+    <Component Name="MAPR2" TI="7503" Line="1022" Offs="28"/>
+   </type>
+   <type Family="typedef" Name="GPIOSpeed_TypeDef" Line="63" ID="7551" toTI="7524"/>
+   <type Family="typedef" Name="GPIOMode_TypeDef" Line="80" ID="7620" toTI="7562"/>
+   <type Family="ComponentList" Line="92" ID="7631">
+    <Component Name="GPIO_Pin" TI="7639" Line="93" Offs="0"/>
+    <Component Name="GPIO_Speed" TI="7653" Line="96" Offs="2"/>
+    <Component Name="GPIO_Mode" TI="7667" Line="99" Offs="3"/>
+   </type>
+   <type Family="typedef" Name="GPIO_InitTypeDef" Line="101" ID="7682" toTI="7631"/>
+   <type Family="typedef" Name="BitAction" Line="111" ID="7714" toTI="7693"/>
+   <type Family="Pointer" TI="7765" toTI="7422"/>
+   <function Name="GPIO_Init" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="174">
+    <parameter Name="GPIOx" TI="7765" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="174" Addr="0x1C000004" Param="Yes"/>
+   <type Family="Pointer" TI="7930" toTI="7682"/>
+    <parameter Name="GPIO_InitStruct" TI="7930" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="174" Addr="0x1C000000" Param="Yes"/>
+    <variable Name="currentmode" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="175" Addr="0x1C000008" TI="7203"/>
+    <variable Name="currentpin" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="175" Addr="0x1C00000C" TI="7203"/>
+    <variable Name="pinpos" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="175" Addr="0x1C000010" TI="7203"/>
+    <variable Name="pos" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="175" Addr="0x1C000014" TI="7203"/>
+    <variable Name="tmpreg" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="176" Addr="0x1C000018" TI="7203"/>
+    <variable Name="pinmask" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="176" Addr="0x1C00001C" TI="7203"/>
+   </function >
+   <function Name="GPIO_Write" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="418">
+    <parameter Name="GPIOx" TI="7765" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="418" Addr="0x1C000004" Param="Yes"/>
+    <parameter Name="PortVal" TI="7178" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="418" Addr="0x1C000002" Param="Yes"/>
+   </function >
+   <function Name="GPIO_PinRemapConfig" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="550">
+    <parameter Name="GPIO_Remap" TI="7203" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="550" Addr="0x1C000004" Param="Yes"/>
+    <parameter Name="NewState" TI="7295" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="550" Addr="0x1C000003" Param="Yes"/>
+    <variable Name="tmp" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="551" Addr="0x1C000008" TI="7203"/>
+    <variable Name="tmp1" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="551" Addr="0x1C00000C" TI="7203"/>
+    <variable Name="tmpreg" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="551" Addr="0x1C000010" TI="7203"/>
+    <variable Name="tmpmask" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Line="551" Addr="0x1C000014" TI="7203"/>
+   </function >
+  </module>
+  <module Name="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c" >
+   <type Family="Base" Name="signed char" ID="8939"/>
+   <type Family="Base" Name="unsigned char" ID="8946"/>
+   <type Family="Base" Name="short int" ID="8953"/>
+   <type Family="Base" Name="short unsigned int" ID="8960"/>
+   <type Family="Base" Name="long int" ID="8967"/>
+   <type Family="Base" Name="long unsigned int" ID="8985"/>
+   <type Family="typedef" Name="uint32_t" Line="84" ID="8974" toTI="8985"/>
+   <type Family="Base" Name="long long int" ID="8992"/>
+   <type Family="Base" Name="long long unsigned int" ID="8999"/>
+   <type Family="Base" Name="int" ID="9006"/>
+   <type Family="Base" Name="unsigned int" ID="9013"/>
+   <type Family="typedef" Name="FlagStatus" Line="519" ID="9050" toTI="9028"/>
+   <type Family="typedef" Name="ITStatus" Line="519" ID="9062" toTI="9028"/>
+   <type Family="typedef" Name="FunctionalState" Line="521" ID="9096" toTI="9074"/>
+   <type Family="ComponentList" Line="888" ID="9108">
+    <Component Name="IMR" TI="9117" Line="889" Offs="0"/>
+    <Component Name="EMR" TI="9132" Line="890" Offs="4"/>
+    <Component Name="RTSR" TI="9147" Line="891" Offs="8"/>
+    <Component Name="FTSR" TI="9162" Line="892" Offs="12"/>
+    <Component Name="SWIER" TI="9177" Line="893" Offs="16"/>
+    <Component Name="PR" TI="9192" Line="894" Offs="20"/>
+   </type>
+   <type Family="typedef" Name="EXTIMode_TypeDef" Line="54" ID="9228" toTI="9207"/>
+   <type Family="typedef" Name="EXTITrigger_TypeDef" Line="67" ID="9266" toTI="9239"/>
+   <type Family="ComponentList" Line="77" ID="9277">
+    <Component Name="EXTI_Line" TI="9285" Line="78" Offs="0"/>
+    <Component Name="EXTI_Mode" TI="9299" Line="81" Offs="4"/>
+    <Component Name="EXTI_Trigger" TI="9313" Line="84" Offs="5"/>
+    <Component Name="EXTI_LineCmd" TI="9327" Line="87" Offs="6"/>
+   </type>
+   <type Family="typedef" Name="EXTI_InitTypeDef" Line="89" ID="9342" toTI="9277"/>
+   <type Family="Pointer" TI="9428" toTI="9342"/>
+  </module>
+  <module Name="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" >
+   <type Family="Base" Name="signed char" ID="9781"/>
+   <type Family="Base" Name="unsigned char" ID="9799"/>
+   <type Family="typedef" Name="uint8_t" Line="46" ID="9788" toTI="9799"/>
+   <type Family="Base" Name="short int" ID="9806"/>
+   <type Family="Base" Name="short unsigned int" ID="9824"/>
+   <type Family="typedef" Name="uint16_t" Line="58" ID="9813" toTI="9824"/>
+   <type Family="Base" Name="long int" ID="9831"/>
+   <type Family="Base" Name="long unsigned int" ID="9849"/>
+   <type Family="typedef" Name="uint32_t" Line="84" ID="9838" toTI="9849"/>
+   <type Family="Base" Name="long long int" ID="9856"/>
+   <type Family="Base" Name="long long unsigned int" ID="9863"/>
+   <type Family="Base" Name="int" ID="9870"/>
+   <type Family="Base" Name="unsigned int" ID="9877"/>
+   <type Family="typedef" Name="FlagStatus" Line="519" ID="9914" toTI="9892"/>
+   <type Family="typedef" Name="ITStatus" Line="519" ID="9926" toTI="9892"/>
+   <type Family="typedef" Name="FunctionalState" Line="521" ID="9960" toTI="9938"/>
+   <type Family="ComponentList" Line="1187" ID="9972">
+    <Component Name="CR1" TI="9981" Line="1188" Offs="0"/>
+    <Component Name="RESERVED0" TI="9996" Line="1189" Offs="2"/>
+    <Component Name="CR2" TI="10011" Line="1190" Offs="4"/>
+    <Component Name="RESERVED1" TI="10026" Line="1191" Offs="6"/>
+    <Component Name="SMCR" TI="10041" Line="1192" Offs="8"/>
+    <Component Name="RESERVED2" TI="10056" Line="1193" Offs="10"/>
+    <Component Name="DIER" TI="10071" Line="1194" Offs="12"/>
+    <Component Name="RESERVED3" TI="10086" Line="1195" Offs="14"/>
+    <Component Name="SR" TI="10101" Line="1196" Offs="16"/>
+    <Component Name="RESERVED4" TI="10115" Line="1197" Offs="18"/>
+    <Component Name="EGR" TI="10130" Line="1198" Offs="20"/>
+    <Component Name="RESERVED5" TI="10145" Line="1199" Offs="22"/>
+    <Component Name="CCMR1" TI="10160" Line="1200" Offs="24"/>
+    <Component Name="RESERVED6" TI="10175" Line="1201" Offs="26"/>
+    <Component Name="CCMR2" TI="10190" Line="1202" Offs="28"/>
+    <Component Name="RESERVED7" TI="10205" Line="1203" Offs="30"/>
+    <Component Name="CCER" TI="10220" Line="1204" Offs="32"/>
+    <Component Name="RESERVED8" TI="10235" Line="1205" Offs="34"/>
+    <Component Name="CNT" TI="10250" Line="1206" Offs="36"/>
+    <Component Name="RESERVED9" TI="10265" Line="1207" Offs="38"/>
+    <Component Name="PSC" TI="10280" Line="1208" Offs="40"/>
+    <Component Name="RESERVED10" TI="10295" Line="1209" Offs="42"/>
+    <Component Name="ARR" TI="10310" Line="1210" Offs="44"/>
+    <Component Name="RESERVED11" TI="10325" Line="1211" Offs="46"/>
+    <Component Name="RCR" TI="10340" Line="1212" Offs="48"/>
+    <Component Name="RESERVED12" TI="10355" Line="1213" Offs="50"/>
+    <Component Name="CCR1" TI="10370" Line="1214" Offs="52"/>
+    <Component Name="RESERVED13" TI="10385" Line="1215" Offs="54"/>
+    <Component Name="CCR2" TI="10400" Line="1216" Offs="56"/>
+    <Component Name="RESERVED14" TI="10415" Line="1217" Offs="58"/>
+    <Component Name="CCR3" TI="10430" Line="1218" Offs="60"/>
+    <Component Name="RESERVED15" TI="10445" Line="1219" Offs="62"/>
+    <Component Name="CCR4" TI="10460" Line="1220" Offs="64"/>
+    <Component Name="RESERVED16" TI="10475" Line="1221" Offs="66"/>
+    <Component Name="BDTR" TI="10490" Line="1222" Offs="68"/>
+    <Component Name="RESERVED17" TI="10505" Line="1223" Offs="70"/>
+    <Component Name="DCR" TI="10520" Line="1224" Offs="72"/>
+    <Component Name="RESERVED18" TI="10535" Line="1225" Offs="74"/>
+    <Component Name="DMAR" TI="10550" Line="1226" Offs="76"/>
+    <Component Name="RESERVED19" TI="10565" Line="1227" Offs="78"/>
+   </type>
+   <type Family="typedef" Name="TIM_TypeDef" Line="1228" ID="10581" toTI="9972"/>
+   <type Family="ComponentList" Line="52" ID="10593">
+    <Component Name="TIM_Prescaler" TI="10601" Line="53" Offs="0"/>
+    <Component Name="TIM_CounterMode" TI="10615" Line="56" Offs="2"/>
+    <Component Name="TIM_Period" TI="10629" Line="59" Offs="4"/>
+    <Component Name="TIM_ClockDivision" TI="10643" Line="63" Offs="6"/>
+    <Component Name="TIM_RepetitionCounter" TI="10657" Line="66" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="TIM_TimeBaseInitTypeDef" Line="74" ID="10672" toTI="10593"/>
+   <type Family="ComponentList" Line="81" ID="10683">
+    <Component Name="TIM_OCMode" TI="10691" Line="82" Offs="0"/>
+    <Component Name="TIM_OutputState" TI="10705" Line="85" Offs="2"/>
+    <Component Name="TIM_OutputNState" TI="10719" Line="88" Offs="4"/>
+    <Component Name="TIM_Pulse" TI="10733" Line="92" Offs="6"/>
+    <Component Name="TIM_OCPolarity" TI="10747" Line="95" Offs="8"/>
+    <Component Name="TIM_OCNPolarity" TI="10761" Line="98" Offs="10"/>
+    <Component Name="TIM_OCIdleState" TI="10775" Line="102" Offs="12"/>
+    <Component Name="TIM_OCNIdleState" TI="10789" Line="106" Offs="14"/>
+   </type>
+   <type Family="typedef" Name="TIM_OCInitTypeDef" Line="109" ID="10804" toTI="10683"/>
+   <type Family="ComponentList" Line="116" ID="10815">
+    <Component Name="TIM_Channel" TI="10823" Line="118" Offs="0"/>
+    <Component Name="TIM_ICPolarity" TI="10837" Line="121" Offs="2"/>
+    <Component Name="TIM_ICSelection" TI="10851" Line="124" Offs="4"/>
+    <Component Name="TIM_ICPrescaler" TI="10865" Line="127" Offs="6"/>
+    <Component Name="TIM_ICFilter" TI="10879" Line="130" Offs="8"/>
+   </type>
+   <type Family="typedef" Name="TIM_ICInitTypeDef" Line="132" ID="10894" toTI="10815"/>
+   <type Family="ComponentList" Line="140" ID="10905">
+    <Component Name="TIM_OSSRState" TI="10913" Line="142" Offs="0"/>
+    <Component Name="TIM_OSSIState" TI="10927" Line="145" Offs="2"/>
+    <Component Name="TIM_LOCKLevel" TI="10941" Line="148" Offs="4"/>
+    <Component Name="TIM_DeadTime" TI="10955" Line="151" Offs="6"/>
+    <Component Name="TIM_Break" TI="10969" Line="155" Offs="8"/>
+    <Component Name="TIM_BreakPolarity" TI="10983" Line="158" Offs="10"/>
+    <Component Name="TIM_AutomaticOutput" TI="10997" Line="161" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="TIM_BDTRInitTypeDef" Line="163" ID="11012" toTI="10905"/>
+   <type Family="Pointer" TI="11063" toTI="10581"/>
+   <function Name="TIM_TimeBaseInit" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="227">
+    <parameter Name="TIMx" TI="11063" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="227" Addr="0x1C000004" Param="Yes"/>
+   <type Family="Pointer" TI="11137" toTI="10672"/>
+    <parameter Name="TIM_TimeBaseInitStruct" TI="11137" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="227" Addr="0x1C000000" Param="Yes"/>
+    <variable Name="tmpcr1" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="228" Addr="0x1C00000E" TI="9813"/>
+   </function >
+   <type Family="Pointer" TI="11245" toTI="10804"/>
+   <function Name="TIM_OC3Init" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="445">
+    <parameter Name="TIMx" TI="11063" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="445" Addr="0x1C00000C" Param="Yes"/>
+    <parameter Name="TIM_OCInitStruct" TI="11245" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="445" Addr="0x1C000008" Param="Yes"/>
+    <variable Name="tmpccmrx" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="446" Addr="0x1C000012" TI="9813"/>
+    <variable Name="tmpccer" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="446" Addr="0x1C000014" TI="9813"/>
+    <variable Name="tmpcr2" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="446" Addr="0x1C000016" TI="9813"/>
+   </function >
+   <function Name="TIM_OC4Init" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="524">
+    <parameter Name="TIMx" TI="11063" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="524" Addr="0x1C00000C" Param="Yes"/>
+    <parameter Name="TIM_OCInitStruct" TI="11245" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="524" Addr="0x1C000008" Param="Yes"/>
+    <variable Name="tmpccmrx" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="525" Addr="0x1C000012" TI="9813"/>
+    <variable Name="tmpccer" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="525" Addr="0x1C000014" TI="9813"/>
+    <variable Name="tmpcr2" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="525" Addr="0x1C000016" TI="9813"/>
+   </function >
+   <type Family="Pointer" TI="11614" toTI="10894"/>
+   <type Family="Pointer" TI="11764" toTI="11012"/>
+   <function Name="TIM_Cmd" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="807">
+    <parameter Name="TIMx" TI="11063" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="807" Addr="0x1C00000C" Param="Yes"/>
+    <parameter Name="NewState" TI="9960" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="807" Addr="0x1C00000B" Param="Yes"/>
+   </function >
+   <function Name="TIM_ITConfig" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="873">
+    <parameter Name="TIMx" TI="11063" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="873" Addr="0x1C000004" Param="Yes"/>
+    <parameter Name="TIM_IT" TI="9813" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="873" Addr="0x1C000002" Param="Yes"/>
+    <parameter Name="NewState" TI="9960" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="873" Addr="0x1C000001" Param="Yes"/>
+   </function >
+   <function Name="TIM_ClearITPendingBit" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="2677">
+    <parameter Name="TIMx" TI="11063" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="2677" Addr="0x1C000004" Param="Yes"/>
+    <parameter Name="TIM_IT" TI="9813" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Line="2677" Addr="0x1C000002" Param="Yes"/>
+   </function >
+  </module>
+  <module Name="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" >
+   <type Family="Base" Name="signed char" ID="17474"/>
+   <type Family="Base" Name="unsigned char" ID="17492"/>
+   <type Family="typedef" Name="uint8_t" Line="46" ID="17481" toTI="17492"/>
+   <type Family="Base" Name="short int" ID="17499"/>
+   <type Family="Base" Name="short unsigned int" ID="17517"/>
+   <type Family="typedef" Name="uint16_t" Line="58" ID="17506" toTI="17517"/>
+   <type Family="Base" Name="long int" ID="17524"/>
+   <type Family="Base" Name="long unsigned int" ID="17542"/>
+   <type Family="typedef" Name="uint32_t" Line="84" ID="17531" toTI="17542"/>
+   <type Family="Base" Name="long long int" ID="17549"/>
+   <type Family="Base" Name="long long unsigned int" ID="17556"/>
+   <type Family="Base" Name="int" ID="17563"/>
+   <type Family="Base" Name="unsigned int" ID="17570"/>
+   <type Family="typedef" Name="FlagStatus" Line="519" ID="17607" toTI="17585"/>
+   <type Family="typedef" Name="ITStatus" Line="519" ID="17619" toTI="17585"/>
+   <type Family="typedef" Name="FunctionalState" Line="521" ID="17653" toTI="17631"/>
+   <type Family="ComponentList" Line="1235" ID="17665">
+    <Component Name="SR" TI="17674" Line="1236" Offs="0"/>
+    <Component Name="RESERVED0" TI="17688" Line="1237" Offs="2"/>
+    <Component Name="DR" TI="17703" Line="1238" Offs="4"/>
+    <Component Name="RESERVED1" TI="17717" Line="1239" Offs="6"/>
+    <Component Name="BRR" TI="17732" Line="1240" Offs="8"/>
+    <Component Name="RESERVED2" TI="17747" Line="1241" Offs="10"/>
+    <Component Name="CR1" TI="17762" Line="1242" Offs="12"/>
+    <Component Name="RESERVED3" TI="17777" Line="1243" Offs="14"/>
+    <Component Name="CR2" TI="17792" Line="1244" Offs="16"/>
+    <Component Name="RESERVED4" TI="17807" Line="1245" Offs="18"/>
+    <Component Name="CR3" TI="17822" Line="1246" Offs="20"/>
+    <Component Name="RESERVED5" TI="17837" Line="1247" Offs="22"/>
+    <Component Name="GTPR" TI="17852" Line="1248" Offs="24"/>
+    <Component Name="RESERVED6" TI="17867" Line="1249" Offs="26"/>
+   </type>
+   <type Family="typedef" Name="USART_TypeDef" Line="1250" ID="17883" toTI="17665"/>
+   <type Family="ComponentList" Line="47" ID="17895">
+    <Component Name="SYSCLK_Frequency" TI="17903" Line="48" Offs="0"/>
+    <Component Name="HCLK_Frequency" TI="17917" Line="49" Offs="4"/>
+    <Component Name="PCLK1_Frequency" TI="17931" Line="50" Offs="8"/>
+    <Component Name="PCLK2_Frequency" TI="17945" Line="51" Offs="12"/>
+    <Component Name="ADCCLK_Frequency" TI="17959" Line="52" Offs="16"/>
+   </type>
+   <type Family="typedef" Name="RCC_ClocksTypeDef" Line="53" ID="17974" toTI="17895"/>
+   <type Family="ComponentList" Line="51" ID="17985">
+    <Component Name="USART_BaudRate" TI="17993" Line="52" Offs="0"/>
+    <Component Name="USART_WordLength" TI="18007" Line="57" Offs="4"/>
+    <Component Name="USART_StopBits" TI="18021" Line="60" Offs="6"/>
+    <Component Name="USART_Parity" TI="18035" Line="63" Offs="8"/>
+    <Component Name="USART_Mode" TI="18049" Line="70" Offs="10"/>
+    <Component Name="USART_HardwareFlowControl" TI="18063" Line="73" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="USART_InitTypeDef" Line="76" ID="18078" toTI="17985"/>
+   <type Family="ComponentList" Line="83" ID="18089">
+    <Component Name="USART_Clock" TI="18097" Line="85" Offs="0"/>
+    <Component Name="USART_CPOL" TI="18111" Line="88" Offs="2"/>
+    <Component Name="USART_CPHA" TI="18125" Line="91" Offs="4"/>
+    <Component Name="USART_LastBit" TI="18139" Line="94" Offs="6"/>
+   </type>
+   <type Family="typedef" Name="USART_ClockInitTypeDef" Line="97" ID="18154" toTI="18089"/>
+   <type Family="Pointer" TI="18205" toTI="17883"/>
+   <function Name="USART_Init" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="177">
+    <parameter Name="USARTx" TI="18205" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="177" Addr="0x1C000004" Param="Yes"/>
+   <type Family="Pointer" TI="18349" toTI="18078"/>
+    <parameter Name="USART_InitStruct" TI="18349" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="177" Addr="0x1C000000" Param="Yes"/>
+    <variable Name="tmpreg" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="178" Addr="0x1C00001C" TI="17531"/>
+    <variable Name="apbclock" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="178" Addr="0x1C000020" TI="17531"/>
+    <variable Name="integerdivider" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="179" Addr="0x1C000024" TI="17531"/>
+    <variable Name="fractionaldivider" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="180" Addr="0x1C000028" TI="17531"/>
+    <variable Name="usartxbase" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="181" Addr="0x1C00002C" TI="17531"/>
+    <variable Name="RCC_ClocksStatus" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="182" Addr="0x1C000008" TI="17974"/>
+   </function >
+   <type Family="Pointer" TI="18469" toTI="18154"/>
+   <function Name="USART_Cmd" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="352">
+    <parameter Name="USARTx" TI="18205" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="352" Addr="0x1C00000C" Param="Yes"/>
+    <parameter Name="NewState" TI="17653" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="352" Addr="0x1C00000B" Param="Yes"/>
+   </function >
+   <function Name="USART_ITConfig" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="389">
+    <parameter Name="USARTx" TI="18205" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="389" Addr="0x1C000004" Param="Yes"/>
+    <parameter Name="USART_IT" TI="17506" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="389" Addr="0x1C000002" Param="Yes"/>
+    <parameter Name="NewState" TI="17653" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="389" Addr="0x1C000001" Param="Yes"/>
+    <variable Name="usartreg" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="390" Addr="0x1C000008" TI="17531"/>
+    <variable Name="itpos" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="390" Addr="0x1C00000C" TI="17531"/>
+    <variable Name="itmask" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="390" Addr="0x1C000010" TI="17531"/>
+    <variable Name="usartxbase" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="391" Addr="0x1C000014" TI="17531"/>
+   </function >
+   <function Name="USART_SendData" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="593">
+    <parameter Name="USARTx" TI="18205" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="593" Addr="0x1C00000C" Param="Yes"/>
+    <parameter Name="Data" TI="17506" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="593" Addr="0x1C00000A" Param="Yes"/>
+   </function >
+   <function Name="USART_ReceiveData" TI="17506" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="610">
+    <parameter Name="USARTx" TI="18205" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="610" Addr="0x1C000004" Param="Yes"/>
+   </function >
+   <function Name="USART_GetFlagStatus" TI="17607" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="875">
+    <parameter Name="USARTx" TI="18205" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="875" Addr="0x1C000004" Param="Yes"/>
+    <parameter Name="USART_FLAG" TI="17506" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="875" Addr="0x1C000002" Param="Yes"/>
+    <variable Name="bitstatus" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="876" Addr="0x1C00000F" TI="17607"/>
+   </function >
+   <function Name="USART_GetITStatus" TI="17619" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="957">
+    <parameter Name="USARTx" TI="18205" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="957" Addr="0x1C000004" Param="Yes"/>
+    <parameter Name="USART_IT" TI="17506" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="957" Addr="0x1C000002" Param="Yes"/>
+    <variable Name="bitpos" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="958" Addr="0x1C000008" TI="17531"/>
+    <variable Name="itmask" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="958" Addr="0x1C00000C" TI="17531"/>
+    <variable Name="usartreg" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="958" Addr="0x1C000010" TI="17531"/>
+    <variable Name="bitstatus" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="959" Addr="0x1C000017" TI="17619"/>
+   </function >
+   <function Name="USART_ClearITPendingBit" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="1031">
+    <parameter Name="USARTx" TI="18205" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="1031" Addr="0x1C000004" Param="Yes"/>
+    <parameter Name="USART_IT" TI="17506" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="1031" Addr="0x1C000002" Param="Yes"/>
+    <variable Name="bitpos" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="1032" Addr="0x1C00000C" TI="17506"/>
+    <variable Name="itmask" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Line="1032" Addr="0x1C00000E" TI="17506"/>
+   </function >
+  </module>
+  <module Name="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" >
+   <type Family="Base" Name="signed char" ID="20119"/>
+   <type Family="Base" Name="unsigned char" ID="20137"/>
+   <type Family="typedef" Name="uint8_t" Line="46" ID="20126" toTI="20137"/>
+   <type Family="Base" Name="short int" ID="20144"/>
+   <type Family="Base" Name="short unsigned int" ID="20151"/>
+   <type Family="Base" Name="long int" ID="20158"/>
+   <type Family="Base" Name="long unsigned int" ID="20176"/>
+   <type Family="typedef" Name="uint32_t" Line="84" ID="20165" toTI="20176"/>
+   <type Family="Base" Name="long long int" ID="20183"/>
+   <type Family="Base" Name="long long unsigned int" ID="20190"/>
+   <type Family="Base" Name="int" ID="20197"/>
+   <type Family="Base" Name="unsigned int" ID="20204"/>
+   <type Family="ComponentList" Line="133" ID="20211">
+   <type Family="array" ID="20413" toTI="20165"/>
+    <Component Name="ISER" TI="20220" Line="134" Offs="0"/>
+   <type Family="array" ID="20437" toTI="20165"/>
+    <Component Name="RESERVED0" TI="20234" Line="135" Offs="32"/>
+    <Component Name="ICER" TI="20248" Line="136" Offs="128"/>
+    <Component Name="RSERVED1" TI="20263" Line="137" Offs="160"/>
+    <Component Name="ISPR" TI="20278" Line="138" Offs="256"/>
+    <Component Name="RESERVED2" TI="20293" Line="139" Offs="288"/>
+    <Component Name="ICPR" TI="20308" Line="140" Offs="384"/>
+    <Component Name="RESERVED3" TI="20323" Line="141" Offs="416"/>
+    <Component Name="IABR" TI="20338" Line="142" Offs="512"/>
+   <type Family="array" ID="20473" toTI="20165"/>
+    <Component Name="RESERVED4" TI="20353" Line="143" Offs="544"/>
+   <type Family="array" ID="20489" toTI="20126"/>
+    <Component Name="IP" TI="20368" Line="144" Offs="768"/>
+   <type Family="array" ID="20510" toTI="20165"/>
+    <Component Name="RESERVED5" TI="20382" Line="145" Offs="1008"/>
+    <Component Name="STIR" TI="20397" Line="146" Offs="3584"/>
+   </type>
+   <type Family="ComponentList" Line="156" ID="20532">
+    <Component Name="CPUID" TI="20540" Line="157" Offs="0"/>
+    <Component Name="ICSR" TI="20554" Line="158" Offs="4"/>
+    <Component Name="VTOR" TI="20568" Line="159" Offs="8"/>
+    <Component Name="AIRCR" TI="20582" Line="160" Offs="12"/>
+    <Component Name="SCR" TI="20596" Line="161" Offs="16"/>
+    <Component Name="CCR" TI="20610" Line="162" Offs="20"/>
+   <type Family="array" ID="20812" toTI="20126"/>
+    <Component Name="SHP" TI="20624" Line="163" Offs="24"/>
+    <Component Name="SHCSR" TI="20638" Line="164" Offs="36"/>
+    <Component Name="CFSR" TI="20652" Line="165" Offs="40"/>
+    <Component Name="HFSR" TI="20666" Line="166" Offs="44"/>
+    <Component Name="DFSR" TI="20680" Line="167" Offs="48"/>
+    <Component Name="MMFAR" TI="20694" Line="168" Offs="52"/>
+    <Component Name="BFAR" TI="20708" Line="169" Offs="56"/>
+    <Component Name="AFSR" TI="20722" Line="170" Offs="60"/>
+   <type Family="array" ID="20833" toTI="20165"/>
+    <Component Name="PFR" TI="20736" Line="171" Offs="64"/>
+    <Component Name="DFR" TI="20750" Line="172" Offs="72"/>
+    <Component Name="ADR" TI="20764" Line="173" Offs="76"/>
+   <type Family="array" ID="20859" toTI="20165"/>
+    <Component Name="MMFR" TI="20778" Line="174" Offs="80"/>
+   <type Family="array" ID="20885" toTI="20165"/>
+    <Component Name="ISAR" TI="20792" Line="175" Offs="96"/>
+   </type>
+   <type Family="ComponentList" Line="366" ID="20911">
+    <Component Name="CTRL" TI="20920" Line="367" Offs="0"/>
+    <Component Name="LOAD" TI="20935" Line="368" Offs="4"/>
+    <Component Name="VAL" TI="20950" Line="369" Offs="8"/>
+    <Component Name="CALIB" TI="20965" Line="370" Offs="12"/>
+   </type>
+   <type Family="typedef" Name="FunctionalState" Line="521" ID="21003" toTI="20981"/>
+   <type Family="ComponentList" Line="51" ID="21015">
+    <Component Name="NVIC_IRQChannel" TI="21023" Line="52" Offs="0"/>
+    <Component Name="NVIC_IRQChannelPreemptionPriority" TI="21037" Line="57" Offs="1"/>
+    <Component Name="NVIC_IRQChannelSubPriority" TI="21051" Line="61" Offs="2"/>
+    <Component Name="NVIC_IRQChannelCmd" TI="21065" Line="65" Offs="3"/>
+   </type>
+   <type Family="typedef" Name="NVIC_InitTypeDef" Line="68" ID="21080" toTI="21015"/>
+   <function Name="NVIC_Init" TI="0" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" Line="113">
+   <type Family="Pointer" TI="21213" toTI="21080"/>
+    <parameter Name="NVIC_InitStruct" TI="21213" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" Line="113" Addr="0x1C000004" Param="Yes"/>
+    <variable Name="tmppriority" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" Line="114" Addr="0x1C00000C" TI="20165"/>
+    <variable Name="tmppre" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" Line="114" Addr="0x1C000010" TI="20165"/>
+    <variable Name="tmpsub" FileName="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" Line="114" Addr="0x1C000014" TI="20165"/>
+   </function >
+  </module>
+ </modulelist>
+</aoffile>
+

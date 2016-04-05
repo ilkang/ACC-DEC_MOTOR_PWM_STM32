@@ -1,0 +1,516 @@
+
+D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o:     file format elf32-littlearm
+D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+
+Disassembly of section .text.EXTI_DeInit:
+
+00000000 <EXTI_DeInit>:
+EXTI_DeInit():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:86
+  * @brief  Deinitializes the EXTI peripheral registers to their default reset values.
+  * @param  None
+  * @retval None
+  */
+void EXTI_DeInit(void)
+{
+   0:	b480      	push	{r7}
+   2:	af00      	add	r7, sp, #0
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:87
+  EXTI->IMR = 0x00000000;
+   4:	f240 4300 	movw	r3, #1024	; 0x400
+   8:	f2c4 0301 	movt	r3, #16385	; 0x4001
+   c:	f04f 0200 	mov.w	r2, #0	; 0x0
+  10:	601a      	str	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:88
+  EXTI->EMR = 0x00000000;
+  12:	f240 4300 	movw	r3, #1024	; 0x400
+  16:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  1a:	f04f 0200 	mov.w	r2, #0	; 0x0
+  1e:	605a      	str	r2, [r3, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:89
+  EXTI->RTSR = 0x00000000; 
+  20:	f240 4300 	movw	r3, #1024	; 0x400
+  24:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  28:	f04f 0200 	mov.w	r2, #0	; 0x0
+  2c:	609a      	str	r2, [r3, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:90
+  EXTI->FTSR = 0x00000000; 
+  2e:	f240 4300 	movw	r3, #1024	; 0x400
+  32:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  36:	f04f 0200 	mov.w	r2, #0	; 0x0
+  3a:	60da      	str	r2, [r3, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:91
+  EXTI->PR = 0x000FFFFF;
+  3c:	f240 4200 	movw	r2, #1024	; 0x400
+  40:	f2c4 0201 	movt	r2, #16385	; 0x4001
+  44:	f64f 73ff 	movw	r3, #65535	; 0xffff
+  48:	f2c0 030f 	movt	r3, #15	; 0xf
+  4c:	6153      	str	r3, [r2, #20]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:92
+}
+  4e:	46bd      	mov	sp, r7
+  50:	bc80      	pop	{r7}
+  52:	4770      	bx	lr
+Disassembly of section .text.EXTI_Init:
+
+00000000 <EXTI_Init>:
+EXTI_Init():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:102
+  * @param  EXTI_InitStruct: pointer to a EXTI_InitTypeDef structure
+  *         that contains the configuration information for the EXTI peripheral.
+  * @retval None
+  */
+void EXTI_Init(EXTI_InitTypeDef* EXTI_InitStruct)
+{
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:103
+  uint32_t tmp = 0;
+   8:	f04f 0300 	mov.w	r3, #0	; 0x0
+   c:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:111
+  assert_param(IS_EXTI_MODE(EXTI_InitStruct->EXTI_Mode));
+  assert_param(IS_EXTI_TRIGGER(EXTI_InitStruct->EXTI_Trigger));
+  assert_param(IS_EXTI_LINE(EXTI_InitStruct->EXTI_Line));  
+  assert_param(IS_FUNCTIONAL_STATE(EXTI_InitStruct->EXTI_LineCmd));
+
+  tmp = (uint32_t)EXTI_BASE;
+   e:	f240 4300 	movw	r3, #1024	; 0x400
+  12:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  16:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:113
+     
+  if (EXTI_InitStruct->EXTI_LineCmd != DISABLE)
+  18:	687b      	ldr	r3, [r7, #4]
+  1a:	799b      	ldrb	r3, [r3, #6]
+  1c:	2b00      	cmp	r3, #0
+  1e:	f000 8083 	beq.w	128 <EXTI_Init+0x128>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:116
+  {
+    /* Clear EXTI line configuration */
+    EXTI->IMR &= ~EXTI_InitStruct->EXTI_Line;
+  22:	f240 4200 	movw	r2, #1024	; 0x400
+  26:	f2c4 0201 	movt	r2, #16385	; 0x4001
+  2a:	f240 4300 	movw	r3, #1024	; 0x400
+  2e:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  32:	6819      	ldr	r1, [r3, #0]
+  34:	687b      	ldr	r3, [r7, #4]
+  36:	681b      	ldr	r3, [r3, #0]
+  38:	ea6f 0303 	mvn.w	r3, r3
+  3c:	ea01 0303 	and.w	r3, r1, r3
+  40:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:117
+    EXTI->EMR &= ~EXTI_InitStruct->EXTI_Line;
+  42:	f240 4200 	movw	r2, #1024	; 0x400
+  46:	f2c4 0201 	movt	r2, #16385	; 0x4001
+  4a:	f240 4300 	movw	r3, #1024	; 0x400
+  4e:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  52:	6859      	ldr	r1, [r3, #4]
+  54:	687b      	ldr	r3, [r7, #4]
+  56:	681b      	ldr	r3, [r3, #0]
+  58:	ea6f 0303 	mvn.w	r3, r3
+  5c:	ea01 0303 	and.w	r3, r1, r3
+  60:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:119
+    
+    tmp += EXTI_InitStruct->EXTI_Mode;
+  62:	687b      	ldr	r3, [r7, #4]
+  64:	791b      	ldrb	r3, [r3, #4]
+  66:	461a      	mov	r2, r3
+  68:	68fb      	ldr	r3, [r7, #12]
+  6a:	4413      	add	r3, r2
+  6c:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:121
+
+    *(__IO uint32_t *) tmp |= EXTI_InitStruct->EXTI_Line;
+  6e:	68f9      	ldr	r1, [r7, #12]
+  70:	68fb      	ldr	r3, [r7, #12]
+  72:	681a      	ldr	r2, [r3, #0]
+  74:	687b      	ldr	r3, [r7, #4]
+  76:	681b      	ldr	r3, [r3, #0]
+  78:	ea42 0303 	orr.w	r3, r2, r3
+  7c:	600b      	str	r3, [r1, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:124
+
+    /* Clear Rising Falling edge configuration */
+    EXTI->RTSR &= ~EXTI_InitStruct->EXTI_Line;
+  7e:	f240 4200 	movw	r2, #1024	; 0x400
+  82:	f2c4 0201 	movt	r2, #16385	; 0x4001
+  86:	f240 4300 	movw	r3, #1024	; 0x400
+  8a:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  8e:	6899      	ldr	r1, [r3, #8]
+  90:	687b      	ldr	r3, [r7, #4]
+  92:	681b      	ldr	r3, [r3, #0]
+  94:	ea6f 0303 	mvn.w	r3, r3
+  98:	ea01 0303 	and.w	r3, r1, r3
+  9c:	6093      	str	r3, [r2, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:125
+    EXTI->FTSR &= ~EXTI_InitStruct->EXTI_Line;
+  9e:	f240 4200 	movw	r2, #1024	; 0x400
+  a2:	f2c4 0201 	movt	r2, #16385	; 0x4001
+  a6:	f240 4300 	movw	r3, #1024	; 0x400
+  aa:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  ae:	68d9      	ldr	r1, [r3, #12]
+  b0:	687b      	ldr	r3, [r7, #4]
+  b2:	681b      	ldr	r3, [r3, #0]
+  b4:	ea6f 0303 	mvn.w	r3, r3
+  b8:	ea01 0303 	and.w	r3, r1, r3
+  bc:	60d3      	str	r3, [r2, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:128
+    
+    /* Select the trigger for the selected external interrupts */
+    if (EXTI_InitStruct->EXTI_Trigger == EXTI_Trigger_Rising_Falling)
+  be:	687b      	ldr	r3, [r7, #4]
+  c0:	795b      	ldrb	r3, [r3, #5]
+  c2:	2b10      	cmp	r3, #16
+  c4:	d11c      	bne.n	100 <EXTI_Init+0x100>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:131
+    {
+      /* Rising Falling edge */
+      EXTI->RTSR |= EXTI_InitStruct->EXTI_Line;
+  c6:	f240 4200 	movw	r2, #1024	; 0x400
+  ca:	f2c4 0201 	movt	r2, #16385	; 0x4001
+  ce:	f240 4300 	movw	r3, #1024	; 0x400
+  d2:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  d6:	6899      	ldr	r1, [r3, #8]
+  d8:	687b      	ldr	r3, [r7, #4]
+  da:	681b      	ldr	r3, [r3, #0]
+  dc:	ea41 0303 	orr.w	r3, r1, r3
+  e0:	6093      	str	r3, [r2, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:132
+      EXTI->FTSR |= EXTI_InitStruct->EXTI_Line;
+  e2:	f240 4200 	movw	r2, #1024	; 0x400
+  e6:	f2c4 0201 	movt	r2, #16385	; 0x4001
+  ea:	f240 4300 	movw	r3, #1024	; 0x400
+  ee:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  f2:	68d9      	ldr	r1, [r3, #12]
+  f4:	687b      	ldr	r3, [r7, #4]
+  f6:	681b      	ldr	r3, [r3, #0]
+  f8:	ea41 0303 	orr.w	r3, r1, r3
+  fc:	60d3      	str	r3, [r2, #12]
+  fe:	e023      	b.n	148 <EXTI_Init+0x148>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:136
+    }
+    else
+    {
+      tmp = (uint32_t)EXTI_BASE;
+ 100:	f240 4300 	movw	r3, #1024	; 0x400
+ 104:	f2c4 0301 	movt	r3, #16385	; 0x4001
+ 108:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:137
+      tmp += EXTI_InitStruct->EXTI_Trigger;
+ 10a:	687b      	ldr	r3, [r7, #4]
+ 10c:	795b      	ldrb	r3, [r3, #5]
+ 10e:	461a      	mov	r2, r3
+ 110:	68fb      	ldr	r3, [r7, #12]
+ 112:	4413      	add	r3, r2
+ 114:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:139
+
+      *(__IO uint32_t *) tmp |= EXTI_InitStruct->EXTI_Line;
+ 116:	68f9      	ldr	r1, [r7, #12]
+ 118:	68fb      	ldr	r3, [r7, #12]
+ 11a:	681a      	ldr	r2, [r3, #0]
+ 11c:	687b      	ldr	r3, [r7, #4]
+ 11e:	681b      	ldr	r3, [r3, #0]
+ 120:	ea42 0303 	orr.w	r3, r2, r3
+ 124:	600b      	str	r3, [r1, #0]
+ 126:	e00f      	b.n	148 <EXTI_Init+0x148>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:144
+    }
+  }
+  else
+  {
+    tmp += EXTI_InitStruct->EXTI_Mode;
+ 128:	687b      	ldr	r3, [r7, #4]
+ 12a:	791b      	ldrb	r3, [r3, #4]
+ 12c:	461a      	mov	r2, r3
+ 12e:	68fb      	ldr	r3, [r7, #12]
+ 130:	4413      	add	r3, r2
+ 132:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:147
+
+    /* Disable the selected external lines */
+    *(__IO uint32_t *) tmp &= ~EXTI_InitStruct->EXTI_Line;
+ 134:	68f9      	ldr	r1, [r7, #12]
+ 136:	68fb      	ldr	r3, [r7, #12]
+ 138:	681a      	ldr	r2, [r3, #0]
+ 13a:	687b      	ldr	r3, [r7, #4]
+ 13c:	681b      	ldr	r3, [r3, #0]
+ 13e:	ea6f 0303 	mvn.w	r3, r3
+ 142:	ea02 0303 	and.w	r3, r2, r3
+ 146:	600b      	str	r3, [r1, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:149
+  }
+}
+ 148:	f107 0714 	add.w	r7, r7, #20	; 0x14
+ 14c:	46bd      	mov	sp, r7
+ 14e:	bc80      	pop	{r7}
+ 150:	4770      	bx	lr
+ 152:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.EXTI_StructInit:
+
+00000000 <EXTI_StructInit>:
+EXTI_StructInit():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:158
+  * @param  EXTI_InitStruct: pointer to a EXTI_InitTypeDef structure which will
+  *         be initialized.
+  * @retval None
+  */
+void EXTI_StructInit(EXTI_InitTypeDef* EXTI_InitStruct)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:159
+  EXTI_InitStruct->EXTI_Line = EXTI_LINENONE;
+   8:	687a      	ldr	r2, [r7, #4]
+   a:	f04f 0300 	mov.w	r3, #0	; 0x0
+   e:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:160
+  EXTI_InitStruct->EXTI_Mode = EXTI_Mode_Interrupt;
+  10:	687a      	ldr	r2, [r7, #4]
+  12:	f04f 0300 	mov.w	r3, #0	; 0x0
+  16:	7113      	strb	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:161
+  EXTI_InitStruct->EXTI_Trigger = EXTI_Trigger_Falling;
+  18:	687a      	ldr	r2, [r7, #4]
+  1a:	f04f 030c 	mov.w	r3, #12	; 0xc
+  1e:	7153      	strb	r3, [r2, #5]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:162
+  EXTI_InitStruct->EXTI_LineCmd = DISABLE;
+  20:	687a      	ldr	r2, [r7, #4]
+  22:	f04f 0300 	mov.w	r3, #0	; 0x0
+  26:	7193      	strb	r3, [r2, #6]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:163
+}
+  28:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  2c:	46bd      	mov	sp, r7
+  2e:	bc80      	pop	{r7}
+  30:	4770      	bx	lr
+  32:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.EXTI_GenerateSWInterrupt:
+
+00000000 <EXTI_GenerateSWInterrupt>:
+EXTI_GenerateSWInterrupt():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:172
+  * @param  EXTI_Line: specifies the EXTI lines to be enabled or disabled.
+  *   This parameter can be any combination of EXTI_Linex where x can be (0..19).
+  * @retval None
+  */
+void EXTI_GenerateSWInterrupt(uint32_t EXTI_Line)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:176
+  /* Check the parameters */
+  assert_param(IS_EXTI_LINE(EXTI_Line));
+  
+  EXTI->SWIER |= EXTI_Line;
+   8:	f240 4200 	movw	r2, #1024	; 0x400
+   c:	f2c4 0201 	movt	r2, #16385	; 0x4001
+  10:	f240 4300 	movw	r3, #1024	; 0x400
+  14:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  18:	6919      	ldr	r1, [r3, #16]
+  1a:	687b      	ldr	r3, [r7, #4]
+  1c:	ea41 0303 	orr.w	r3, r1, r3
+  20:	6113      	str	r3, [r2, #16]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:177
+}
+  22:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  26:	46bd      	mov	sp, r7
+  28:	bc80      	pop	{r7}
+  2a:	4770      	bx	lr
+Disassembly of section .text.EXTI_GetFlagStatus:
+
+00000000 <EXTI_GetFlagStatus>:
+EXTI_GetFlagStatus():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:187
+  *   This parameter can be:
+  *     @arg EXTI_Linex: External interrupt line x where x(0..19)
+  * @retval The new state of EXTI_Line (SET or RESET).
+  */
+FlagStatus EXTI_GetFlagStatus(uint32_t EXTI_Line)
+{
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:188
+  FlagStatus bitstatus = RESET;
+   8:	f04f 0300 	mov.w	r3, #0	; 0x0
+   c:	73fb      	strb	r3, [r7, #15]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:192
+  /* Check the parameters */
+  assert_param(IS_GET_EXTI_LINE(EXTI_Line));
+  
+  if ((EXTI->PR & EXTI_Line) != (uint32_t)RESET)
+   e:	f240 4300 	movw	r3, #1024	; 0x400
+  12:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  16:	695a      	ldr	r2, [r3, #20]
+  18:	687b      	ldr	r3, [r7, #4]
+  1a:	ea02 0303 	and.w	r3, r2, r3
+  1e:	2b00      	cmp	r3, #0
+  20:	d003      	beq.n	2a <EXTI_GetFlagStatus+0x2a>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:194
+  {
+    bitstatus = SET;
+  22:	f04f 0301 	mov.w	r3, #1	; 0x1
+  26:	73fb      	strb	r3, [r7, #15]
+  28:	e002      	b.n	30 <EXTI_GetFlagStatus+0x30>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:198
+  }
+  else
+  {
+    bitstatus = RESET;
+  2a:	f04f 0300 	mov.w	r3, #0	; 0x0
+  2e:	73fb      	strb	r3, [r7, #15]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:200
+  }
+  return bitstatus;
+  30:	7bfb      	ldrb	r3, [r7, #15]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:201
+}
+  32:	4618      	mov	r0, r3
+  34:	f107 0714 	add.w	r7, r7, #20	; 0x14
+  38:	46bd      	mov	sp, r7
+  3a:	bc80      	pop	{r7}
+  3c:	4770      	bx	lr
+  3e:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.EXTI_ClearFlag:
+
+00000000 <EXTI_ClearFlag>:
+EXTI_ClearFlag():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:210
+  * @param  EXTI_Line: specifies the EXTI lines flags to clear.
+  *   This parameter can be any combination of EXTI_Linex where x can be (0..19).
+  * @retval None
+  */
+void EXTI_ClearFlag(uint32_t EXTI_Line)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:214
+  /* Check the parameters */
+  assert_param(IS_EXTI_LINE(EXTI_Line));
+  
+  EXTI->PR = EXTI_Line;
+   8:	f240 4300 	movw	r3, #1024	; 0x400
+   c:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  10:	687a      	ldr	r2, [r7, #4]
+  12:	615a      	str	r2, [r3, #20]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:215
+}
+  14:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  18:	46bd      	mov	sp, r7
+  1a:	bc80      	pop	{r7}
+  1c:	4770      	bx	lr
+  1e:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.EXTI_GetITStatus:
+
+00000000 <EXTI_GetITStatus>:
+EXTI_GetITStatus():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:225
+  *   This parameter can be:
+  *     @arg EXTI_Linex: External interrupt line x where x(0..19)
+  * @retval The new state of EXTI_Line (SET or RESET).
+  */
+ITStatus EXTI_GetITStatus(uint32_t EXTI_Line)
+{
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:226
+  ITStatus bitstatus = RESET;
+   8:	f04f 0300 	mov.w	r3, #0	; 0x0
+   c:	72fb      	strb	r3, [r7, #11]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:227
+  uint32_t enablestatus = 0;
+   e:	f04f 0300 	mov.w	r3, #0	; 0x0
+  12:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:231
+  /* Check the parameters */
+  assert_param(IS_GET_EXTI_LINE(EXTI_Line));
+  
+  enablestatus =  EXTI->IMR & EXTI_Line;
+  14:	f240 4300 	movw	r3, #1024	; 0x400
+  18:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  1c:	681a      	ldr	r2, [r3, #0]
+  1e:	687b      	ldr	r3, [r7, #4]
+  20:	ea02 0303 	and.w	r3, r2, r3
+  24:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:232
+  if (((EXTI->PR & EXTI_Line) != (uint32_t)RESET) && (enablestatus != (uint32_t)RESET))
+  26:	f240 4300 	movw	r3, #1024	; 0x400
+  2a:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  2e:	695a      	ldr	r2, [r3, #20]
+  30:	687b      	ldr	r3, [r7, #4]
+  32:	ea02 0303 	and.w	r3, r2, r3
+  36:	2b00      	cmp	r3, #0
+  38:	d006      	beq.n	48 <EXTI_GetITStatus+0x48>
+  3a:	68fb      	ldr	r3, [r7, #12]
+  3c:	2b00      	cmp	r3, #0
+  3e:	d003      	beq.n	48 <EXTI_GetITStatus+0x48>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:234
+  {
+    bitstatus = SET;
+  40:	f04f 0301 	mov.w	r3, #1	; 0x1
+  44:	72fb      	strb	r3, [r7, #11]
+  46:	e002      	b.n	4e <EXTI_GetITStatus+0x4e>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:238
+  }
+  else
+  {
+    bitstatus = RESET;
+  48:	f04f 0300 	mov.w	r3, #0	; 0x0
+  4c:	72fb      	strb	r3, [r7, #11]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:240
+  }
+  return bitstatus;
+  4e:	7afb      	ldrb	r3, [r7, #11]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:241
+}
+  50:	4618      	mov	r0, r3
+  52:	f107 0714 	add.w	r7, r7, #20	; 0x14
+  56:	46bd      	mov	sp, r7
+  58:	bc80      	pop	{r7}
+  5a:	4770      	bx	lr
+Disassembly of section .text.EXTI_ClearITPendingBit:
+
+00000000 <EXTI_ClearITPendingBit>:
+EXTI_ClearITPendingBit():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:250
+  * @param  EXTI_Line: specifies the EXTI lines to clear.
+  *   This parameter can be any combination of EXTI_Linex where x can be (0..19).
+  * @retval None
+  */
+void EXTI_ClearITPendingBit(uint32_t EXTI_Line)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:254
+  /* Check the parameters */
+  assert_param(IS_EXTI_LINE(EXTI_Line));
+  
+  EXTI->PR = EXTI_Line;
+   8:	f240 4300 	movw	r3, #1024	; 0x400
+   c:	f2c4 0301 	movt	r3, #16385	; 0x4001
+  10:	687a      	ldr	r2, [r7, #4]
+  12:	615a      	str	r2, [r3, #20]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_exti.c:255
+}
+  14:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  18:	46bd      	mov	sp, r7
+  1a:	bc80      	pop	{r7}
+  1c:	4770      	bx	lr
+  1e:	46c0      	nop			(mov r8, r8)

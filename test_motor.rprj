@@ -1,0 +1,4 @@
+
+<Project Header="Project 'test_motor'" Path=".\test_motor.rprj" Project="Yes" OutputFile="" sate="96" ActiveApp="test_motor" >
+	<ApplicationBuild Header="test_motor" Extern=".\test_motor.rapp" Path=".\test_motor.rapp" OutputFile=".\test_motor.elf" sate="96" />
+</Project>

@@ -1,0 +1,1919 @@
+
+D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o:     file format elf32-littlearm
+D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+
+Disassembly of section .text.RCC_DeInit:
+
+00000000 <RCC_DeInit>:
+RCC_DeInit():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:218
+  * @brief  Resets the RCC clock configuration to the default reset state.
+  * @param  None
+  * @retval None
+  */
+void RCC_DeInit(void)
+{
+   0:	b480      	push	{r7}
+   2:	af00      	add	r7, sp, #0
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:220
+  /* Set HSION bit */
+  RCC->CR |= (uint32_t)0x00000001;
+   4:	f241 0200 	movw	r2, #4096	; 0x1000
+   8:	f2c4 0202 	movt	r2, #16386	; 0x4002
+   c:	f241 0300 	movw	r3, #4096	; 0x1000
+  10:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  14:	681b      	ldr	r3, [r3, #0]
+  16:	f043 0301 	orr.w	r3, r3, #1	; 0x1
+  1a:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:224
+
+  /* Reset SW, HPRE, PPRE1, PPRE2, ADCPRE and MCO bits */
+#ifndef STM32F10X_CL
+  RCC->CFGR &= (uint32_t)0xF8FF0000;
+  1c:	f241 0200 	movw	r2, #4096	; 0x1000
+  20:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  24:	f241 0300 	movw	r3, #4096	; 0x1000
+  28:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  2c:	6859      	ldr	r1, [r3, #4]
+  2e:	f240 0300 	movw	r3, #0	; 0x0
+  32:	f6cf 03ff 	movt	r3, #63743	; 0xf8ff
+  36:	ea01 0303 	and.w	r3, r1, r3
+  3a:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:230
+#else
+  RCC->CFGR &= (uint32_t)0xF0FF0000;
+#endif /* STM32F10X_CL */   
+  
+  /* Reset HSEON, CSSON and PLLON bits */
+  RCC->CR &= (uint32_t)0xFEF6FFFF;
+  3c:	f241 0200 	movw	r2, #4096	; 0x1000
+  40:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  44:	f241 0300 	movw	r3, #4096	; 0x1000
+  48:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  4c:	681b      	ldr	r3, [r3, #0]
+  4e:	f023 7384 	bic.w	r3, r3, #17301504	; 0x1080000
+  52:	f423 3380 	bic.w	r3, r3, #65536	; 0x10000
+  56:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:233
+
+  /* Reset HSEBYP bit */
+  RCC->CR &= (uint32_t)0xFFFBFFFF;
+  58:	f241 0200 	movw	r2, #4096	; 0x1000
+  5c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  60:	f241 0300 	movw	r3, #4096	; 0x1000
+  64:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  68:	681b      	ldr	r3, [r3, #0]
+  6a:	f423 2380 	bic.w	r3, r3, #262144	; 0x40000
+  6e:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:236
+
+  /* Reset PLLSRC, PLLXTPRE, PLLMUL and USBPRE/OTGFSPRE bits */
+  RCC->CFGR &= (uint32_t)0xFF80FFFF;
+  70:	f241 0200 	movw	r2, #4096	; 0x1000
+  74:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  78:	f241 0300 	movw	r3, #4096	; 0x1000
+  7c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  80:	685b      	ldr	r3, [r3, #4]
+  82:	f423 03fe 	bic.w	r3, r3, #8323072	; 0x7f0000
+  86:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:255
+
+  /* Reset CFGR2 register */
+  RCC->CFGR2 = 0x00000000;      
+#else
+  /* Disable all interrupts and clear pending bits  */
+  RCC->CIR = 0x009F0000;
+  88:	f241 0300 	movw	r3, #4096	; 0x1000
+  8c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  90:	f44f 021f 	mov.w	r2, #10420224	; 0x9f0000
+  94:	609a      	str	r2, [r3, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:258
+#endif /* STM32F10X_CL */
+
+}
+  96:	46bd      	mov	sp, r7
+  98:	bc80      	pop	{r7}
+  9a:	4770      	bx	lr
+Disassembly of section .text.RCC_HSEConfig:
+
+00000000 <RCC_HSEConfig>:
+RCC_HSEConfig():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:271
+  *     @arg RCC_HSE_ON: HSE oscillator ON
+  *     @arg RCC_HSE_Bypass: HSE oscillator bypassed with external clock
+  * @retval None
+  */
+void RCC_HSEConfig(uint32_t RCC_HSE)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:276
+  /* Check the parameters */
+  assert_param(IS_RCC_HSE(RCC_HSE));
+  /* Reset HSEON and HSEBYP bits before configuring the HSE ------------------*/
+  /* Reset HSEON bit */
+  RCC->CR &= CR_HSEON_Reset;
+   8:	f241 0200 	movw	r2, #4096	; 0x1000
+   c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  10:	f241 0300 	movw	r3, #4096	; 0x1000
+  14:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  18:	681b      	ldr	r3, [r3, #0]
+  1a:	f423 3380 	bic.w	r3, r3, #65536	; 0x10000
+  1e:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:278
+  /* Reset HSEBYP bit */
+  RCC->CR &= CR_HSEBYP_Reset;
+  20:	f241 0200 	movw	r2, #4096	; 0x1000
+  24:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  28:	f241 0300 	movw	r3, #4096	; 0x1000
+  2c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  30:	681b      	ldr	r3, [r3, #0]
+  32:	f423 2380 	bic.w	r3, r3, #262144	; 0x40000
+  36:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:280
+  /* Configure HSE (RCC_HSE_OFF is already covered by the code section above) */
+  switch(RCC_HSE)
+  38:	687b      	ldr	r3, [r7, #4]
+  3a:	603b      	str	r3, [r7, #0]
+  3c:	683b      	ldr	r3, [r7, #0]
+  3e:	f5b3 3f80 	cmp.w	r3, #65536	; 0x10000
+  42:	d004      	beq.n	4e <RCC_HSEConfig+0x4e>
+  44:	683b      	ldr	r3, [r7, #0]
+  46:	f5b3 2f80 	cmp.w	r3, #262144	; 0x40000
+  4a:	d00d      	beq.n	68 <RCC_HSEConfig+0x68>
+  4c:	e018      	b.n	80 <RCC_HSEConfig+0x80>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:284
+  {
+    case RCC_HSE_ON:
+      /* Set HSEON bit */
+      RCC->CR |= CR_HSEON_Set;
+  4e:	f241 0200 	movw	r2, #4096	; 0x1000
+  52:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  56:	f241 0300 	movw	r3, #4096	; 0x1000
+  5a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  5e:	681b      	ldr	r3, [r3, #0]
+  60:	f443 3380 	orr.w	r3, r3, #65536	; 0x10000
+  64:	6013      	str	r3, [r2, #0]
+  66:	e00b      	b.n	80 <RCC_HSEConfig+0x80>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:289
+      break;
+      
+    case RCC_HSE_Bypass:
+      /* Set HSEBYP and HSEON bits */
+      RCC->CR |= CR_HSEBYP_Set | CR_HSEON_Set;
+  68:	f241 0200 	movw	r2, #4096	; 0x1000
+  6c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  70:	f241 0300 	movw	r3, #4096	; 0x1000
+  74:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  78:	681b      	ldr	r3, [r3, #0]
+  7a:	f443 23a0 	orr.w	r3, r3, #327680	; 0x50000
+  7e:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:295
+      break;
+      
+    default:
+      break;
+  }
+}
+  80:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  84:	46bd      	mov	sp, r7
+  86:	bc80      	pop	{r7}
+  88:	4770      	bx	lr
+  8a:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_WaitForHSEStartUp:
+
+00000000 <RCC_WaitForHSEStartUp>:
+RCC_WaitForHSEStartUp():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:305
+  * @retval An ErrorStatus enumuration value:
+  * - SUCCESS: HSE oscillator is stable and ready to use
+  * - ERROR: HSE oscillator not yet ready
+  */
+ErrorStatus RCC_WaitForHSEStartUp(void)
+{
+   0:	b580      	push	{r7, lr}
+   2:	b082      	sub	sp, #8
+   4:	af00      	add	r7, sp, #0
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:306
+  __IO uint32_t StartUpCounter = 0;
+   6:	f04f 0300 	mov.w	r3, #0	; 0x0
+   a:	603b      	str	r3, [r7, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:307
+  ErrorStatus status = ERROR;
+   c:	f04f 0300 	mov.w	r3, #0	; 0x0
+  10:	71bb      	strb	r3, [r7, #6]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:308
+  FlagStatus HSEStatus = RESET;
+  12:	f04f 0300 	mov.w	r3, #0	; 0x0
+  16:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:313
+  
+  /* Wait till HSE is ready and if Time out is reached exit */
+  do
+  {
+    HSEStatus = RCC_GetFlagStatus(RCC_FLAG_HSERDY);
+  18:	f04f 0031 	mov.w	r0, #49	; 0x31
+  1c:	f7ff fffe 	bl	0 <RCC_WaitForHSEStartUp>
+  20:	4603      	mov	r3, r0
+  22:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:314
+    StartUpCounter++;  
+  24:	683b      	ldr	r3, [r7, #0]
+  26:	f103 0301 	add.w	r3, r3, #1	; 0x1
+  2a:	603b      	str	r3, [r7, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:315
+  } while((StartUpCounter != HSE_STARTUP_TIMEOUT) && (HSEStatus == RESET));
+  2c:	683b      	ldr	r3, [r7, #0]
+  2e:	f5b3 6fa0 	cmp.w	r3, #1280	; 0x500
+  32:	d002      	beq.n	3a <RCC_WaitForHSEStartUp+0x3a>
+  34:	79fb      	ldrb	r3, [r7, #7]
+  36:	2b00      	cmp	r3, #0
+  38:	d0ee      	beq.n	18 <RCC_WaitForHSEStartUp+0x18>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:317
+  
+  if (RCC_GetFlagStatus(RCC_FLAG_HSERDY) != RESET)
+  3a:	f04f 0031 	mov.w	r0, #49	; 0x31
+  3e:	f7ff fffe 	bl	0 <RCC_WaitForHSEStartUp>
+  42:	4603      	mov	r3, r0
+  44:	2b00      	cmp	r3, #0
+  46:	d003      	beq.n	50 <RCC_WaitForHSEStartUp+0x50>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:319
+  {
+    status = SUCCESS;
+  48:	f04f 0301 	mov.w	r3, #1	; 0x1
+  4c:	71bb      	strb	r3, [r7, #6]
+  4e:	e002      	b.n	56 <RCC_WaitForHSEStartUp+0x56>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:323
+  }
+  else
+  {
+    status = ERROR;
+  50:	f04f 0300 	mov.w	r3, #0	; 0x0
+  54:	71bb      	strb	r3, [r7, #6]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:325
+  }  
+  return (status);
+  56:	79bb      	ldrb	r3, [r7, #6]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:326
+}
+  58:	4618      	mov	r0, r3
+  5a:	f107 0708 	add.w	r7, r7, #8	; 0x8
+  5e:	46bd      	mov	sp, r7
+  60:	bd80      	pop	{r7, pc}
+  62:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_AdjustHSICalibrationValue:
+
+00000000 <RCC_AdjustHSICalibrationValue>:
+RCC_AdjustHSICalibrationValue():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:335
+  * @param  HSICalibrationValue: specifies the calibration trimming value.
+  *   This parameter must be a number between 0 and 0x1F.
+  * @retval None
+  */
+void RCC_AdjustHSICalibrationValue(uint8_t HSICalibrationValue)
+{
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:336
+  uint32_t tmpreg = 0;
+   a:	f04f 0300 	mov.w	r3, #0	; 0x0
+   e:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:339
+  /* Check the parameters */
+  assert_param(IS_RCC_CALIBRATION_VALUE(HSICalibrationValue));
+  tmpreg = RCC->CR;
+  10:	f241 0300 	movw	r3, #4096	; 0x1000
+  14:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  18:	681b      	ldr	r3, [r3, #0]
+  1a:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:341
+  /* Clear HSITRIM[4:0] bits */
+  tmpreg &= CR_HSITRIM_Mask;
+  1c:	68fb      	ldr	r3, [r7, #12]
+  1e:	f023 03f8 	bic.w	r3, r3, #248	; 0xf8
+  22:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:343
+  /* Set the HSITRIM[4:0] bits according to HSICalibrationValue value */
+  tmpreg |= (uint32_t)HSICalibrationValue << 3;
+  24:	79fb      	ldrb	r3, [r7, #7]
+  26:	ea4f 02c3 	mov.w	r2, r3, lsl #3
+  2a:	68fb      	ldr	r3, [r7, #12]
+  2c:	ea43 0302 	orr.w	r3, r3, r2
+  30:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:345
+  /* Store the new value */
+  RCC->CR = tmpreg;
+  32:	f241 0300 	movw	r3, #4096	; 0x1000
+  36:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3a:	68fa      	ldr	r2, [r7, #12]
+  3c:	601a      	str	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:346
+}
+  3e:	f107 0714 	add.w	r7, r7, #20	; 0x14
+  42:	46bd      	mov	sp, r7
+  44:	bc80      	pop	{r7}
+  46:	4770      	bx	lr
+Disassembly of section .text.RCC_HSICmd:
+
+00000000 <RCC_HSICmd>:
+RCC_HSICmd():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:355
+  * @note   HSI can not be stopped if it is used directly or through the PLL as system clock.
+  * @param  NewState: new state of the HSI. This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_HSICmd(FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:358
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  *(__IO uint32_t *) CR_HSION_BB = (uint32_t)NewState;
+   a:	f240 0300 	movw	r3, #0	; 0x0
+   e:	f2c4 2342 	movt	r3, #16962	; 0x4242
+  12:	79fa      	ldrb	r2, [r7, #7]
+  14:	601a      	str	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:359
+}
+  16:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  1a:	46bd      	mov	sp, r7
+  1c:	bc80      	pop	{r7}
+  1e:	4770      	bx	lr
+Disassembly of section .text.RCC_PLLConfig:
+
+00000000 <RCC_PLLConfig>:
+RCC_PLLConfig():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:379
+  *   For @b STM32_Connectivity_line_devices, this parameter can be RCC_PLLMul_x where x:{[4,9], 6_5}
+  *   For @b other_STM32_devices, this parameter can be RCC_PLLMul_x where x:[2,16]  
+  * @retval None
+  */
+void RCC_PLLConfig(uint32_t RCC_PLLSource, uint32_t RCC_PLLMul)
+{
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+   8:	6039      	str	r1, [r7, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:380
+  uint32_t tmpreg = 0;
+   a:	f04f 0300 	mov.w	r3, #0	; 0x0
+   e:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:386
+
+  /* Check the parameters */
+  assert_param(IS_RCC_PLL_SOURCE(RCC_PLLSource));
+  assert_param(IS_RCC_PLL_MUL(RCC_PLLMul));
+
+  tmpreg = RCC->CFGR;
+  10:	f241 0300 	movw	r3, #4096	; 0x1000
+  14:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  18:	685b      	ldr	r3, [r3, #4]
+  1a:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:388
+  /* Clear PLLSRC, PLLXTPRE and PLLMUL[3:0] bits */
+  tmpreg &= CFGR_PLL_Mask;
+  1c:	68fb      	ldr	r3, [r7, #12]
+  1e:	f423 137c 	bic.w	r3, r3, #4128768	; 0x3f0000
+  22:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:390
+  /* Set the PLL configuration bits */
+  tmpreg |= RCC_PLLSource | RCC_PLLMul;
+  24:	687a      	ldr	r2, [r7, #4]
+  26:	683b      	ldr	r3, [r7, #0]
+  28:	ea42 0203 	orr.w	r2, r2, r3
+  2c:	68fb      	ldr	r3, [r7, #12]
+  2e:	ea43 0302 	orr.w	r3, r3, r2
+  32:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:392
+  /* Store the new value */
+  RCC->CFGR = tmpreg;
+  34:	f241 0300 	movw	r3, #4096	; 0x1000
+  38:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3c:	68fa      	ldr	r2, [r7, #12]
+  3e:	605a      	str	r2, [r3, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:393
+}
+  40:	f107 0714 	add.w	r7, r7, #20	; 0x14
+  44:	46bd      	mov	sp, r7
+  46:	bc80      	pop	{r7}
+  48:	4770      	bx	lr
+  4a:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_PLLCmd:
+
+00000000 <RCC_PLLCmd>:
+RCC_PLLCmd():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:402
+  * @note   The PLL can not be disabled if it is used as system clock.
+  * @param  NewState: new state of the PLL. This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_PLLCmd(FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:406
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  *(__IO uint32_t *) CR_PLLON_BB = (uint32_t)NewState;
+   a:	f240 0360 	movw	r3, #96	; 0x60
+   e:	f2c4 2342 	movt	r3, #16962	; 0x4242
+  12:	79fa      	ldrb	r2, [r7, #7]
+  14:	601a      	str	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:407
+}
+  16:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  1a:	46bd      	mov	sp, r7
+  1c:	bc80      	pop	{r7}
+  1e:	4770      	bx	lr
+Disassembly of section .text.RCC_SYSCLKConfig:
+
+00000000 <RCC_SYSCLKConfig>:
+RCC_SYSCLKConfig():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:565
+  *     @arg RCC_SYSCLKSource_HSE: HSE selected as system clock
+  *     @arg RCC_SYSCLKSource_PLLCLK: PLL selected as system clock
+  * @retval None
+  */
+void RCC_SYSCLKConfig(uint32_t RCC_SYSCLKSource)
+{
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:566
+  uint32_t tmpreg = 0;
+   8:	f04f 0300 	mov.w	r3, #0	; 0x0
+   c:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:569
+  /* Check the parameters */
+  assert_param(IS_RCC_SYSCLK_SOURCE(RCC_SYSCLKSource));
+  tmpreg = RCC->CFGR;
+   e:	f241 0300 	movw	r3, #4096	; 0x1000
+  12:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  16:	685b      	ldr	r3, [r3, #4]
+  18:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:571
+  /* Clear SW[1:0] bits */
+  tmpreg &= CFGR_SW_Mask;
+  1a:	68fb      	ldr	r3, [r7, #12]
+  1c:	f023 0303 	bic.w	r3, r3, #3	; 0x3
+  20:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:573
+  /* Set SW[1:0] bits according to RCC_SYSCLKSource value */
+  tmpreg |= RCC_SYSCLKSource;
+  22:	68fa      	ldr	r2, [r7, #12]
+  24:	687b      	ldr	r3, [r7, #4]
+  26:	ea42 0303 	orr.w	r3, r2, r3
+  2a:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:575
+  /* Store the new value */
+  RCC->CFGR = tmpreg;
+  2c:	f241 0300 	movw	r3, #4096	; 0x1000
+  30:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  34:	68fa      	ldr	r2, [r7, #12]
+  36:	605a      	str	r2, [r3, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:576
+}
+  38:	f107 0714 	add.w	r7, r7, #20	; 0x14
+  3c:	46bd      	mov	sp, r7
+  3e:	bc80      	pop	{r7}
+  40:	4770      	bx	lr
+  42:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_GetSYSCLKSource:
+
+00000000 <RCC_GetSYSCLKSource>:
+RCC_GetSYSCLKSource():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:588
+  *     - 0x00: HSI used as system clock
+  *     - 0x04: HSE used as system clock
+  *     - 0x08: PLL used as system clock
+  */
+uint8_t RCC_GetSYSCLKSource(void)
+{
+   0:	b480      	push	{r7}
+   2:	af00      	add	r7, sp, #0
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:589
+  return ((uint8_t)(RCC->CFGR & CFGR_SWS_Mask));
+   4:	f241 0300 	movw	r3, #4096	; 0x1000
+   8:	f2c4 0302 	movt	r3, #16386	; 0x4002
+   c:	685b      	ldr	r3, [r3, #4]
+   e:	b2db      	uxtb	r3, r3
+  10:	f003 030c 	and.w	r3, r3, #12	; 0xc
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:590
+}
+  14:	4618      	mov	r0, r3
+  16:	46bd      	mov	sp, r7
+  18:	bc80      	pop	{r7}
+  1a:	4770      	bx	lr
+Disassembly of section .text.RCC_HCLKConfig:
+
+00000000 <RCC_HCLKConfig>:
+RCC_HCLKConfig():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:609
+  *     @arg RCC_SYSCLK_Div256: AHB clock = SYSCLK/256
+  *     @arg RCC_SYSCLK_Div512: AHB clock = SYSCLK/512
+  * @retval None
+  */
+void RCC_HCLKConfig(uint32_t RCC_SYSCLK)
+{
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:610
+  uint32_t tmpreg = 0;
+   8:	f04f 0300 	mov.w	r3, #0	; 0x0
+   c:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:613
+  /* Check the parameters */
+  assert_param(IS_RCC_HCLK(RCC_SYSCLK));
+  tmpreg = RCC->CFGR;
+   e:	f241 0300 	movw	r3, #4096	; 0x1000
+  12:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  16:	685b      	ldr	r3, [r3, #4]
+  18:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:615
+  /* Clear HPRE[3:0] bits */
+  tmpreg &= CFGR_HPRE_Reset_Mask;
+  1a:	68fb      	ldr	r3, [r7, #12]
+  1c:	f023 03f0 	bic.w	r3, r3, #240	; 0xf0
+  20:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:617
+  /* Set HPRE[3:0] bits according to RCC_SYSCLK value */
+  tmpreg |= RCC_SYSCLK;
+  22:	68fa      	ldr	r2, [r7, #12]
+  24:	687b      	ldr	r3, [r7, #4]
+  26:	ea42 0303 	orr.w	r3, r2, r3
+  2a:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:619
+  /* Store the new value */
+  RCC->CFGR = tmpreg;
+  2c:	f241 0300 	movw	r3, #4096	; 0x1000
+  30:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  34:	68fa      	ldr	r2, [r7, #12]
+  36:	605a      	str	r2, [r3, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:620
+}
+  38:	f107 0714 	add.w	r7, r7, #20	; 0x14
+  3c:	46bd      	mov	sp, r7
+  3e:	bc80      	pop	{r7}
+  40:	4770      	bx	lr
+  42:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_PCLK1Config:
+
+00000000 <RCC_PCLK1Config>:
+RCC_PCLK1Config():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:635
+  *     @arg RCC_HCLK_Div8: APB1 clock = HCLK/8
+  *     @arg RCC_HCLK_Div16: APB1 clock = HCLK/16
+  * @retval None
+  */
+void RCC_PCLK1Config(uint32_t RCC_HCLK)
+{
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:636
+  uint32_t tmpreg = 0;
+   8:	f04f 0300 	mov.w	r3, #0	; 0x0
+   c:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:639
+  /* Check the parameters */
+  assert_param(IS_RCC_PCLK(RCC_HCLK));
+  tmpreg = RCC->CFGR;
+   e:	f241 0300 	movw	r3, #4096	; 0x1000
+  12:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  16:	685b      	ldr	r3, [r3, #4]
+  18:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:641
+  /* Clear PPRE1[2:0] bits */
+  tmpreg &= CFGR_PPRE1_Reset_Mask;
+  1a:	68fb      	ldr	r3, [r7, #12]
+  1c:	f423 63e0 	bic.w	r3, r3, #1792	; 0x700
+  20:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:643
+  /* Set PPRE1[2:0] bits according to RCC_HCLK value */
+  tmpreg |= RCC_HCLK;
+  22:	68fa      	ldr	r2, [r7, #12]
+  24:	687b      	ldr	r3, [r7, #4]
+  26:	ea42 0303 	orr.w	r3, r2, r3
+  2a:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:645
+  /* Store the new value */
+  RCC->CFGR = tmpreg;
+  2c:	f241 0300 	movw	r3, #4096	; 0x1000
+  30:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  34:	68fa      	ldr	r2, [r7, #12]
+  36:	605a      	str	r2, [r3, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:646
+}
+  38:	f107 0714 	add.w	r7, r7, #20	; 0x14
+  3c:	46bd      	mov	sp, r7
+  3e:	bc80      	pop	{r7}
+  40:	4770      	bx	lr
+  42:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_PCLK2Config:
+
+00000000 <RCC_PCLK2Config>:
+RCC_PCLK2Config():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:661
+  *     @arg RCC_HCLK_Div8: APB2 clock = HCLK/8
+  *     @arg RCC_HCLK_Div16: APB2 clock = HCLK/16
+  * @retval None
+  */
+void RCC_PCLK2Config(uint32_t RCC_HCLK)
+{
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:662
+  uint32_t tmpreg = 0;
+   8:	f04f 0300 	mov.w	r3, #0	; 0x0
+   c:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:665
+  /* Check the parameters */
+  assert_param(IS_RCC_PCLK(RCC_HCLK));
+  tmpreg = RCC->CFGR;
+   e:	f241 0300 	movw	r3, #4096	; 0x1000
+  12:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  16:	685b      	ldr	r3, [r3, #4]
+  18:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:667
+  /* Clear PPRE2[2:0] bits */
+  tmpreg &= CFGR_PPRE2_Reset_Mask;
+  1a:	68fb      	ldr	r3, [r7, #12]
+  1c:	f423 5360 	bic.w	r3, r3, #14336	; 0x3800
+  20:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:669
+  /* Set PPRE2[2:0] bits according to RCC_HCLK value */
+  tmpreg |= RCC_HCLK << 3;
+  22:	687b      	ldr	r3, [r7, #4]
+  24:	ea4f 02c3 	mov.w	r2, r3, lsl #3
+  28:	68fb      	ldr	r3, [r7, #12]
+  2a:	ea43 0302 	orr.w	r3, r3, r2
+  2e:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:671
+  /* Store the new value */
+  RCC->CFGR = tmpreg;
+  30:	f241 0300 	movw	r3, #4096	; 0x1000
+  34:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  38:	68fa      	ldr	r2, [r7, #12]
+  3a:	605a      	str	r2, [r3, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:672
+}
+  3c:	f107 0714 	add.w	r7, r7, #20	; 0x14
+  40:	46bd      	mov	sp, r7
+  42:	bc80      	pop	{r7}
+  44:	4770      	bx	lr
+  46:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_ITConfig:
+
+00000000 <RCC_ITConfig>:
+RCC_ITConfig():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:701
+  * @param  NewState: new state of the specified RCC interrupts.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_ITConfig(uint8_t RCC_IT, FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	460a      	mov	r2, r1
+   a:	71fb      	strb	r3, [r7, #7]
+   c:	4613      	mov	r3, r2
+   e:	71bb      	strb	r3, [r7, #6]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:705
+  /* Check the parameters */
+  assert_param(IS_RCC_IT(RCC_IT));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  if (NewState != DISABLE)
+  10:	79bb      	ldrb	r3, [r7, #6]
+  12:	2b00      	cmp	r3, #0
+  14:	d00f      	beq.n	36 <RCC_ITConfig+0x36>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:708
+  {
+    /* Perform Byte access to RCC_CIR bits to enable the selected interrupts */
+    *(__IO uint8_t *) CIR_BYTE2_ADDRESS |= RCC_IT;
+  16:	f241 0109 	movw	r1, #4105	; 0x1009
+  1a:	f2c4 0102 	movt	r1, #16386	; 0x4002
+  1e:	f241 0309 	movw	r3, #4105	; 0x1009
+  22:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  26:	781b      	ldrb	r3, [r3, #0]
+  28:	b2da      	uxtb	r2, r3
+  2a:	79fb      	ldrb	r3, [r7, #7]
+  2c:	ea42 0303 	orr.w	r3, r2, r3
+  30:	b2db      	uxtb	r3, r3
+  32:	700b      	strb	r3, [r1, #0]
+  34:	e011      	b.n	5a <RCC_ITConfig+0x5a>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:713
+  }
+  else
+  {
+    /* Perform Byte access to RCC_CIR bits to disable the selected interrupts */
+    *(__IO uint8_t *) CIR_BYTE2_ADDRESS &= (uint8_t)~RCC_IT;
+  36:	f241 0209 	movw	r2, #4105	; 0x1009
+  3a:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  3e:	f241 0309 	movw	r3, #4105	; 0x1009
+  42:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  46:	781b      	ldrb	r3, [r3, #0]
+  48:	b2d9      	uxtb	r1, r3
+  4a:	79fb      	ldrb	r3, [r7, #7]
+  4c:	ea6f 0303 	mvn.w	r3, r3
+  50:	b2db      	uxtb	r3, r3
+  52:	ea01 0303 	and.w	r3, r1, r3
+  56:	b2db      	uxtb	r3, r3
+  58:	7013      	strb	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:715
+  }
+}
+  5a:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  5e:	46bd      	mov	sp, r7
+  60:	bc80      	pop	{r7}
+  62:	4770      	bx	lr
+Disassembly of section .text.RCC_USBCLKConfig:
+
+00000000 <RCC_USBCLKConfig>:
+RCC_USBCLKConfig():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:729
+  *                                     clock source
+  *     @arg RCC_USBCLKSource_PLLCLK_Div1: PLL clock selected as USB clock source
+  * @retval None
+  */
+void RCC_USBCLKConfig(uint32_t RCC_USBCLKSource)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:733
+  /* Check the parameters */
+  assert_param(IS_RCC_USBCLK_SOURCE(RCC_USBCLKSource));
+
+  *(__IO uint32_t *) CFGR_USBPRE_BB = RCC_USBCLKSource;
+   8:	f240 03d8 	movw	r3, #216	; 0xd8
+   c:	f2c4 2342 	movt	r3, #16962	; 0x4242
+  10:	687a      	ldr	r2, [r7, #4]
+  12:	601a      	str	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:734
+}
+  14:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  18:	46bd      	mov	sp, r7
+  1a:	bc80      	pop	{r7}
+  1c:	4770      	bx	lr
+  1e:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_ADCCLKConfig:
+
+00000000 <RCC_ADCCLKConfig>:
+RCC_ADCCLKConfig():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:767
+  *     @arg RCC_PCLK2_Div6: ADC clock = PCLK2/6
+  *     @arg RCC_PCLK2_Div8: ADC clock = PCLK2/8
+  * @retval None
+  */
+void RCC_ADCCLKConfig(uint32_t RCC_PCLK2)
+{
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:768
+  uint32_t tmpreg = 0;
+   8:	f04f 0300 	mov.w	r3, #0	; 0x0
+   c:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:771
+  /* Check the parameters */
+  assert_param(IS_RCC_ADCCLK(RCC_PCLK2));
+  tmpreg = RCC->CFGR;
+   e:	f241 0300 	movw	r3, #4096	; 0x1000
+  12:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  16:	685b      	ldr	r3, [r3, #4]
+  18:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:773
+  /* Clear ADCPRE[1:0] bits */
+  tmpreg &= CFGR_ADCPRE_Reset_Mask;
+  1a:	68fb      	ldr	r3, [r7, #12]
+  1c:	f423 4340 	bic.w	r3, r3, #49152	; 0xc000
+  20:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:775
+  /* Set ADCPRE[1:0] bits according to RCC_PCLK2 value */
+  tmpreg |= RCC_PCLK2;
+  22:	68fa      	ldr	r2, [r7, #12]
+  24:	687b      	ldr	r3, [r7, #4]
+  26:	ea42 0303 	orr.w	r3, r2, r3
+  2a:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:777
+  /* Store the new value */
+  RCC->CFGR = tmpreg;
+  2c:	f241 0300 	movw	r3, #4096	; 0x1000
+  30:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  34:	68fa      	ldr	r2, [r7, #12]
+  36:	605a      	str	r2, [r3, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:778
+}
+  38:	f107 0714 	add.w	r7, r7, #20	; 0x14
+  3c:	46bd      	mov	sp, r7
+  3e:	bc80      	pop	{r7}
+  40:	4770      	bx	lr
+  42:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_LSEConfig:
+
+00000000 <RCC_LSEConfig>:
+RCC_LSEConfig():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:830
+  *     @arg RCC_LSE_ON: LSE oscillator ON
+  *     @arg RCC_LSE_Bypass: LSE oscillator bypassed with external clock
+  * @retval None
+  */
+void RCC_LSEConfig(uint8_t RCC_LSE)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:835
+  /* Check the parameters */
+  assert_param(IS_RCC_LSE(RCC_LSE));
+  /* Reset LSEON and LSEBYP bits before configuring the LSE ------------------*/
+  /* Reset LSEON bit */
+  *(__IO uint8_t *) BDCR_ADDRESS = RCC_LSE_OFF;
+   a:	f241 0320 	movw	r3, #4128	; 0x1020
+   e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  12:	f04f 0200 	mov.w	r2, #0	; 0x0
+  16:	701a      	strb	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:837
+  /* Reset LSEBYP bit */
+  *(__IO uint8_t *) BDCR_ADDRESS = RCC_LSE_OFF;
+  18:	f241 0320 	movw	r3, #4128	; 0x1020
+  1c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  20:	f04f 0200 	mov.w	r2, #0	; 0x0
+  24:	701a      	strb	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:839
+  /* Configure LSE (RCC_LSE_OFF is already covered by the code section above) */
+  switch(RCC_LSE)
+  26:	79fb      	ldrb	r3, [r7, #7]
+  28:	603b      	str	r3, [r7, #0]
+  2a:	683b      	ldr	r3, [r7, #0]
+  2c:	2b01      	cmp	r3, #1
+  2e:	d003      	beq.n	38 <RCC_LSEConfig+0x38>
+  30:	683b      	ldr	r3, [r7, #0]
+  32:	2b04      	cmp	r3, #4
+  34:	d008      	beq.n	48 <RCC_LSEConfig+0x48>
+  36:	e00e      	b.n	56 <RCC_LSEConfig+0x56>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:843
+  {
+    case RCC_LSE_ON:
+      /* Set LSEON bit */
+      *(__IO uint8_t *) BDCR_ADDRESS = RCC_LSE_ON;
+  38:	f241 0320 	movw	r3, #4128	; 0x1020
+  3c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  40:	f04f 0201 	mov.w	r2, #1	; 0x1
+  44:	701a      	strb	r2, [r3, #0]
+  46:	e006      	b.n	56 <RCC_LSEConfig+0x56>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:848
+      break;
+      
+    case RCC_LSE_Bypass:
+      /* Set LSEBYP and LSEON bits */
+      *(__IO uint8_t *) BDCR_ADDRESS = RCC_LSE_Bypass | RCC_LSE_ON;
+  48:	f241 0320 	movw	r3, #4128	; 0x1020
+  4c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  50:	f04f 0205 	mov.w	r2, #5	; 0x5
+  54:	701a      	strb	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:854
+      break;            
+      
+    default:
+      break;      
+  }
+}
+  56:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  5a:	46bd      	mov	sp, r7
+  5c:	bc80      	pop	{r7}
+  5e:	4770      	bx	lr
+Disassembly of section .text.RCC_LSICmd:
+
+00000000 <RCC_LSICmd>:
+RCC_LSICmd():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:863
+  * @note   LSI can not be disabled if the IWDG is running.
+  * @param  NewState: new state of the LSI. This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_LSICmd(FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:866
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  *(__IO uint32_t *) CSR_LSION_BB = (uint32_t)NewState;
+   a:	f240 4380 	movw	r3, #1152	; 0x480
+   e:	f2c4 2342 	movt	r3, #16962	; 0x4242
+  12:	79fa      	ldrb	r2, [r7, #7]
+  14:	601a      	str	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:867
+}
+  16:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  1a:	46bd      	mov	sp, r7
+  1c:	bc80      	pop	{r7}
+  1e:	4770      	bx	lr
+Disassembly of section .text.RCC_RTCCLKConfig:
+
+00000000 <RCC_RTCCLKConfig>:
+RCC_RTCCLKConfig():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:880
+  *     @arg RCC_RTCCLKSource_LSI: LSI selected as RTC clock
+  *     @arg RCC_RTCCLKSource_HSE_Div128: HSE clock divided by 128 selected as RTC clock
+  * @retval None
+  */
+void RCC_RTCCLKConfig(uint32_t RCC_RTCCLKSource)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:884
+  /* Check the parameters */
+  assert_param(IS_RCC_RTCCLK_SOURCE(RCC_RTCCLKSource));
+  /* Select the RTC clock source */
+  RCC->BDCR |= RCC_RTCCLKSource;
+   8:	f241 0200 	movw	r2, #4096	; 0x1000
+   c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  10:	f241 0300 	movw	r3, #4096	; 0x1000
+  14:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  18:	6a19      	ldr	r1, [r3, #32]
+  1a:	687b      	ldr	r3, [r7, #4]
+  1c:	ea41 0303 	orr.w	r3, r1, r3
+  20:	6213      	str	r3, [r2, #32]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:885
+}
+  22:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  26:	46bd      	mov	sp, r7
+  28:	bc80      	pop	{r7}
+  2a:	4770      	bx	lr
+Disassembly of section .text.RCC_RTCCLKCmd:
+
+00000000 <RCC_RTCCLKCmd>:
+RCC_RTCCLKCmd():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:894
+  * @note   This function must be used only after the RTC clock was selected using the RCC_RTCCLKConfig function.
+  * @param  NewState: new state of the RTC clock. This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_RTCCLKCmd(FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:897
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  *(__IO uint32_t *) BDCR_RTCEN_BB = (uint32_t)NewState;
+   a:	f240 433c 	movw	r3, #1084	; 0x43c
+   e:	f2c4 2342 	movt	r3, #16962	; 0x4242
+  12:	79fa      	ldrb	r2, [r7, #7]
+  14:	601a      	str	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:898
+}
+  16:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  1a:	46bd      	mov	sp, r7
+  1c:	bc80      	pop	{r7}
+  1e:	4770      	bx	lr
+Disassembly of section .text.RCC_GetClocksFreq:
+
+00000000 <RCC_GetClocksFreq>:
+RCC_GetClocksFreq():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:909
+  * @note   The result of this function could be not correct when using 
+  *         fractional value for HSE crystal.  
+  * @retval None
+  */
+void RCC_GetClocksFreq(RCC_ClocksTypeDef* RCC_Clocks)
+{
+   0:	b480      	push	{r7}
+   2:	b087      	sub	sp, #28
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:910
+  uint32_t tmp = 0, pllmull = 0, pllsource = 0, presc = 0;
+   8:	f04f 0300 	mov.w	r3, #0	; 0x0
+   c:	60bb      	str	r3, [r7, #8]
+   e:	f04f 0300 	mov.w	r3, #0	; 0x0
+  12:	60fb      	str	r3, [r7, #12]
+  14:	f04f 0300 	mov.w	r3, #0	; 0x0
+  18:	613b      	str	r3, [r7, #16]
+  1a:	f04f 0300 	mov.w	r3, #0	; 0x0
+  1e:	617b      	str	r3, [r7, #20]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:921
+#if defined (STM32F10X_LD_VL) || defined (STM32F10X_MD_VL) || defined (STM32F10X_HD_VL)
+  uint32_t prediv1factor = 0;
+#endif
+    
+  /* Get SYSCLK source -------------------------------------------------------*/
+  tmp = RCC->CFGR & CFGR_SWS_Mask;
+  20:	f241 0300 	movw	r3, #4096	; 0x1000
+  24:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  28:	685b      	ldr	r3, [r3, #4]
+  2a:	f003 030c 	and.w	r3, r3, #12	; 0xc
+  2e:	60bb      	str	r3, [r7, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:923
+  
+  switch (tmp)
+  30:	68bb      	ldr	r3, [r7, #8]
+  32:	603b      	str	r3, [r7, #0]
+  34:	683b      	ldr	r3, [r7, #0]
+  36:	2b04      	cmp	r3, #4
+  38:	d00c      	beq.n	54 <RCC_GetClocksFreq+0x54>
+  3a:	683b      	ldr	r3, [r7, #0]
+  3c:	2b08      	cmp	r3, #8
+  3e:	d010      	beq.n	62 <RCC_GetClocksFreq+0x62>
+  40:	683b      	ldr	r3, [r7, #0]
+  42:	2b00      	cmp	r3, #0
+  44:	d14d      	bne.n	e2 <RCC_GetClocksFreq+0xe2>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:926
+  {
+    case 0x00:  /* HSI used as system clock */
+      RCC_Clocks->SYSCLK_Frequency = HSI_VALUE;
+  46:	687a      	ldr	r2, [r7, #4]
+  48:	f241 2300 	movw	r3, #4608	; 0x1200
+  4c:	f2c0 037a 	movt	r3, #122	; 0x7a
+  50:	6013      	str	r3, [r2, #0]
+  52:	e04c      	b.n	ee <RCC_GetClocksFreq+0xee>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:929
+      break;
+    case 0x04:  /* HSE used as system clock */
+      RCC_Clocks->SYSCLK_Frequency = HSE_VALUE;
+  54:	687a      	ldr	r2, [r7, #4]
+  56:	f241 2300 	movw	r3, #4608	; 0x1200
+  5a:	f2c0 037a 	movt	r3, #122	; 0x7a
+  5e:	6013      	str	r3, [r2, #0]
+  60:	e045      	b.n	ee <RCC_GetClocksFreq+0xee>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:934
+      break;
+    case 0x08:  /* PLL used as system clock */
+
+      /* Get PLL clock source and multiplication factor ----------------------*/
+      pllmull = RCC->CFGR & CFGR_PLLMull_Mask;
+  62:	f241 0300 	movw	r3, #4096	; 0x1000
+  66:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  6a:	685b      	ldr	r3, [r3, #4]
+  6c:	f403 1370 	and.w	r3, r3, #3932160	; 0x3c0000
+  70:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:935
+      pllsource = RCC->CFGR & CFGR_PLLSRC_Mask;
+  72:	f241 0300 	movw	r3, #4096	; 0x1000
+  76:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  7a:	685b      	ldr	r3, [r3, #4]
+  7c:	f403 3380 	and.w	r3, r3, #65536	; 0x10000
+  80:	613b      	str	r3, [r7, #16]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:938
+      
+#ifndef STM32F10X_CL      
+      pllmull = ( pllmull >> 18) + 2;
+  82:	68fb      	ldr	r3, [r7, #12]
+  84:	ea4f 4393 	mov.w	r3, r3, lsr #18
+  88:	f103 0302 	add.w	r3, r3, #2	; 0x2
+  8c:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:940
+      
+      if (pllsource == 0x00)
+  8e:	693b      	ldr	r3, [r7, #16]
+  90:	2b00      	cmp	r3, #0
+  92:	d109      	bne.n	a8 <RCC_GetClocksFreq+0xa8>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:942
+      {/* HSI oscillator clock divided by 2 selected as PLL clock entry */
+        RCC_Clocks->SYSCLK_Frequency = (HSI_VALUE >> 1) * pllmull;
+  94:	68fa      	ldr	r2, [r7, #12]
+  96:	f640 1300 	movw	r3, #2304	; 0x900
+  9a:	f2c0 033d 	movt	r3, #61	; 0x3d
+  9e:	fb03 f202 	mul.w	r2, r3, r2
+  a2:	687b      	ldr	r3, [r7, #4]
+  a4:	601a      	str	r2, [r3, #0]
+  a6:	e022      	b.n	ee <RCC_GetClocksFreq+0xee>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:952
+       prediv1factor = (RCC->CFGR2 & CFGR2_PREDIV1) + 1;
+       /* HSE oscillator clock selected as PREDIV1 clock entry */
+       RCC_Clocks->SYSCLK_Frequency = (HSE_VALUE / prediv1factor) * pllmull; 
+ #else
+        /* HSE selected as PLL clock entry */
+        if ((RCC->CFGR & CFGR_PLLXTPRE_Mask) != (uint32_t)RESET)
+  a8:	f241 0300 	movw	r3, #4096	; 0x1000
+  ac:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  b0:	685b      	ldr	r3, [r3, #4]
+  b2:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+  b6:	2b00      	cmp	r3, #0
+  b8:	d009      	beq.n	ce <RCC_GetClocksFreq+0xce>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:954
+        {/* HSE oscillator clock divided by 2 */
+          RCC_Clocks->SYSCLK_Frequency = (HSE_VALUE >> 1) * pllmull;
+  ba:	68fa      	ldr	r2, [r7, #12]
+  bc:	f640 1300 	movw	r3, #2304	; 0x900
+  c0:	f2c0 033d 	movt	r3, #61	; 0x3d
+  c4:	fb03 f202 	mul.w	r2, r3, r2
+  c8:	687b      	ldr	r3, [r7, #4]
+  ca:	601a      	str	r2, [r3, #0]
+  cc:	e00f      	b.n	ee <RCC_GetClocksFreq+0xee>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:958
+        }
+        else
+        {
+          RCC_Clocks->SYSCLK_Frequency = HSE_VALUE * pllmull;
+  ce:	68fa      	ldr	r2, [r7, #12]
+  d0:	f241 2300 	movw	r3, #4608	; 0x1200
+  d4:	f2c0 037a 	movt	r3, #122	; 0x7a
+  d8:	fb03 f202 	mul.w	r2, r3, r2
+  dc:	687b      	ldr	r3, [r7, #4]
+  de:	601a      	str	r2, [r3, #0]
+  e0:	e005      	b.n	ee <RCC_GetClocksFreq+0xee>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1002
+      }
+#endif /* STM32F10X_CL */ 
+      break;
+
+    default:
+      RCC_Clocks->SYSCLK_Frequency = HSI_VALUE;
+  e2:	687a      	ldr	r2, [r7, #4]
+  e4:	f241 2300 	movw	r3, #4608	; 0x1200
+  e8:	f2c0 037a 	movt	r3, #122	; 0x7a
+  ec:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1008
+      break;
+  }
+
+  /* Compute HCLK, PCLK1, PCLK2 and ADCCLK clocks frequencies ----------------*/
+  /* Get HCLK prescaler */
+  tmp = RCC->CFGR & CFGR_HPRE_Set_Mask;
+  ee:	f241 0300 	movw	r3, #4096	; 0x1000
+  f2:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  f6:	685b      	ldr	r3, [r3, #4]
+  f8:	f003 03f0 	and.w	r3, r3, #240	; 0xf0
+  fc:	60bb      	str	r3, [r7, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1009
+  tmp = tmp >> 4;
+  fe:	68bb      	ldr	r3, [r7, #8]
+ 100:	ea4f 1313 	mov.w	r3, r3, lsr #4
+ 104:	60bb      	str	r3, [r7, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1010
+  presc = APBAHBPrescTable[tmp];
+ 106:	68ba      	ldr	r2, [r7, #8]
+ 108:	f240 0300 	movw	r3, #0	; 0x0
+ 10c:	f2c0 0300 	movt	r3, #0	; 0x0
+ 110:	5c9b      	ldrb	r3, [r3, r2]
+ 112:	b2db      	uxtb	r3, r3
+ 114:	617b      	str	r3, [r7, #20]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1012
+  /* HCLK clock frequency */
+  RCC_Clocks->HCLK_Frequency = RCC_Clocks->SYSCLK_Frequency >> presc;
+ 116:	687b      	ldr	r3, [r7, #4]
+ 118:	681a      	ldr	r2, [r3, #0]
+ 11a:	697b      	ldr	r3, [r7, #20]
+ 11c:	fa22 f203 	lsr.w	r2, r2, r3
+ 120:	687b      	ldr	r3, [r7, #4]
+ 122:	605a      	str	r2, [r3, #4]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1014
+  /* Get PCLK1 prescaler */
+  tmp = RCC->CFGR & CFGR_PPRE1_Set_Mask;
+ 124:	f241 0300 	movw	r3, #4096	; 0x1000
+ 128:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 12c:	685b      	ldr	r3, [r3, #4]
+ 12e:	f403 63e0 	and.w	r3, r3, #1792	; 0x700
+ 132:	60bb      	str	r3, [r7, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1015
+  tmp = tmp >> 8;
+ 134:	68bb      	ldr	r3, [r7, #8]
+ 136:	ea4f 2313 	mov.w	r3, r3, lsr #8
+ 13a:	60bb      	str	r3, [r7, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1016
+  presc = APBAHBPrescTable[tmp];
+ 13c:	68ba      	ldr	r2, [r7, #8]
+ 13e:	f240 0300 	movw	r3, #0	; 0x0
+ 142:	f2c0 0300 	movt	r3, #0	; 0x0
+ 146:	5c9b      	ldrb	r3, [r3, r2]
+ 148:	b2db      	uxtb	r3, r3
+ 14a:	617b      	str	r3, [r7, #20]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1018
+  /* PCLK1 clock frequency */
+  RCC_Clocks->PCLK1_Frequency = RCC_Clocks->HCLK_Frequency >> presc;
+ 14c:	687b      	ldr	r3, [r7, #4]
+ 14e:	685a      	ldr	r2, [r3, #4]
+ 150:	697b      	ldr	r3, [r7, #20]
+ 152:	fa22 f203 	lsr.w	r2, r2, r3
+ 156:	687b      	ldr	r3, [r7, #4]
+ 158:	609a      	str	r2, [r3, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1020
+  /* Get PCLK2 prescaler */
+  tmp = RCC->CFGR & CFGR_PPRE2_Set_Mask;
+ 15a:	f241 0300 	movw	r3, #4096	; 0x1000
+ 15e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 162:	685b      	ldr	r3, [r3, #4]
+ 164:	f403 5360 	and.w	r3, r3, #14336	; 0x3800
+ 168:	60bb      	str	r3, [r7, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1021
+  tmp = tmp >> 11;
+ 16a:	68bb      	ldr	r3, [r7, #8]
+ 16c:	ea4f 23d3 	mov.w	r3, r3, lsr #11
+ 170:	60bb      	str	r3, [r7, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1022
+  presc = APBAHBPrescTable[tmp];
+ 172:	68ba      	ldr	r2, [r7, #8]
+ 174:	f240 0300 	movw	r3, #0	; 0x0
+ 178:	f2c0 0300 	movt	r3, #0	; 0x0
+ 17c:	5c9b      	ldrb	r3, [r3, r2]
+ 17e:	b2db      	uxtb	r3, r3
+ 180:	617b      	str	r3, [r7, #20]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1024
+  /* PCLK2 clock frequency */
+  RCC_Clocks->PCLK2_Frequency = RCC_Clocks->HCLK_Frequency >> presc;
+ 182:	687b      	ldr	r3, [r7, #4]
+ 184:	685a      	ldr	r2, [r3, #4]
+ 186:	697b      	ldr	r3, [r7, #20]
+ 188:	fa22 f203 	lsr.w	r2, r2, r3
+ 18c:	687b      	ldr	r3, [r7, #4]
+ 18e:	60da      	str	r2, [r3, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1026
+  /* Get ADCCLK prescaler */
+  tmp = RCC->CFGR & CFGR_ADCPRE_Set_Mask;
+ 190:	f241 0300 	movw	r3, #4096	; 0x1000
+ 194:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 198:	685b      	ldr	r3, [r3, #4]
+ 19a:	f403 4340 	and.w	r3, r3, #49152	; 0xc000
+ 19e:	60bb      	str	r3, [r7, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1027
+  tmp = tmp >> 14;
+ 1a0:	68bb      	ldr	r3, [r7, #8]
+ 1a2:	ea4f 3393 	mov.w	r3, r3, lsr #14
+ 1a6:	60bb      	str	r3, [r7, #8]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1028
+  presc = ADCPrescTable[tmp];
+ 1a8:	68ba      	ldr	r2, [r7, #8]
+ 1aa:	f240 0300 	movw	r3, #0	; 0x0
+ 1ae:	f2c0 0300 	movt	r3, #0	; 0x0
+ 1b2:	5c9b      	ldrb	r3, [r3, r2]
+ 1b4:	b2db      	uxtb	r3, r3
+ 1b6:	617b      	str	r3, [r7, #20]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1030
+  /* ADCCLK clock frequency */
+  RCC_Clocks->ADCCLK_Frequency = RCC_Clocks->PCLK2_Frequency / presc;
+ 1b8:	687b      	ldr	r3, [r7, #4]
+ 1ba:	68da      	ldr	r2, [r3, #12]
+ 1bc:	697b      	ldr	r3, [r7, #20]
+ 1be:	fbb2 f2f3 	udiv	r2, r2, r3
+ 1c2:	687b      	ldr	r3, [r7, #4]
+ 1c4:	611a      	str	r2, [r3, #16]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1031
+}
+ 1c6:	f107 071c 	add.w	r7, r7, #28	; 0x1c
+ 1ca:	46bd      	mov	sp, r7
+ 1cc:	bc80      	pop	{r7}
+ 1ce:	4770      	bx	lr
+Disassembly of section .text.RCC_AHBPeriphClockCmd:
+
+00000000 <RCC_AHBPeriphClockCmd>:
+RCC_AHBPeriphClockCmd():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1065
+  * @param  NewState: new state of the specified peripheral clock.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_AHBPeriphClockCmd(uint32_t RCC_AHBPeriph, FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+   8:	460b      	mov	r3, r1
+   a:	70fb      	strb	r3, [r7, #3]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1070
+  /* Check the parameters */
+  assert_param(IS_RCC_AHB_PERIPH(RCC_AHBPeriph));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+   c:	78fb      	ldrb	r3, [r7, #3]
+   e:	2b00      	cmp	r3, #0
+  10:	d00d      	beq.n	3e <RCC_AHBPeriphClockCmd+0x3e>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1072
+  {
+    RCC->AHBENR |= RCC_AHBPeriph;
+  12:	f241 0200 	movw	r2, #4096	; 0x1000
+  16:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  1a:	f241 0300 	movw	r3, #4096	; 0x1000
+  1e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  22:	6959      	ldr	r1, [r3, #20]
+  24:	687b      	ldr	r3, [r7, #4]
+  26:	ea41 0303 	orr.w	r3, r1, r3
+  2a:	6153      	str	r3, [r2, #20]
+  2c:	e00e      	b.n	5c <ADCPrescTable+0x4c>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1076
+  }
+  else
+  {
+    RCC->AHBENR &= ~RCC_AHBPeriph;
+  2e:	f241 0200 	movw	r2, #4096	; 0x1000
+  32:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  36:	f241 0300 	movw	r3, #4096	; 0x1000
+  3a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3e:	6959      	ldr	r1, [r3, #20]
+  40:	687b      	ldr	r3, [r7, #4]
+  42:	ea6f 0303 	mvn.w	r3, r3
+  46:	ea01 0303 	and.w	r3, r1, r3
+  4a:	6153      	str	r3, [r2, #20]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1078
+  }
+}
+  4c:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  50:	46bd      	mov	sp, r7
+  52:	bc80      	pop	{r7}
+  54:	4770      	bx	lr
+  56:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_APB2PeriphClockCmd:
+
+00000000 <RCC_APB2PeriphClockCmd>:
+RCC_APB2PeriphClockCmd():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1096
+  * @param  NewState: new state of the specified peripheral clock.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_APB2PeriphClockCmd(uint32_t RCC_APB2Periph, FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+   8:	460b      	mov	r3, r1
+   a:	70fb      	strb	r3, [r7, #3]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1100
+  /* Check the parameters */
+  assert_param(IS_RCC_APB2_PERIPH(RCC_APB2Periph));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  if (NewState != DISABLE)
+   c:	78fb      	ldrb	r3, [r7, #3]
+   e:	2b00      	cmp	r3, #0
+  10:	d00d      	beq.n	3e <RCC_APB2PeriphClockCmd+0x3e>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1102
+  {
+    RCC->APB2ENR |= RCC_APB2Periph;
+  12:	f241 0200 	movw	r2, #4096	; 0x1000
+  16:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  1a:	f241 0300 	movw	r3, #4096	; 0x1000
+  1e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  22:	6999      	ldr	r1, [r3, #24]
+  24:	687b      	ldr	r3, [r7, #4]
+  26:	ea41 0303 	orr.w	r3, r1, r3
+  2a:	6193      	str	r3, [r2, #24]
+  2c:	e00e      	b.n	5c <ADCPrescTable+0x4c>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1106
+  }
+  else
+  {
+    RCC->APB2ENR &= ~RCC_APB2Periph;
+  2e:	f241 0200 	movw	r2, #4096	; 0x1000
+  32:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  36:	f241 0300 	movw	r3, #4096	; 0x1000
+  3a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3e:	6999      	ldr	r1, [r3, #24]
+  40:	687b      	ldr	r3, [r7, #4]
+  42:	ea6f 0303 	mvn.w	r3, r3
+  46:	ea01 0303 	and.w	r3, r1, r3
+  4a:	6193      	str	r3, [r2, #24]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1108
+  }
+}
+  4c:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  50:	46bd      	mov	sp, r7
+  52:	bc80      	pop	{r7}
+  54:	4770      	bx	lr
+  56:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_APB1PeriphClockCmd:
+
+00000000 <RCC_APB1PeriphClockCmd>:
+RCC_APB1PeriphClockCmd():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1127
+  * @param  NewState: new state of the specified peripheral clock.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_APB1PeriphClockCmd(uint32_t RCC_APB1Periph, FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+   8:	460b      	mov	r3, r1
+   a:	70fb      	strb	r3, [r7, #3]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1131
+  /* Check the parameters */
+  assert_param(IS_RCC_APB1_PERIPH(RCC_APB1Periph));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  if (NewState != DISABLE)
+   c:	78fb      	ldrb	r3, [r7, #3]
+   e:	2b00      	cmp	r3, #0
+  10:	d00d      	beq.n	3e <RCC_APB1PeriphClockCmd+0x3e>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1133
+  {
+    RCC->APB1ENR |= RCC_APB1Periph;
+  12:	f241 0200 	movw	r2, #4096	; 0x1000
+  16:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  1a:	f241 0300 	movw	r3, #4096	; 0x1000
+  1e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  22:	69d9      	ldr	r1, [r3, #28]
+  24:	687b      	ldr	r3, [r7, #4]
+  26:	ea41 0303 	orr.w	r3, r1, r3
+  2a:	61d3      	str	r3, [r2, #28]
+  2c:	e00e      	b.n	5c <ADCPrescTable+0x4c>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1137
+  }
+  else
+  {
+    RCC->APB1ENR &= ~RCC_APB1Periph;
+  2e:	f241 0200 	movw	r2, #4096	; 0x1000
+  32:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  36:	f241 0300 	movw	r3, #4096	; 0x1000
+  3a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3e:	69d9      	ldr	r1, [r3, #28]
+  40:	687b      	ldr	r3, [r7, #4]
+  42:	ea6f 0303 	mvn.w	r3, r3
+  46:	ea01 0303 	and.w	r3, r1, r3
+  4a:	61d3      	str	r3, [r2, #28]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1139
+  }
+}
+  4c:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  50:	46bd      	mov	sp, r7
+  52:	bc80      	pop	{r7}
+  54:	4770      	bx	lr
+  56:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_APB2PeriphResetCmd:
+
+00000000 <RCC_APB2PeriphResetCmd>:
+RCC_APB2PeriphResetCmd():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1186
+  * @param  NewState: new state of the specified peripheral reset.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_APB2PeriphResetCmd(uint32_t RCC_APB2Periph, FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+   8:	460b      	mov	r3, r1
+   a:	70fb      	strb	r3, [r7, #3]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1190
+  /* Check the parameters */
+  assert_param(IS_RCC_APB2_PERIPH(RCC_APB2Periph));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  if (NewState != DISABLE)
+   c:	78fb      	ldrb	r3, [r7, #3]
+   e:	2b00      	cmp	r3, #0
+  10:	d00d      	beq.n	3e <RCC_APB2PeriphResetCmd+0x3e>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1192
+  {
+    RCC->APB2RSTR |= RCC_APB2Periph;
+  12:	f241 0200 	movw	r2, #4096	; 0x1000
+  16:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  1a:	f241 0300 	movw	r3, #4096	; 0x1000
+  1e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  22:	68d9      	ldr	r1, [r3, #12]
+  24:	687b      	ldr	r3, [r7, #4]
+  26:	ea41 0303 	orr.w	r3, r1, r3
+  2a:	60d3      	str	r3, [r2, #12]
+  2c:	e00e      	b.n	5c <ADCPrescTable+0x4c>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1196
+  }
+  else
+  {
+    RCC->APB2RSTR &= ~RCC_APB2Periph;
+  2e:	f241 0200 	movw	r2, #4096	; 0x1000
+  32:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  36:	f241 0300 	movw	r3, #4096	; 0x1000
+  3a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3e:	68d9      	ldr	r1, [r3, #12]
+  40:	687b      	ldr	r3, [r7, #4]
+  42:	ea6f 0303 	mvn.w	r3, r3
+  46:	ea01 0303 	and.w	r3, r1, r3
+  4a:	60d3      	str	r3, [r2, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1198
+  }
+}
+  4c:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  50:	46bd      	mov	sp, r7
+  52:	bc80      	pop	{r7}
+  54:	4770      	bx	lr
+  56:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_APB1PeriphResetCmd:
+
+00000000 <RCC_APB1PeriphResetCmd>:
+RCC_APB1PeriphResetCmd():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1217
+  * @param  NewState: new state of the specified peripheral clock.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_APB1PeriphResetCmd(uint32_t RCC_APB1Periph, FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	6078      	str	r0, [r7, #4]
+   8:	460b      	mov	r3, r1
+   a:	70fb      	strb	r3, [r7, #3]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1221
+  /* Check the parameters */
+  assert_param(IS_RCC_APB1_PERIPH(RCC_APB1Periph));
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  if (NewState != DISABLE)
+   c:	78fb      	ldrb	r3, [r7, #3]
+   e:	2b00      	cmp	r3, #0
+  10:	d00d      	beq.n	3e <RCC_APB1PeriphResetCmd+0x3e>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1223
+  {
+    RCC->APB1RSTR |= RCC_APB1Periph;
+  12:	f241 0200 	movw	r2, #4096	; 0x1000
+  16:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  1a:	f241 0300 	movw	r3, #4096	; 0x1000
+  1e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  22:	6919      	ldr	r1, [r3, #16]
+  24:	687b      	ldr	r3, [r7, #4]
+  26:	ea41 0303 	orr.w	r3, r1, r3
+  2a:	6113      	str	r3, [r2, #16]
+  2c:	e00e      	b.n	5c <ADCPrescTable+0x4c>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1227
+  }
+  else
+  {
+    RCC->APB1RSTR &= ~RCC_APB1Periph;
+  2e:	f241 0200 	movw	r2, #4096	; 0x1000
+  32:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  36:	f241 0300 	movw	r3, #4096	; 0x1000
+  3a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  3e:	6919      	ldr	r1, [r3, #16]
+  40:	687b      	ldr	r3, [r7, #4]
+  42:	ea6f 0303 	mvn.w	r3, r3
+  46:	ea01 0303 	and.w	r3, r1, r3
+  4a:	6113      	str	r3, [r2, #16]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1229
+  }
+}
+  4c:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  50:	46bd      	mov	sp, r7
+  52:	bc80      	pop	{r7}
+  54:	4770      	bx	lr
+  56:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_BackupResetCmd:
+
+00000000 <RCC_BackupResetCmd>:
+RCC_BackupResetCmd():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1238
+  * @param  NewState: new state of the Backup domain reset.
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_BackupResetCmd(FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1241
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  *(__IO uint32_t *) BDCR_BDRST_BB = (uint32_t)NewState;
+   a:	f240 4340 	movw	r3, #1088	; 0x440
+   e:	f2c4 2342 	movt	r3, #16962	; 0x4242
+  12:	79fa      	ldrb	r2, [r7, #7]
+  14:	601a      	str	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1242
+}
+  16:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  1a:	46bd      	mov	sp, r7
+  1c:	bc80      	pop	{r7}
+  1e:	4770      	bx	lr
+Disassembly of section .text.RCC_ClockSecuritySystemCmd:
+
+00000000 <RCC_ClockSecuritySystemCmd>:
+RCC_ClockSecuritySystemCmd():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1251
+  * @param  NewState: new state of the Clock Security System..
+  *   This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_ClockSecuritySystemCmd(FunctionalState NewState)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1254
+  /* Check the parameters */
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  *(__IO uint32_t *) CR_CSSON_BB = (uint32_t)NewState;
+   a:	f240 034c 	movw	r3, #76	; 0x4c
+   e:	f2c4 2342 	movt	r3, #16962	; 0x4242
+  12:	79fa      	ldrb	r2, [r7, #7]
+  14:	601a      	str	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1255
+}
+  16:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  1a:	46bd      	mov	sp, r7
+  1c:	bc80      	pop	{r7}
+  1e:	4770      	bx	lr
+Disassembly of section .text.RCC_MCOConfig:
+
+00000000 <RCC_MCOConfig>:
+RCC_MCOConfig():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1283
+  *     @arg RCC_MCO_PLLCLK_Div2: PLL clock divided by 2 selected
+  *   
+  * @retval None
+  */
+void RCC_MCOConfig(uint8_t RCC_MCO)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1288
+  /* Check the parameters */
+  assert_param(IS_RCC_MCO(RCC_MCO));
+
+  /* Perform Byte access to MCO bits to select the MCO source */
+  *(__IO uint8_t *) CFGR_BYTE4_ADDRESS = RCC_MCO;
+   a:	f241 0307 	movw	r3, #4103	; 0x1007
+   e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  12:	79fa      	ldrb	r2, [r7, #7]
+  14:	701a      	strb	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1289
+}
+  16:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  1a:	46bd      	mov	sp, r7
+  1c:	bc80      	pop	{r7}
+  1e:	4770      	bx	lr
+Disassembly of section .text.RCC_GetFlagStatus:
+
+00000000 <RCC_GetFlagStatus>:
+RCC_GetFlagStatus():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1327
+  *     @arg RCC_FLAG_LPWRRST: Low Power reset
+  *   
+  * @retval The new state of RCC_FLAG (SET or RESET).
+  */
+FlagStatus RCC_GetFlagStatus(uint8_t RCC_FLAG)
+{
+   0:	b480      	push	{r7}
+   2:	b087      	sub	sp, #28
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1328
+  uint32_t tmp = 0;
+   a:	f04f 0300 	mov.w	r3, #0	; 0x0
+   e:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1329
+  uint32_t statusreg = 0;
+  10:	f04f 0300 	mov.w	r3, #0	; 0x0
+  14:	613b      	str	r3, [r7, #16]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1330
+  FlagStatus bitstatus = RESET;
+  16:	f04f 0300 	mov.w	r3, #0	; 0x0
+  1a:	75fb      	strb	r3, [r7, #23]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1335
+  /* Check the parameters */
+  assert_param(IS_RCC_FLAG(RCC_FLAG));
+
+  /* Get the RCC register index */
+  tmp = RCC_FLAG >> 5;
+  1c:	79fb      	ldrb	r3, [r7, #7]
+  1e:	ea4f 1353 	mov.w	r3, r3, lsr #5
+  22:	b2db      	uxtb	r3, r3
+  24:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1336
+  if (tmp == 1)               /* The flag to check is in CR register */
+  26:	68fb      	ldr	r3, [r7, #12]
+  28:	2b01      	cmp	r3, #1
+  2a:	d106      	bne.n	4a <RCC_GetFlagStatus+0x4a>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1338
+  {
+    statusreg = RCC->CR;
+  2c:	f241 0300 	movw	r3, #4096	; 0x1000
+  30:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  34:	681b      	ldr	r3, [r3, #0]
+  36:	613b      	str	r3, [r7, #16]
+  38:	e00f      	b.n	6a <RCC_GetFlagStatus+0x6a>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1340
+  }
+  else if (tmp == 2)          /* The flag to check is in BDCR register */
+  3a:	68fb      	ldr	r3, [r7, #12]
+  3c:	2b02      	cmp	r3, #2
+  3e:	d106      	bne.n	5e <RCC_GetFlagStatus+0x5e>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1342
+  {
+    statusreg = RCC->BDCR;
+  40:	f241 0300 	movw	r3, #4096	; 0x1000
+  44:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  48:	6a1b      	ldr	r3, [r3, #32]
+  4a:	613b      	str	r3, [r7, #16]
+  4c:	e005      	b.n	6a <RCC_GetFlagStatus+0x6a>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1346
+  }
+  else                       /* The flag to check is in CSR register */
+  {
+    statusreg = RCC->CSR;
+  4e:	f241 0300 	movw	r3, #4096	; 0x1000
+  52:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  56:	6a5b      	ldr	r3, [r3, #36]
+  58:	613b      	str	r3, [r7, #16]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1350
+  }
+
+  /* Get the flag position */
+  tmp = RCC_FLAG & FLAG_Mask;
+  5a:	79fb      	ldrb	r3, [r7, #7]
+  5c:	f003 031f 	and.w	r3, r3, #31	; 0x1f
+  60:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1351
+  if ((statusreg & ((uint32_t)1 << tmp)) != (uint32_t)RESET)
+  62:	68fa      	ldr	r2, [r7, #12]
+  64:	693b      	ldr	r3, [r7, #16]
+  66:	fa23 f302 	lsr.w	r3, r3, r2
+  6a:	f003 0301 	and.w	r3, r3, #1	; 0x1
+  6e:	b2db      	uxtb	r3, r3
+  70:	2b00      	cmp	r3, #0
+  72:	d003      	beq.n	8c <RCC_GetFlagStatus+0x8c>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1353
+  {
+    bitstatus = SET;
+  74:	f04f 0301 	mov.w	r3, #1	; 0x1
+  78:	75fb      	strb	r3, [r7, #23]
+  7a:	e002      	b.n	92 <ADCPrescTable+0x82>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1357
+  }
+  else
+  {
+    bitstatus = RESET;
+  7c:	f04f 0300 	mov.w	r3, #0	; 0x0
+  80:	75fb      	strb	r3, [r7, #23]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1361
+  }
+
+  /* Return the flag status */
+  return bitstatus;
+  82:	7dfb      	ldrb	r3, [r7, #23]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1362
+}
+  84:	4618      	mov	r0, r3
+  86:	f107 071c 	add.w	r7, r7, #28	; 0x1c
+  8a:	46bd      	mov	sp, r7
+  8c:	bc80      	pop	{r7}
+  8e:	4770      	bx	lr
+Disassembly of section .text.RCC_ClearFlag:
+
+00000000 <RCC_ClearFlag>:
+RCC_ClearFlag():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1372
+  *   RCC_FLAG_IWDGRST, RCC_FLAG_WWDGRST, RCC_FLAG_LPWRRST
+  * @param  None
+  * @retval None
+  */
+void RCC_ClearFlag(void)
+{
+   0:	b480      	push	{r7}
+   2:	af00      	add	r7, sp, #0
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1374
+  /* Set RMVF bit to clear the reset flags */
+  RCC->CSR |= CSR_RMVF_Set;
+   4:	f241 0200 	movw	r2, #4096	; 0x1000
+   8:	f2c4 0202 	movt	r2, #16386	; 0x4002
+   c:	f241 0300 	movw	r3, #4096	; 0x1000
+  10:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  14:	6a5b      	ldr	r3, [r3, #36]
+  16:	f043 7380 	orr.w	r3, r3, #16777216	; 0x1000000
+  1a:	6253      	str	r3, [r2, #36]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1375
+}
+  1c:	46bd      	mov	sp, r7
+  1e:	bc80      	pop	{r7}
+  20:	4770      	bx	lr
+  22:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.RCC_GetITStatus:
+
+00000000 <RCC_GetITStatus>:
+RCC_GetITStatus():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1403
+  *     @arg RCC_IT_CSS: Clock Security System interrupt
+  *   
+  * @retval The new state of RCC_IT (SET or RESET).
+  */
+ITStatus RCC_GetITStatus(uint8_t RCC_IT)
+{
+   0:	b480      	push	{r7}
+   2:	b085      	sub	sp, #20
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1404
+  ITStatus bitstatus = RESET;
+   a:	f04f 0300 	mov.w	r3, #0	; 0x0
+   e:	73fb      	strb	r3, [r7, #15]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1409
+  /* Check the parameters */
+  assert_param(IS_RCC_GET_IT(RCC_IT));
+
+  /* Check the status of the specified RCC interrupt */
+  if ((RCC->CIR & RCC_IT) != (uint32_t)RESET)
+  10:	f241 0300 	movw	r3, #4096	; 0x1000
+  14:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  18:	689a      	ldr	r2, [r3, #8]
+  1a:	79fb      	ldrb	r3, [r7, #7]
+  1c:	ea02 0303 	and.w	r3, r2, r3
+  20:	2b00      	cmp	r3, #0
+  22:	d003      	beq.n	3c <RCC_GetITStatus+0x3c>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1411
+  {
+    bitstatus = SET;
+  24:	f04f 0301 	mov.w	r3, #1	; 0x1
+  28:	73fb      	strb	r3, [r7, #15]
+  2a:	e002      	b.n	42 <ADCPrescTable+0x32>
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1415
+  }
+  else
+  {
+    bitstatus = RESET;
+  2c:	f04f 0300 	mov.w	r3, #0	; 0x0
+  30:	73fb      	strb	r3, [r7, #15]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1419
+  }
+
+  /* Return the RCC_IT status */
+  return  bitstatus;
+  32:	7bfb      	ldrb	r3, [r7, #15]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1420
+}
+  34:	4618      	mov	r0, r3
+  36:	f107 0714 	add.w	r7, r7, #20	; 0x14
+  3a:	46bd      	mov	sp, r7
+  3c:	bc80      	pop	{r7}
+  3e:	4770      	bx	lr
+Disassembly of section .text.RCC_ClearITPendingBit:
+
+00000000 <RCC_ClearITPendingBit>:
+RCC_ClearITPendingBit():
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1449
+  *   
+  *     @arg RCC_IT_CSS: Clock Security System interrupt
+  * @retval None
+  */
+void RCC_ClearITPendingBit(uint8_t RCC_IT)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+   6:	4603      	mov	r3, r0
+   8:	71fb      	strb	r3, [r7, #7]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1455
+  /* Check the parameters */
+  assert_param(IS_RCC_CLEAR_IT(RCC_IT));
+
+  /* Perform Byte access to RCC_CIR[23:16] bits to clear the selected interrupt
+     pending bits */
+  *(__IO uint8_t *) CIR_BYTE3_ADDRESS = RCC_IT;
+   a:	f241 030a 	movw	r3, #4106	; 0x100a
+   e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  12:	79fa      	ldrb	r2, [r7, #7]
+  14:	701a      	strb	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src/stm32f10x_rcc.c:1456
+}
+  16:	f107 070c 	add.w	r7, r7, #12	; 0xc
+  1a:	46bd      	mov	sp, r7
+  1c:	bc80      	pop	{r7}
+  1e:	4770      	bx	lr

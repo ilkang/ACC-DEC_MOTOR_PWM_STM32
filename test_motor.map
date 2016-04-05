@@ -1,0 +1,1180 @@
+Archive member included because of file (symbol)
+
+D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+                              (__io_putchar)
+D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)
+                              (_write)
+
+Allocating common symbols
+Common symbol       size              file
+
+Second_Focus_STEP   0x2               D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+TIM_OCInitType      0x10              D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+USART_InitType      0x10              D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+NVIC_InitType       0x4               D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+EXTI_InitType       0x8               D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+TIM_TimeBaseInitType
+                    0xa               D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+TIM_ICInitStructure
+                    0xa               D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+GPIO_InitType       0x4               D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .text.Putch1   0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .text.Putch3   0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .text.Getch3   0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .text          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+ .data          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+ .bss           0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+ .text          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .bss           0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .text.SystemCoreClockUpdate
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .text          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .bss           0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_DeInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_HSEConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_WaitForHSEStartUp
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_AdjustHSICalibrationValue
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_HSICmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_PLLConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_PLLCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_SYSCLKConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_GetSYSCLKSource
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_HCLKConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_PCLK1Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_PCLK2Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_ITConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_USBCLKConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_ADCCLKConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_LSEConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_LSICmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_RTCCLKConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_RTCCLKCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_AHBPeriphClockCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_APB2PeriphResetCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_APB1PeriphResetCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_BackupResetCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_ClockSecuritySystemCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_MCOConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_GetFlagStatus
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_ClearFlag
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_GetITStatus
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text.RCC_ClearITPendingBit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .text          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .data          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .bss           0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_DeInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_AFIODeInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_StructInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_ReadInputDataBit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_ReadInputData
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_ReadOutputDataBit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_ReadOutputData
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_SetBits
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_ResetBits
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_WriteBit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_PinLockConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_EventOutputConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_EventOutputCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_EXTILineConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text.GPIO_ETH_MediaInterfaceConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .text          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .data          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .bss           0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .text.EXTI_DeInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .text.EXTI_Init
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .text.EXTI_StructInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .text.EXTI_GenerateSWInterrupt
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .text.EXTI_GetFlagStatus
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .text.EXTI_ClearFlag
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .text.EXTI_GetITStatus
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .text.EXTI_ClearITPendingBit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .text          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .data          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .bss           0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_DeInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC1Init
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC2Init
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ICInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_PWMIConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_BDTRConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_TimeBaseStructInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OCStructInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ICStructInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_BDTRStructInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_CtrlPWMOutputs
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_GenerateEvent
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_DMAConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_DMACmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_InternalClockConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ITRxExternalClockConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_TIxExternalClockConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ETRClockMode1Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ETRClockMode2Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ETRConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_PrescalerConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_CounterModeConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SelectInputTrigger
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_EncoderInterfaceConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ForcedOC1Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ForcedOC2Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ForcedOC3Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ForcedOC4Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ARRPreloadConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SelectCOM
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SelectCCDMA
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_CCPreloadControl
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC1PreloadConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC2PreloadConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC3PreloadConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC4PreloadConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC1FastConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC2FastConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC3FastConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC4FastConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ClearOC1Ref
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ClearOC2Ref
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ClearOC3Ref
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ClearOC4Ref
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC1PolarityConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC1NPolarityConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC2PolarityConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC2NPolarityConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC3PolarityConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC3NPolarityConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_OC4PolarityConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_CCxCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_CCxNCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SelectOCxM
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_UpdateDisableConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_UpdateRequestConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SelectHallSensor
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SelectOnePulseMode
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SelectOutputTrigger
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SelectSlaveMode
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SelectMasterSlaveMode
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SetCounter
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SetAutoreload
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SetCompare1
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SetCompare2
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SetCompare3
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SetCompare4
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SetIC1Prescaler
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SetIC2Prescaler
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SetIC3Prescaler
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SetIC4Prescaler
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_SetClockDivision
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_GetCapture1
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_GetCapture2
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_GetCapture3
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_GetCapture4
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_GetCounter
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_GetPrescaler
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_GetFlagStatus
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_ClearFlag
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TIM_GetITStatus
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TI1_Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TI2_Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TI3_Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text.TI4_Config
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .text          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .data          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .bss           0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_DeInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_StructInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_ClockInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_ClockStructInit
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_DMACmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_SetAddress
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_WakeUpConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_ReceiverWakeUpCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_LINBreakDetectLengthConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_LINCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_SendBreak
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_SetGuardTime
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_SetPrescaler
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_SmartCardCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_SmartCardNACKCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_HalfDuplexCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_OverSampling8Cmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_OneBitMethodCmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_IrDAConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_IrDACmd
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text.USART_ClearFlag
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .text          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .data          0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .bss           0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .text.NVIC_PriorityGroupConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .text.NVIC_SetVectorTable
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .text.NVIC_SystemLPConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .text.SysTick_CLKSourceConfig
+                0x00000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .text          0x00000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .data          0x00000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .text.__io_SetMainOscFreq
+                0x00000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .text.__io_getchar
+                0x00000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .text.getchar  0x00000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .text.putchar  0x00000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .text          0x00000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)
+ .data          0x00000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)
+ .bss           0x00000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x20000000         0x00005000         xrw
+FLASH            0x08000000         0x00010000         xr
+STARTFLASH       0x00000000         0x00000000         xr
+CRPPATCH         0x00000000         0x00000000         r
+FLASHPATCH       0x00000000         0x00000000         r
+ENDFLASH         0x00000000         0x00000000         xr
+FLASHB1          0x00000000         0x00000000         xr
+EXTMEMB0         0x00000000         0x00000000         xr
+EXTMEMB1         0x00000000         0x00000000         xr
+EXTMEMB2         0x00000000         0x00000000         xr
+EXTMEMB3         0x00000000         0x00000000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+LOAD D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+LOAD D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+LOAD D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+LOAD D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+LOAD D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+LOAD D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+LOAD D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+LOAD D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+START GROUP
+LOAD D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a
+LOAD D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib
+LOAD D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\e_stdio_thumb.a
+LOAD D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32F10x_thumb.lib
+LOAD d:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a
+LOAD d:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libm.a
+END GROUP
+                0x00000400                __Stack_Size = 0x400
+                0x00000400                PROVIDE (_Stack_Size, __Stack_Size)
+                0x20004c00                __Stack_Init = (_estack - __Stack_Size)
+                0x20004c00                PROVIDE (_Stack_Init, __Stack_Init)
+                0x00000100                _Minimum_Stack_Size = 0x100
+                0x00000000                PROVIDE (Undefined_Handler, 0x0)
+                0x00000000                PROVIDE (SWI_Handler, 0x0)
+                0x00000000                PROVIDE (IRQ_Handler, 0x0)
+                0x00000000                PROVIDE (Prefetch_Handler, 0x0)
+                0x00000000                PROVIDE (Abort_Handler, 0x0)
+                0x00000000                PROVIDE (FIQ_Handler, 0x0)
+                0x00000000                PROVIDE (NMIException, 0x0)
+                0x00000000                PROVIDE (NMI_Handler, 0x0)
+                0x00000000                PROVIDE (HardFaultException, 0x0)
+                0x00000000                PROVIDE (HardFault_Handler, 0x0)
+                0x00000000                PROVIDE (MemManageException, 0x0)
+                0x00000000                PROVIDE (MemManage_Handler, 0x0)
+                0x00000000                PROVIDE (BusFaultException, 0x0)
+                0x00000000                PROVIDE (BusFault_Handler, 0x0)
+                0x00000000                PROVIDE (UsageFaultException, 0x0)
+                0x00000000                PROVIDE (UsageFault_Handler, 0x0)
+                0x00000000                PROVIDE (SVCHandler, 0x0)
+                0x00000000                PROVIDE (SVC_Handler, 0x0)
+                0x00000000                PROVIDE (DebugMonitor, 0x0)
+                0x00000000                PROVIDE (DebugMon_Handler, 0x0)
+                0x00000000                PROVIDE (PendSVC, 0x0)
+                0x00000000                PROVIDE (PendSV_Handler, 0x0)
+                0x00000000                PROVIDE (SysTickHandler, 0x0)
+                0x00000000                PROVIDE (SysTick_Handler, 0x0)
+                0x00000000                PROVIDE (WWDG_IRQHandler, 0x0)
+                0x00000000                PROVIDE (PVD_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TAMPER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RTC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (FLASH_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RCC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI0_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel6_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMAChannel7_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel6_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA1_Channel7_IRQHandler, 0x0)
+                0x00000000                PROVIDE (ADC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (ADC1_2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_HP_CAN_TX_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_HP_CAN1_TX_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_LP_CAN_RX0_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USB_LP_CAN1_RX0_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN_RX1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN1_RX1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN_SCE_IRQHandler, 0x0)
+                0x00000000                PROVIDE (CAN1_SCE_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI9_5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_BRK_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_UP_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_TRG_COM_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM1_CC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C1_EV_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C1_ER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C2_EV_IRQHandler, 0x0)
+                0x00000000                PROVIDE (I2C2_ER_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SPI1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SPI2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USART3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (EXTI15_10_IRQHandler, 0x0)
+                0x00000000                PROVIDE (RTCAlarm_IRQHandler, 0x0)
+                0x00000000                PROVIDE (USBWakeUp_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_BRK_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_UP_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_TRG_COM_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM8_CC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (ADC3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (FSMC_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SDIO_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (SPI3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (UART4_IRQHandler, 0x0)
+                0x00000000                PROVIDE (UART5_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM6_IRQHandler, 0x0)
+                0x00000000                PROVIDE (TIM7_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel1_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel2_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel3_IRQHandler, 0x0)
+                0x00000000                PROVIDE (DMA2_Channel4_5_IRQHandler, 0x0)
+                0x42000000                PERIPH_BB_BASE = 0x42000000
+                0x22000000                SRAM_BB_BASE = 0x22000000
+                0x20000000                SRAM_BASE = 0x20000000
+                0x40000000                PERIPH_BASE = 0x40000000
+                0x40022000                PROVIDE (FLASH_BASE, 0x40022000)
+                0x1ffff800                PROVIDE (OB_BASE, 0x1ffff800)
+                0x40000000                APB1PERIPH_BASE = PERIPH_BASE
+                0x40010000                APB2PERIPH_BASE = (PERIPH_BASE + 0x10000)
+                0x40020000                AHBPERIPH_BASE = (PERIPH_BASE + 0x20000)
+                0x40000000                PROVIDE (TIM2, (APB1PERIPH_BASE + 0x0))
+                0x40000400                PROVIDE (TIM3, (APB1PERIPH_BASE + 0x400))
+                0x40000800                PROVIDE (TIM4, (APB1PERIPH_BASE + 0x800))
+                0x40002800                PROVIDE (RTC, (APB1PERIPH_BASE + 0x2800))
+                0x40002c00                PROVIDE (WWDG, (APB1PERIPH_BASE + 0x2c00))
+                0x40003000                PROVIDE (IWDG, (APB1PERIPH_BASE + 0x3000))
+                0x40003800                PROVIDE (SPI2, (APB1PERIPH_BASE + 0x3800))
+                0x40004400                PROVIDE (USART2, (APB1PERIPH_BASE + 0x4400))
+                0x40004800                PROVIDE (USART3, (APB1PERIPH_BASE + 0x4800))
+                0x40005400                PROVIDE (I2C1, (APB1PERIPH_BASE + 0x5400))
+                0x40005800                PROVIDE (I2C2, (APB1PERIPH_BASE + 0x5800))
+                0x40006400                PROVIDE (CAN, (APB1PERIPH_BASE + 0x6400))
+                0x40006c00                PROVIDE (BKP, (APB1PERIPH_BASE + 0x6c00))
+                0x40007000                PROVIDE (PWR, (APB1PERIPH_BASE + 0x7000))
+                0x40010000                PROVIDE (AFIO, (APB2PERIPH_BASE + 0x0))
+                0x40010400                PROVIDE (EXTI, (APB2PERIPH_BASE + 0x400))
+                0x40010800                PROVIDE (GPIOA, (APB2PERIPH_BASE + 0x800))
+                0x40010c00                PROVIDE (GPIOB, (APB2PERIPH_BASE + 0xc00))
+                0x40011000                PROVIDE (GPIOC, (APB2PERIPH_BASE + 0x1000))
+                0x40011400                PROVIDE (GPIOD, (APB2PERIPH_BASE + 0x1400))
+                0x40011800                PROVIDE (GPIOE, (APB2PERIPH_BASE + 0x1800))
+                0x40012400                PROVIDE (ADC1, (APB2PERIPH_BASE + 0x2400))
+                0x40012800                PROVIDE (ADC2, (APB2PERIPH_BASE + 0x2800))
+                0x40012c00                PROVIDE (TIM1, (APB2PERIPH_BASE + 0x2c00))
+                0x40013000                PROVIDE (SPI1, (APB2PERIPH_BASE + 0x3000))
+                0x40013800                PROVIDE (USART1, (APB2PERIPH_BASE + 0x3800))
+                0x40020000                PROVIDE (DMA, (AHBPERIPH_BASE + 0x0))
+                0x40020008                PROVIDE (DMA_Channel1, (AHBPERIPH_BASE + 0x8))
+                0x4002001c                PROVIDE (DMA_Channel2, (AHBPERIPH_BASE + 0x1c))
+                0x40020030                PROVIDE (DMA_Channel3, (AHBPERIPH_BASE + 0x30))
+                0x40020044                PROVIDE (DMA_Channel4, (AHBPERIPH_BASE + 0x44))
+                0x40020058                PROVIDE (DMA_Channel5, (AHBPERIPH_BASE + 0x58))
+                0x4002006c                PROVIDE (DMA_Channel6, (AHBPERIPH_BASE + 0x6c))
+                0x40020080                PROVIDE (DMA_Channel7, (AHBPERIPH_BASE + 0x80))
+                0x40021000                PROVIDE (RCC, (AHBPERIPH_BASE + 0x1000))
+                0xe000e000                SCS_BASE = 0xe000e000
+                0xe000e010                PROVIDE (SysTick, (SCS_BASE + 0x10))
+                0xe000e100                PROVIDE (NVIC, (SCS_BASE + 0x100))
+                0xe000ed00                PROVIDE (SCB, (SCS_BASE + 0xd00))
+                0x20005000                _estack = 0x20005000
+
+.isr_vector     0x08000000      0x10c
+                0x08000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x10c D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+                0x08000000                g_pfnVectors
+                0x0800010c                . = ALIGN (0x4)
+
+.flash_start    0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.flash_start)
+ *(.flash_start.*)
+                0x00000000                . = ALIGN (0x4)
+
+.crp_patch      0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.crp_patch)
+                0x00000000                . = ALIGN (0x4)
+
+.flashtext      0x0800010c        0x0
+                0x0800010c                . = ALIGN (0x4)
+ *(.flashtext)
+                0x0800010c                . = ALIGN (0x4)
+
+.text           0x0800010c     0x2024
+                0x0800010c                . = ALIGN (0x4)
+ *(.text)
+ *(.text.*)
+ .text.main     0x0800010c       0x14 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                0x0800010c                main
+ .text.TIM1_UP_IRQHandler
+                0x08000120       0x28 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                0x08000120                TIM1_UP_IRQHandler
+ .text.USART1_IRQHandler
+                0x08000148       0x4c D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                0x08000148                USART1_IRQHandler
+ .text.USART3_IRQHandler
+                0x08000194      0x224 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                0x08000194                USART3_IRQHandler
+ .text.init_mcu
+                0x080003b8      0x62c D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                0x080003b8                init_mcu
+ .text.delay_ms_sys
+                0x080009e4       0x44 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                0x080009e4                delay_ms_sys
+ .text.Wtire_Motor
+                0x08000a28      0x394 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                0x08000a28                Wtire_Motor
+ .text.TIM3_Init
+                0x08000dbc       0xb0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                0x08000dbc                TIM3_Init
+ .text.Reset_Handler
+                0x08000e6c       0x44 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+                0x08000e6c                Reset_Handler
+ .text.Default_Handler
+                0x08000eb0        0x2 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+                0x08000eb0                EXTI2_IRQHandler
+                0x08000eb0                DebugMon_Handler
+                0x08000eb0                TIM1_CC_IRQHandler
+                0x08000eb0                HardFault_Handler
+                0x08000eb0                SysTick_Handler
+                0x08000eb0                PVD_IRQHandler
+                0x08000eb0                PendSV_Handler
+                0x08000eb0                NMI_Handler
+                0x08000eb0                EXTI3_IRQHandler
+                0x08000eb0                EXTI0_IRQHandler
+                0x08000eb0                I2C2_EV_IRQHandler
+                0x08000eb0                UsageFault_Handler
+                0x08000eb0                ADC1_2_IRQHandler
+                0x08000eb0                SPI1_IRQHandler
+                0x08000eb0                TAMPER_IRQHandler
+                0x08000eb0                DMA1_Channel4_IRQHandler
+                0x08000eb0                RTC_IRQHandler
+                0x08000eb0                DMA1_Channel7_IRQHandler
+                0x08000eb0                CAN1_RX1_IRQHandler
+                0x08000eb0                TIM4_IRQHandler
+                0x08000eb0                I2C1_EV_IRQHandler
+                0x08000eb0                DMA1_Channel6_IRQHandler
+                0x08000eb0                TIM3_IRQHandler
+                0x08000eb0                RCC_IRQHandler
+                0x08000eb0                TIM1_TRG_COM_IRQHandler
+                0x08000eb0                DMA1_Channel1_IRQHandler
+                0x08000eb0                Default_Handler
+                0x08000eb0                EXTI15_10_IRQHandler
+                0x08000eb0                EXTI9_5_IRQHandler
+                0x08000eb0                SPI2_IRQHandler
+                0x08000eb0                MemManage_Handler
+                0x08000eb0                SVC_Handler
+                0x08000eb0                DMA1_Channel5_IRQHandler
+                0x08000eb0                EXTI4_IRQHandler
+                0x08000eb0                USB_LP_CAN1_RX0_IRQHandler
+                0x08000eb0                USB_HP_CAN1_TX_IRQHandler
+                0x08000eb0                DMA1_Channel3_IRQHandler
+                0x08000eb0                WWDG_IRQHandler
+                0x08000eb0                TIM2_IRQHandler
+                0x08000eb0                TIM1_BRK_IRQHandler
+                0x08000eb0                EXTI1_IRQHandler
+                0x08000eb0                RTCAlarm_IRQHandler
+                0x08000eb0                USART2_IRQHandler
+                0x08000eb0                I2C2_ER_IRQHandler
+                0x08000eb0                DMA1_Channel2_IRQHandler
+                0x08000eb0                CAN1_SCE_IRQHandler
+                0x08000eb0                FLASH_IRQHandler
+                0x08000eb0                BusFault_Handler
+                0x08000eb0                I2C1_ER_IRQHandler
+                0x08000eb0                USBWakeUp_IRQHandler
+ *fill*         0x08000eb2        0x2 00
+ .text.SystemInit
+                0x08000eb4       0xac D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+                0x08000eb4                SystemInit
+ .text.SetSysClock
+                0x08000f60        0xc D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .text.SetSysClockTo72
+                0x08000f6c      0x1a8 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .text.RCC_GetClocksFreq
+                0x08001114      0x1d0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+                0x08001114                RCC_GetClocksFreq
+ .text.RCC_APB2PeriphClockCmd
+                0x080012e4       0x58 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+                0x080012e4                RCC_APB2PeriphClockCmd
+ .text.RCC_APB1PeriphClockCmd
+                0x0800133c       0x58 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+                0x0800133c                RCC_APB1PeriphClockCmd
+ .text.GPIO_Init
+                0x08001394      0x1c8 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+                0x08001394                GPIO_Init
+ .text.GPIO_Write
+                0x0800155c       0x1c D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+                0x0800155c                GPIO_Write
+ .text.GPIO_PinRemapConfig
+                0x08001578      0x128 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+                0x08001578                GPIO_PinRemapConfig
+ .text.TIM_TimeBaseInit
+                0x080016a0      0x120 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+                0x080016a0                TIM_TimeBaseInit
+ .text.TIM_OC3Init
+                0x080017c0      0x140 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+                0x080017c0                TIM_OC3Init
+ .text.TIM_OC4Init
+                0x08001900       0xf8 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+                0x08001900                TIM_OC4Init
+ .text.TIM_Cmd  0x080019f8       0x50 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+                0x080019f8                TIM_Cmd
+ .text.TIM_ITConfig
+                0x08001a48       0x4c D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+                0x08001a48                TIM_ITConfig
+ .text.TIM_ClearITPendingBit
+                0x08001a94       0x24 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+                0x08001a94                TIM_ClearITPendingBit
+ .text.USART_Init
+                0x08001ab8      0x1e0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+                0x08001ab8                USART_Init
+ .text.USART_Cmd
+                0x08001c98       0x50 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+                0x08001c98                USART_Cmd
+ .text.USART_ITConfig
+                0x08001ce8       0xa8 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+                0x08001ce8                USART_ITConfig
+ .text.USART_SendData
+                0x08001d90       0x30 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+                0x08001d90                USART_SendData
+ .text.USART_ReceiveData
+                0x08001dc0       0x2c D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+                0x08001dc0                USART_ReceiveData
+ .text.USART_GetFlagStatus
+                0x08001dec       0x40 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+                0x08001dec                USART_GetFlagStatus
+ .text.USART_GetITStatus
+                0x08001e2c       0xd4 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+                0x08001e2c                USART_GetITStatus
+ .text.USART_ClearITPendingBit
+                0x08001f00       0x44 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+                0x08001f00                USART_ClearITPendingBit
+ .text.NVIC_Init
+                0x08001f44       0xf0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+                0x08001f44                NVIC_Init
+ .text.__io_init
+                0x08002034       0xac D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+                0x08002034                __io_init
+ .text.__io_putchar
+                0x080020e0       0x4c D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+                0x080020e0                __io_putchar
+ .text._write   0x0800212c        0x4 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)
+                0x0800212c                _write
+ *(.rodata)
+ *(.rodata*)
+ *(.glue_7)
+ .glue_7        0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .glue_7        0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+ .glue_7        0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .glue_7        0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .glue_7        0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .glue_7        0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .glue_7        0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .glue_7        0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .glue_7        0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .glue_7        0x08002130        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .glue_7        0x08002130        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)
+ *(.glue_7t)
+ .glue_7t       0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .glue_7t       0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+ .glue_7t       0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .glue_7t       0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .glue_7t       0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .glue_7t       0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .glue_7t       0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .glue_7t       0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .glue_7t       0x08002130        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .glue_7t       0x08002130        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .glue_7t       0x08002130        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)
+                0x08002130                . = ALIGN (0x4)
+                0x08002130                _etext = .
+                0x08002130                _sidata = _etext
+
+.vfp11_veneer   0x20000000        0x0
+ .vfp11_veneer  0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .vfp11_veneer  0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+ .vfp11_veneer  0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .vfp11_veneer  0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .vfp11_veneer  0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .vfp11_veneer  0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .vfp11_veneer  0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .vfp11_veneer  0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .vfp11_veneer  0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .vfp11_veneer  0x20000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .vfp11_veneer  0x20000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)
+
+.janus_2cc_veneer
+                0x20000000        0x0
+ .janus_2cc_veneer
+                0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .janus_2cc_veneer
+                0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+ .janus_2cc_veneer
+                0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .janus_2cc_veneer
+                0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .janus_2cc_veneer
+                0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .janus_2cc_veneer
+                0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .janus_2cc_veneer
+                0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .janus_2cc_veneer
+                0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .janus_2cc_veneer
+                0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .janus_2cc_veneer
+                0x20000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .janus_2cc_veneer
+                0x20000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)
+
+.v4_bx          0x20000000        0x0
+ .v4_bx         0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .v4_bx         0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+ .v4_bx         0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .v4_bx         0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .v4_bx         0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .v4_bx         0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .v4_bx         0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .v4_bx         0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .v4_bx         0x20000000        0x0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .v4_bx         0x20000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .v4_bx         0x20000000        0x0 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)
+
+.flashpatch     0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.flashpatch)
+                0x00000000                . = ALIGN (0x4)
+
+.endflash       0x00000000        0x0
+                0x00000000                . = ALIGN (0x4)
+ *(.endflash)
+                0x00000000                . = ALIGN (0x4)
+                0x00000000                _e_endflash = .
+
+.data           0x20000000       0x34 load address 0x08002130
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sdata = .
+                0x20000000                _data = .
+ *(.data)
+ .data          0x20000000        0xc D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                0x20000008                T3_PWM_Dec
+                0x20000006                T3_PWM_Acc
+                0x20000002                PHOTO1_STATUS
+                0x20000000                STATUS
+                0x20000004                PHOTO2_STATUS
+                0x2000000a                T3_PWM_Period
+ .data          0x2000000c       0x14 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+                0x2000000c                SystemCoreClock
+                0x20000010                AHBPrescTable
+ .data          0x20000020       0x14 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ *(.data.*)
+ *(.RAMtext)
+                0x20000034                . = ALIGN (0x4)
+                0x20000034                _edata = .
+                0x08002164                _eidata = ((_sidata + _edata) - _sdata)
+                0x08010000                _lastdataromaddress = 0x8010000
+                0x00000000                toobig = (_eidata > _lastdataromaddress)?!!!!!!!!! FLASH IS FULL !!!!!!!!!:0x0
+
+.bss            0x20000034       0x94 load address 0x08002164
+                0x20000034                . = ALIGN (0x4)
+                0x20000034                _sbss = .
+                0x20000034                _bss = .
+ *(.bss)
+ .bss           0x20000034       0x48 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                0x20000039                Com
+                0x2000004c                DATA
+                0x20000035                MOTOR2_STATUS
+                0x20000062                First_Focus_STEP
+                0x20000034                MOTOR1_STATUS
+                0x20000052                data_count
+                0x20000060                Focus_Ref_STEP
+                0x20000046                Enc_count
+                0x20000070                Focus_Value
+                0x20000038                MOTORT3_STATUS
+                0x20000048                COM_status
+                0x20000036                T3_PWM
+                0x2000005e                Focus_STEP
+                0x20000064                Mid_Focus_Ref_STEP
+                0x20000074                i
+                0x2000006f                MSG_LENGTH
+                0x20000066                Zoom_STEP
+                0x2000006a                First_Zoom_STEP
+                0x20000051                msg_count
+                0x2000005c                msg_count3
+                0x20000068                Zoom_Ref_STEP
+                0x2000006c                Second_Zoom_STEP
+                0x20000054                MSG3
+                0x20000053                COM_status3
+                0x20000044                velc
+                0x2000003b                Zoom_dir
+                0x2000003e                ref_Value_1
+                0x2000003a                Focus_dir
+                0x20000045                velr
+                0x2000006e                MSG_ID
+                0x20000040                ref_Value_2
+                0x2000003d                ref_Value_4
+                0x20000049                MSG
+                0x2000003c                ref_Value_3
+ .bss           0x2000007c        0x1 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+                0x2000007c                __io_init_done
+ *(COMMON)
+ *fill*         0x2000007d        0x3 00
+ COMMON         0x20000080       0x48 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                0x20000080                Second_Focus_STEP
+                0x20000082                TIM_OCInitType
+                0x20000094                USART_InitType
+                0x200000a4                NVIC_InitType
+                0x200000a8                EXTI_InitType
+                0x200000b0                TIM_TimeBaseInitType
+                0x200000ba                TIM_ICInitStructure
+                0x200000c4                GPIO_InitType
+                0x200000c8                . = ALIGN (0x4)
+                0x200000c8                _ebss = .
+                0x200000c8                PROVIDE (end, _ebss)
+                0x200000c8                PROVIDE (_end, _ebss)
+
+._usrstack      0x200000c8      0x100 load address 0x080021f8
+                0x200000c8                . = ALIGN (0x4)
+                0x200000c8                _susrstack = .
+                0x200001c8                . = (. + _Minimum_Stack_Size)
+ *fill*         0x200000c8      0x100 00
+                0x200001c8                . = ALIGN (0x4)
+                0x200001c8                _eusrstack = .
+
+.b1text
+ *(.b1text)
+ *(.b1rodata)
+ *(.b1rodata*)
+
+.eb0text
+ *(.eb0text)
+ *(.eb0rodata)
+ *(.eb0rodata*)
+
+.eb1text
+ *(.eb1text)
+ *(.eb1rodata)
+ *(.eb1rodata*)
+
+.eb2text
+ *(.eb2text)
+ *(.eb2rodata)
+ *(.eb2rodata*)
+
+.eb3text
+ *(.eb3text)
+ *(.eb3rodata)
+ *(.eb3rodata*)
+                0x200001c8                __exidx_start = .
+                0x200001c8                __exidx_end = .
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000      0x1a4
+ *(.comment)
+ .comment       0x00000000       0x2a D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .comment       0x0000002a       0x2a D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .comment       0x00000054       0x2a D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .comment       0x0000007e       0x2a D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .comment       0x000000a8       0x2a D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .comment       0x000000d2       0x2a D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .comment       0x000000fc       0x2a D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .comment       0x00000126       0x2a D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .comment       0x00000150       0x2a D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .comment       0x0000017a       0x2a D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x6f0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x70 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .debug_aranges
+                0x00000070       0x38 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .debug_aranges
+                0x000000a8      0x118 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .debug_aranges
+                0x000001c0       0xa8 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .debug_aranges
+                0x00000268       0x58 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .debug_aranges
+                0x000002c0      0x2f0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .debug_aranges
+                0x000005b0      0x100 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .debug_aranges
+                0x000006b0       0x40 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+
+.debug_pubnames
+                0x00000000     0x13f8
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x3ae D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .debug_pubnames
+                0x000003ae       0x61 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .debug_pubnames
+                0x0000040f      0x2c4 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .debug_pubnames
+                0x000006d3      0x19d D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .debug_pubnames
+                0x00000870       0xbb D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .debug_pubnames
+                0x0000092b      0x7b0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .debug_pubnames
+                0x000010db      0x294 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .debug_pubnames
+                0x0000136f       0x89 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+
+.debug_info     0x00000000     0x538b
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0xea3 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .debug_info    0x00000ea3      0x443 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .debug_info    0x000012e6      0x8df D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .debug_info    0x00001bc5      0x701 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .debug_info    0x000022c6      0x34a D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .debug_info    0x00002610     0x1e0d D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .debug_info    0x0000441d      0xa55 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .debug_info    0x00004e72      0x519 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+
+.debug_abbrev   0x00000000      0xbe0
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x1da D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .debug_abbrev  0x000001da      0x169 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .debug_abbrev  0x00000343      0x19a D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .debug_abbrev  0x000004dd      0x1a0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .debug_abbrev  0x0000067d      0x153 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .debug_abbrev  0x000007d0      0x17b D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .debug_abbrev  0x0000094b      0x157 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .debug_abbrev  0x00000aa2      0x13e D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+
+.debug_line     0x00000000     0x204b
+ *(.debug_line)
+ .debug_line    0x00000000      0x3a3 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .debug_line    0x000003a3      0x1fa D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .debug_line    0x0000059d      0x46e D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .debug_line    0x00000a0b      0x370 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .debug_line    0x00000d7b      0x26c D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .debug_line    0x00000fe7      0x9f0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .debug_line    0x000019d7      0x463 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .debug_line    0x00001e3a      0x211 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+
+.debug_frame    0x00000000     0x1664
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x160 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .debug_frame   0x00000160       0x80 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .debug_frame   0x000001e0      0x388 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .debug_frame   0x00000568      0x210 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .debug_frame   0x00000778       0xec D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .debug_frame   0x00000864      0xa20 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .debug_frame   0x00001284      0x344 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .debug_frame   0x000015c8       0x9c D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+
+.debug_str      0x00000000     0x22b8
+ *(.debug_str)
+ .debug_str     0x00000000      0xb83 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+                                0xc09 (size before relaxing)
+ .debug_str     0x00000b83      0x146 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+                                0x21d (size before relaxing)
+ .debug_str     0x00000cc9      0x408 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+                                0x568 (size before relaxing)
+ .debug_str     0x000010d1      0x265 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+                                0x46f (size before relaxing)
+ .debug_str     0x00001336       0xfe D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+                                0x2b4 (size before relaxing)
+ .debug_str     0x00001434      0x98f D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+                                0xd40 (size before relaxing)
+ .debug_str     0x00001dc3      0x3bd D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+                                0x5f3 (size before relaxing)
+ .debug_str     0x00002180      0x138 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+                                0x306 (size before relaxing)
+
+.debug_loc      0x00000000     0x2a12
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x239 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .debug_loc     0x00000239       0xc4 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .debug_loc     0x000002fd      0x6bc D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .debug_loc     0x000009b9      0x3d2 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .debug_loc     0x00000d8b      0x1ac D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .debug_loc     0x00000f37     0x138d D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .debug_loc     0x000022c4      0x63b D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .debug_loc     0x000028ff      0x113 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+START GROUP
+LOAD d:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/thumb2\libgcc.a
+LOAD d:/program files (x86)/raisonance/ride/arm-gcc/bin/../lib/gcc/arm-none-eabi/4.3.2/../../../../arm-none-eabi/lib/thumb2\libc.a
+END GROUP
+OUTPUT(D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.elf elf32-littlearm)
+
+.debug_ranges   0x00000000      0x6b0
+ .debug_ranges  0x00000000       0x68 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .debug_ranges  0x00000068       0x30 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .debug_ranges  0x00000098      0x110 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .debug_ranges  0x000001a8       0xa0 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .debug_ranges  0x00000248       0x50 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .debug_ranges  0x00000298      0x2e8 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .debug_ranges  0x00000580       0xf8 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .debug_ranges  0x00000678       0x38 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x31 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.o
+ .ARM.attributes
+                0x00000031       0x21 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\startup_stm32f10x_md.o
+ .ARM.attributes
+                0x00000052       0x31 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+ .ARM.attributes
+                0x00000083       0x31 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_rcc.o
+ .ARM.attributes
+                0x000000b4       0x31 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_gpio.o
+ .ARM.attributes
+                0x000000e5       0x31 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_exti.o
+ .ARM.attributes
+                0x00000116       0x31 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_tim.o
+ .ARM.attributes
+                0x00000147       0x31 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\stm32f10x_usart.o
+ .ARM.attributes
+                0x00000178       0x31 D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\misc.o
+ .ARM.attributes
+                0x000001a9       0x31 D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\STM32x_io_putchar_thumb.a(STM32F10X_IO_putchar.o)
+ .ARM.attributes
+                0x000001da       0x2e D:\Program Files (x86)\Raisonance\Ride\Lib\ARM\std_sbrk_thumb.lib(write.o)

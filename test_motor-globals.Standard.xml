@@ -1,0 +1,161 @@
+<!-- DWF2XML 2.00.01 - Raisonance Dwarf information extractor -->
+<aoffile Header="test_motor" Path="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.elf">
+ <Def>
+  <Col Header="DeclFile" Desc="File"/>
+  <Col Header="Type" Desc="Type"/>
+  <Col Header="Header" Desc="Name"/>
+ </Def>
+ <type Header="uint8_t" Icon="1" Type="type" Desc=": unsigned char" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="46" Pointer="No"/>
+ <type Header="int16_t" Icon="1" Type="type" Desc=": int" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="57" Pointer="No"/>
+ <type Header="uint16_t" Icon="1" Type="type" Desc=": unsigned int" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="58" Pointer="No"/>
+ <type Header="int32_t" Icon="1" Type="type" Desc=": long" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="83" Pointer="No"/>
+ <type Header="uint32_t" Icon="1" Type="type" Desc=": unsigned long" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="84" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="521" Pointer="No"/>
+ <type Header="EXTIMode_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h" DeclLine="54" Pointer="No"/>
+ <type Header="EXTITrigger_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h" DeclLine="67" Pointer="No"/>
+ <type Header="EXTI_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h" DeclLine="89" Pointer="No"/>
+ <type Header="GPIOSpeed_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h" DeclLine="63" Pointer="No"/>
+ <type Header="GPIOMode_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h" DeclLine="80" Pointer="No"/>
+ <type Header="GPIO_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h" DeclLine="101" Pointer="No"/>
+ <type Header="TIM_TimeBaseInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" DeclLine="74" Pointer="No"/>
+ <type Header="TIM_OCInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" DeclLine="109" Pointer="No"/>
+ <type Header="TIM_ICInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" DeclLine="132" Pointer="No"/>
+ <type Header="USART_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h" DeclLine="76" Pointer="No"/>
+ <type Header="NVIC_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h" DeclLine="68" Pointer="No"/>
+ <func Header="main" Icon="3" Type="func" Desc=":   void" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="87"/>
+ <func Header="TIM1_UP_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="99"/>
+ <func Header="USART1_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="126"/>
+ <func Header="USART3_IRQHandler" Icon="3" Type="func" Desc=":   void" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="138"/>
+ <func Header="init_mcu" Icon="3" Type="func" Desc=":   void" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="197"/>
+ <func Header="delay_ms_sys" Icon="3" Type="func" Desc=":   void" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="394"/>
+ <func Header="Wtire_Motor" Icon="3" Type="func" Desc=":   void" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="428"/>
+ <func Header="TIM3_Init" Icon="3" Type="func" Desc=":   void" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="536"/>
+ <variable Header="TimingDelay" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="19" Pointer="No"/>
+ <variable Header="GPIO_InitType" Icon="2" Type="variable" Desc=":   struct " DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="11" Pointer="No"/>
+ <variable Header="EXTI_InitType" Icon="2" Type="variable" Desc=":   struct " DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="12" Pointer="No"/>
+ <variable Header="TIM_TimeBaseInitType" Icon="2" Type="variable" Desc=":   struct " DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="13" Pointer="No"/>
+ <variable Header="TIM_OCInitType" Icon="2" Type="variable" Desc=":   struct " DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="14" Pointer="No"/>
+ <variable Header="TIM_ICInitStructure" Icon="2" Type="variable" Desc=":   struct " DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="15" Pointer="No"/>
+ <variable Header="USART_InitType" Icon="2" Type="variable" Desc=":   struct " DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="16" Pointer="No"/>
+ <variable Header="NVIC_InitType" Icon="2" Type="variable" Desc=":   struct " DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="17" Pointer="No"/>
+ <variable Header="STATUS" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="23" Pointer="No"/>
+ <variable Header="MOTOR1_STATUS" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="25" Pointer="No"/>
+ <variable Header="MOTOR2_STATUS" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="26" Pointer="No"/>
+ <variable Header="PHOTO1_STATUS" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="27" Pointer="No"/>
+ <variable Header="PHOTO2_STATUS" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="28" Pointer="No"/>
+ <variable Header="T3_PWM" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="31" Pointer="No"/>
+ <variable Header="T3_PWM_Acc" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="32" Pointer="No"/>
+ <variable Header="T3_PWM_Dec" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="33" Pointer="No"/>
+ <variable Header="T3_PWM_Period" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="34" Pointer="No"/>
+ <variable Header="MOTORT3_STATUS" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="36" Pointer="No"/>
+ <variable Header="Com" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="46" Pointer="No"/>
+ <variable Header="Focus_dir" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="46" Pointer="No"/>
+ <variable Header="Zoom_dir" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="46" Pointer="No"/>
+ <variable Header="ref_Value_3" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="47" Pointer="No"/>
+ <variable Header="ref_Value_4" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="47" Pointer="No"/>
+ <variable Header="ref_Value_1" Icon="2" Type="variable" Desc=":   int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="48" Pointer="No"/>
+ <variable Header="ref_Value_2" Icon="2" Type="variable" Desc=":   long" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="49" Pointer="No"/>
+ <variable Header="velc" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="50" Pointer="No"/>
+ <variable Header="velr" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="50" Pointer="No"/>
+ <variable Header="Enc_count" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="51" Pointer="No"/>
+ <variable Header="COM_status" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="54" Pointer="No"/>
+ <variable Header="MSG" Icon="2" Type="variable" Desc=":   unsigned char[3]" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="55" Pointer="No"/>
+ <variable Header="DATA" Icon="2" Type="variable" Desc=":   unsigned char[5]" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="56" Pointer="No"/>
+ <variable Header="msg_count" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="57" Pointer="No"/>
+ <variable Header="data_count" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="58" Pointer="No"/>
+ <variable Header="COM_status3" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="61" Pointer="No"/>
+ <variable Header="MSG3" Icon="2" Type="variable" Desc=":   unsigned char[8]" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="62" Pointer="No"/>
+ <variable Header="msg_count3" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="63" Pointer="No"/>
+ <variable Header="Focus_STEP" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="65" Pointer="No"/>
+ <variable Header="Focus_Ref_STEP" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="65" Pointer="No"/>
+ <variable Header="First_Focus_STEP" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="65" Pointer="No"/>
+ <variable Header="Second_Focus_STEP" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="65" Pointer="No"/>
+ <variable Header="Mid_Focus_Ref_STEP" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="65" Pointer="No"/>
+ <variable Header="Zoom_STEP" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="66" Pointer="No"/>
+ <variable Header="Zoom_Ref_STEP" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="66" Pointer="No"/>
+ <variable Header="First_Zoom_STEP" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="66" Pointer="No"/>
+ <variable Header="Second_Zoom_STEP" Icon="2" Type="variable" Desc=":   unsigned int" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="66" Pointer="No"/>
+ <variable Header="MSG_ID" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="67" Pointer="No"/>
+ <variable Header="MSG_LENGTH" Icon="2" Type="variable" Desc=":   unsigned char" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="67" Pointer="No"/>
+ <variable Header="Focus_Value" Icon="2" Type="variable" Desc=":   float" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="68" Pointer="No"/>
+ <variable Header="i" Icon="2" Type="variable" Desc=":   long" DeclFile="D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\test_motor.c" DeclLine="69" Pointer="No"/>
+ <type Header="uint8_t" Icon="1" Type="type" Desc=": unsigned char" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="46" Pointer="No"/>
+ <type Header="uint32_t" Icon="1" Type="type" Desc=": unsigned long" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="84" Pointer="No"/>
+ <func Header="SystemInit" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" DeclLine="213"/>
+ <func Header="SetSysClock" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" DeclLine="420"/>
+ <func Header="SetSysClockTo72" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" DeclLine="988"/>
+ <variable Header="SystemCoreClock" Icon="2" Type="variable" Desc=":   unsigned long" DeclFile="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" DeclLine="162" Pointer="No"/>
+ <variable Header="AHBPrescTable" Icon="2" Type="variable" Desc=":   unsigned char[16]" DeclFile="D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" DeclLine="167" Pointer="No"/>
+ <type Header="uint8_t" Icon="1" Type="type" Desc=": unsigned char" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="46" Pointer="No"/>
+ <type Header="uint32_t" Icon="1" Type="type" Desc=": unsigned long" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="84" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="519" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="519" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="521" Pointer="No"/>
+ <type Header="ErrorStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="524" Pointer="No"/>
+ <type Header="RCC_ClocksTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h" DeclLine="53" Pointer="No"/>
+ <func Header="RCC_GetClocksFreq" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" DeclLine="909"/>
+ <func Header="RCC_APB2PeriphClockCmd" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" DeclLine="1096"/>
+ <func Header="RCC_APB1PeriphClockCmd" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" DeclLine="1127"/>
+ <variable Header="APBAHBPrescTable" Icon="2" Type="variable" Desc=":   unsigned char[16]" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" DeclLine="193" Pointer="No"/>
+ <variable Header="ADCPrescTable" Icon="2" Type="variable" Desc=":   unsigned char[4]" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" DeclLine="194" Pointer="No"/>
+ <type Header="uint8_t" Icon="1" Type="type" Desc=": unsigned char" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="46" Pointer="No"/>
+ <type Header="uint16_t" Icon="1" Type="type" Desc=": unsigned int" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="58" Pointer="No"/>
+ <type Header="uint32_t" Icon="1" Type="type" Desc=": unsigned long" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="84" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="521" Pointer="No"/>
+ <type Header="GPIO_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="1010" Pointer="No"/>
+ <type Header="GPIOSpeed_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h" DeclLine="63" Pointer="No"/>
+ <type Header="GPIOMode_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h" DeclLine="80" Pointer="No"/>
+ <type Header="GPIO_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h" DeclLine="101" Pointer="No"/>
+ <type Header="BitAction" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h" DeclLine="111" Pointer="No"/>
+ <func Header="GPIO_Init" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" DeclLine="174"/>
+ <func Header="GPIO_Write" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" DeclLine="418"/>
+ <func Header="GPIO_PinRemapConfig" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" DeclLine="550"/>
+ <type Header="uint32_t" Icon="1" Type="type" Desc=": unsigned long" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="84" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="519" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="519" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="521" Pointer="No"/>
+ <type Header="EXTIMode_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h" DeclLine="54" Pointer="No"/>
+ <type Header="EXTITrigger_TypeDef" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h" DeclLine="67" Pointer="No"/>
+ <type Header="EXTI_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h" DeclLine="89" Pointer="No"/>
+ <type Header="uint8_t" Icon="1" Type="type" Desc=": unsigned char" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="46" Pointer="No"/>
+ <type Header="uint16_t" Icon="1" Type="type" Desc=": unsigned int" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="58" Pointer="No"/>
+ <type Header="uint32_t" Icon="1" Type="type" Desc=": unsigned long" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="84" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="519" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="519" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="521" Pointer="No"/>
+ <type Header="TIM_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="1228" Pointer="No"/>
+ <type Header="TIM_TimeBaseInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" DeclLine="74" Pointer="No"/>
+ <type Header="TIM_OCInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" DeclLine="109" Pointer="No"/>
+ <type Header="TIM_ICInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" DeclLine="132" Pointer="No"/>
+ <type Header="TIM_BDTRInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" DeclLine="163" Pointer="No"/>
+ <func Header="TIM_TimeBaseInit" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" DeclLine="227"/>
+ <func Header="TIM_OC3Init" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" DeclLine="445"/>
+ <func Header="TIM_OC4Init" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" DeclLine="524"/>
+ <func Header="TIM_Cmd" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" DeclLine="807"/>
+ <func Header="TIM_ITConfig" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" DeclLine="873"/>
+ <func Header="TIM_ClearITPendingBit" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" DeclLine="2677"/>
+ <type Header="uint8_t" Icon="1" Type="type" Desc=": unsigned char" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="46" Pointer="No"/>
+ <type Header="uint16_t" Icon="1" Type="type" Desc=": unsigned int" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="58" Pointer="No"/>
+ <type Header="uint32_t" Icon="1" Type="type" Desc=": unsigned long" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="84" Pointer="No"/>
+ <type Header="FlagStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="519" Pointer="No"/>
+ <type Header="ITStatus" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="519" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="521" Pointer="No"/>
+ <type Header="USART_TypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="1250" Pointer="No"/>
+ <type Header="RCC_ClocksTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h" DeclLine="53" Pointer="No"/>
+ <type Header="USART_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h" DeclLine="76" Pointer="No"/>
+ <type Header="USART_ClockInitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h" DeclLine="97" Pointer="No"/>
+ <func Header="USART_Init" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" DeclLine="177"/>
+ <func Header="USART_Cmd" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" DeclLine="352"/>
+ <func Header="USART_ITConfig" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" DeclLine="389"/>
+ <func Header="USART_SendData" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" DeclLine="593"/>
+ <func Header="USART_ReceiveData" Icon="3" Type="func" Desc=":   unsigned int" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" DeclLine="610"/>
+ <func Header="USART_GetFlagStatus" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" DeclLine="875"/>
+ <func Header="USART_GetITStatus" Icon="3" Type="func" Desc=":   unsigned char" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" DeclLine="957"/>
+ <func Header="USART_ClearITPendingBit" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" DeclLine="1031"/>
+ <type Header="uint8_t" Icon="1" Type="type" Desc=": unsigned char" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="46" Pointer="No"/>
+ <type Header="uint32_t" Icon="1" Type="type" Desc=": unsigned long" DeclFile="d:\program files (x86)\raisonance\ride\arm-gcc\arm-none-eabi\include\stdint.h" DeclLine="84" Pointer="No"/>
+ <type Header="FunctionalState" Icon="1" Type="type" Desc=": unsigned char" DeclFile="C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" DeclLine="521" Pointer="No"/>
+ <type Header="NVIC_InitTypeDef" Icon="1" Type="type" Desc=": struct " DeclFile="C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h" DeclLine="68" Pointer="No"/>
+ <func Header="NVIC_Init" Icon="3" Type="func" Desc=":   void" DeclFile="D:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" DeclLine="113"/>
+</aoffile>
+

@@ -1,0 +1,576 @@
+
+D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o:     file format elf32-littlearm
+D:\Dropbox\Work\MWIR\Firmware\[5]MWIR - DRV8825_2 - Acctest\system_stm32f10x.o
+
+Disassembly of section .text.SystemInit:
+
+00000000 <SystemInit>:
+SystemInit():
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:213
+  * @note   This function should be used only after reset.
+  * @param  None
+  * @retval None
+  */
+void SystemInit (void)
+{
+   0:	b580      	push	{r7, lr}
+   2:	af00      	add	r7, sp, #0
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:216
+  /* Reset the RCC clock configuration to the default reset state(for debug purpose) */
+  /* Set HSION bit */
+  RCC->CR |= (uint32_t)0x00000001;
+   4:	f241 0200 	movw	r2, #4096	; 0x1000
+   8:	f2c4 0202 	movt	r2, #16386	; 0x4002
+   c:	f241 0300 	movw	r3, #4096	; 0x1000
+  10:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  14:	681b      	ldr	r3, [r3, #0]
+  16:	f043 0301 	orr.w	r3, r3, #1	; 0x1
+  1a:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:220
+
+  /* Reset SW, HPRE, PPRE1, PPRE2, ADCPRE and MCO bits */
+#ifndef STM32F10X_CL
+  RCC->CFGR &= (uint32_t)0xF8FF0000;
+  1c:	f241 0200 	movw	r2, #4096	; 0x1000
+  20:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  24:	f241 0300 	movw	r3, #4096	; 0x1000
+  28:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  2c:	6859      	ldr	r1, [r3, #4]
+  2e:	f240 0300 	movw	r3, #0	; 0x0
+  32:	f6cf 03ff 	movt	r3, #63743	; 0xf8ff
+  36:	ea01 0303 	and.w	r3, r1, r3
+  3a:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:226
+#else
+  RCC->CFGR &= (uint32_t)0xF0FF0000;
+#endif /* STM32F10X_CL */   
+  
+  /* Reset HSEON, CSSON and PLLON bits */
+  RCC->CR &= (uint32_t)0xFEF6FFFF;
+  3c:	f241 0200 	movw	r2, #4096	; 0x1000
+  40:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  44:	f241 0300 	movw	r3, #4096	; 0x1000
+  48:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  4c:	681b      	ldr	r3, [r3, #0]
+  4e:	f023 7384 	bic.w	r3, r3, #17301504	; 0x1080000
+  52:	f423 3380 	bic.w	r3, r3, #65536	; 0x10000
+  56:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:229
+
+  /* Reset HSEBYP bit */
+  RCC->CR &= (uint32_t)0xFFFBFFFF;
+  58:	f241 0200 	movw	r2, #4096	; 0x1000
+  5c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  60:	f241 0300 	movw	r3, #4096	; 0x1000
+  64:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  68:	681b      	ldr	r3, [r3, #0]
+  6a:	f423 2380 	bic.w	r3, r3, #262144	; 0x40000
+  6e:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:232
+
+  /* Reset PLLSRC, PLLXTPRE, PLLMUL and USBPRE/OTGFSPRE bits */
+  RCC->CFGR &= (uint32_t)0xFF80FFFF;
+  70:	f241 0200 	movw	r2, #4096	; 0x1000
+  74:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  78:	f241 0300 	movw	r3, #4096	; 0x1000
+  7c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  80:	685b      	ldr	r3, [r3, #4]
+  82:	f423 03fe 	bic.w	r3, r3, #8323072	; 0x7f0000
+  86:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:251
+
+  /* Reset CFGR2 register */
+  RCC->CFGR2 = 0x00000000;      
+#else
+  /* Disable all interrupts and clear pending bits  */
+  RCC->CIR = 0x009F0000;
+  88:	f241 0300 	movw	r3, #4096	; 0x1000
+  8c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  90:	f44f 021f 	mov.w	r2, #10420224	; 0x9f0000
+  94:	609a      	str	r2, [r3, #8]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:262
+  #endif /* DATA_IN_ExtSRAM */
+#endif 
+
+  /* Configure the System clock frequency, HCLK, PCLK2 and PCLK1 prescalers */
+  /* Configure the Flash Latency cycles and enable prefetch buffer */
+  SetSysClock();
+  96:	f7ff fffe 	bl	0 <SystemInit>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:267
+
+#ifdef VECT_TAB_SRAM
+  SCB->VTOR = SRAM_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM. */
+#else
+  SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH. */
+  9a:	f64e 5300 	movw	r3, #60672	; 0xed00
+  9e:	f2ce 0300 	movt	r3, #57344	; 0xe000
+  a2:	f04f 6200 	mov.w	r2, #134217728	; 0x8000000
+  a6:	609a      	str	r2, [r3, #8]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:269
+#endif 
+}
+  a8:	46bd      	mov	sp, r7
+  aa:	bd80      	pop	{r7, pc}
+Disassembly of section .text.SystemCoreClockUpdate:
+
+00000000 <SystemCoreClockUpdate>:
+SystemCoreClockUpdate():
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:307
+  *           value for HSE crystal.
+  * @param  None
+  * @retval None
+  */
+void SystemCoreClockUpdate (void)
+{
+   0:	b480      	push	{r7}
+   2:	b087      	sub	sp, #28
+   4:	af00      	add	r7, sp, #0
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:308
+  uint32_t tmp = 0, pllmull = 0, pllsource = 0;
+   6:	f04f 0300 	mov.w	r3, #0	; 0x0
+   a:	60fb      	str	r3, [r7, #12]
+   c:	f04f 0300 	mov.w	r3, #0	; 0x0
+  10:	613b      	str	r3, [r7, #16]
+  12:	f04f 0300 	mov.w	r3, #0	; 0x0
+  16:	617b      	str	r3, [r7, #20]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:319
+#if defined (STM32F10X_LD_VL) || defined (STM32F10X_MD_VL) || (defined STM32F10X_HD_VL)
+  uint32_t prediv1factor = 0;
+#endif /* STM32F10X_LD_VL or STM32F10X_MD_VL or STM32F10X_HD_VL */
+    
+  /* Get SYSCLK source -------------------------------------------------------*/
+  tmp = RCC->CFGR & RCC_CFGR_SWS;
+  18:	f241 0300 	movw	r3, #4096	; 0x1000
+  1c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  20:	685b      	ldr	r3, [r3, #4]
+  22:	f003 030c 	and.w	r3, r3, #12	; 0xc
+  26:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:321
+  
+  switch (tmp)
+  28:	68fb      	ldr	r3, [r7, #12]
+  2a:	607b      	str	r3, [r7, #4]
+  2c:	687b      	ldr	r3, [r7, #4]
+  2e:	2b04      	cmp	r3, #4
+  30:	d00f      	beq.n	52 <SystemCoreClockUpdate+0x52>
+  32:	687b      	ldr	r3, [r7, #4]
+  34:	2b08      	cmp	r3, #8
+  36:	d016      	beq.n	66 <SystemCoreClockUpdate+0x66>
+  38:	687b      	ldr	r3, [r7, #4]
+  3a:	2b00      	cmp	r3, #0
+  3c:	d15c      	bne.n	f8 <SystemCoreClockUpdate+0xf8>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:324
+  {
+    case 0x00:  /* HSI used as system clock */
+      SystemCoreClock = HSI_VALUE;
+  3e:	f240 0200 	movw	r2, #0	; 0x0
+  42:	f2c0 0200 	movt	r2, #0	; 0x0
+  46:	f241 2300 	movw	r3, #4608	; 0x1200
+  4a:	f2c0 037a 	movt	r3, #122	; 0x7a
+  4e:	6013      	str	r3, [r2, #0]
+  50:	e05b      	b.n	10a <SystemCoreClockUpdate+0x10a>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:327
+      break;
+    case 0x04:  /* HSE used as system clock */
+      SystemCoreClock = HSE_VALUE;
+  52:	f240 0200 	movw	r2, #0	; 0x0
+  56:	f2c0 0200 	movt	r2, #0	; 0x0
+  5a:	f241 2300 	movw	r3, #4608	; 0x1200
+  5e:	f2c0 037a 	movt	r3, #122	; 0x7a
+  62:	6013      	str	r3, [r2, #0]
+  64:	e051      	b.n	10a <SystemCoreClockUpdate+0x10a>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:332
+      break;
+    case 0x08:  /* PLL used as system clock */
+
+      /* Get PLL clock source and multiplication factor ----------------------*/
+      pllmull = RCC->CFGR & RCC_CFGR_PLLMULL;
+  66:	f241 0300 	movw	r3, #4096	; 0x1000
+  6a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  6e:	685b      	ldr	r3, [r3, #4]
+  70:	f403 1370 	and.w	r3, r3, #3932160	; 0x3c0000
+  74:	613b      	str	r3, [r7, #16]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:333
+      pllsource = RCC->CFGR & RCC_CFGR_PLLSRC;
+  76:	f241 0300 	movw	r3, #4096	; 0x1000
+  7a:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  7e:	685b      	ldr	r3, [r3, #4]
+  80:	f403 3380 	and.w	r3, r3, #65536	; 0x10000
+  84:	617b      	str	r3, [r7, #20]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:336
+      
+#ifndef STM32F10X_CL      
+      pllmull = ( pllmull >> 18) + 2;
+  86:	693b      	ldr	r3, [r7, #16]
+  88:	ea4f 4393 	mov.w	r3, r3, lsr #18
+  8c:	f103 0302 	add.w	r3, r3, #2	; 0x2
+  90:	613b      	str	r3, [r7, #16]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:338
+      
+      if (pllsource == 0x00)
+  92:	697b      	ldr	r3, [r7, #20]
+  94:	2b00      	cmp	r3, #0
+  96:	d10c      	bne.n	b2 <SystemCoreClockUpdate+0xb2>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:341
+      {
+        /* HSI oscillator clock divided by 2 selected as PLL clock entry */
+        SystemCoreClock = (HSI_VALUE >> 1) * pllmull;
+  98:	693a      	ldr	r2, [r7, #16]
+  9a:	f640 1300 	movw	r3, #2304	; 0x900
+  9e:	f2c0 033d 	movt	r3, #61	; 0x3d
+  a2:	fb03 f202 	mul.w	r2, r3, r2
+  a6:	f240 0300 	movw	r3, #0	; 0x0
+  aa:	f2c0 0300 	movt	r3, #0	; 0x0
+  ae:	601a      	str	r2, [r3, #0]
+  b0:	e02b      	b.n	10a <SystemCoreClockUpdate+0x10a>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:351
+       prediv1factor = (RCC->CFGR2 & RCC_CFGR2_PREDIV1) + 1;
+       /* HSE oscillator clock selected as PREDIV1 clock entry */
+       SystemCoreClock = (HSE_VALUE / prediv1factor) * pllmull; 
+ #else
+        /* HSE selected as PLL clock entry */
+        if ((RCC->CFGR & RCC_CFGR_PLLXTPRE) != (uint32_t)RESET)
+  b2:	f241 0300 	movw	r3, #4096	; 0x1000
+  b6:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  ba:	685b      	ldr	r3, [r3, #4]
+  bc:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+  c0:	2b00      	cmp	r3, #0
+  c2:	d00c      	beq.n	de <SystemCoreClockUpdate+0xde>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:353
+        {/* HSE oscillator clock divided by 2 */
+          SystemCoreClock = (HSE_VALUE >> 1) * pllmull;
+  c4:	693a      	ldr	r2, [r7, #16]
+  c6:	f640 1300 	movw	r3, #2304	; 0x900
+  ca:	f2c0 033d 	movt	r3, #61	; 0x3d
+  ce:	fb03 f202 	mul.w	r2, r3, r2
+  d2:	f240 0300 	movw	r3, #0	; 0x0
+  d6:	f2c0 0300 	movt	r3, #0	; 0x0
+  da:	601a      	str	r2, [r3, #0]
+  dc:	e015      	b.n	10a <SystemCoreClockUpdate+0x10a>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:357
+        }
+        else
+        {
+          SystemCoreClock = HSE_VALUE * pllmull;
+  de:	693a      	ldr	r2, [r7, #16]
+  e0:	f241 2300 	movw	r3, #4608	; 0x1200
+  e4:	f2c0 037a 	movt	r3, #122	; 0x7a
+  e8:	fb03 f202 	mul.w	r2, r3, r2
+  ec:	f240 0300 	movw	r3, #0	; 0x0
+  f0:	f2c0 0300 	movt	r3, #0	; 0x0
+  f4:	601a      	str	r2, [r3, #0]
+  f6:	e008      	b.n	10a <SystemCoreClockUpdate+0x10a>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:403
+      }
+#endif /* STM32F10X_CL */ 
+      break;
+
+    default:
+      SystemCoreClock = HSI_VALUE;
+  f8:	f240 0200 	movw	r2, #0	; 0x0
+  fc:	f2c0 0200 	movt	r2, #0	; 0x0
+ 100:	f241 2300 	movw	r3, #4608	; 0x1200
+ 104:	f2c0 037a 	movt	r3, #122	; 0x7a
+ 108:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:409
+      break;
+  }
+  
+  /* Compute HCLK clock frequency ----------------*/
+  /* Get HCLK prescaler */
+  tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+ 10a:	f241 0300 	movw	r3, #4096	; 0x1000
+ 10e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 112:	685b      	ldr	r3, [r3, #4]
+ 114:	f003 03f0 	and.w	r3, r3, #240	; 0xf0
+ 118:	ea4f 1213 	mov.w	r2, r3, lsr #4
+ 11c:	f240 0300 	movw	r3, #0	; 0x0
+ 120:	f2c0 0300 	movt	r3, #0	; 0x0
+ 124:	5c9b      	ldrb	r3, [r3, r2]
+ 126:	b2db      	uxtb	r3, r3
+ 128:	60fb      	str	r3, [r7, #12]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:411
+  /* HCLK clock frequency */
+  SystemCoreClock >>= tmp;  
+ 12a:	f240 0300 	movw	r3, #0	; 0x0
+ 12e:	f2c0 0300 	movt	r3, #0	; 0x0
+ 132:	681a      	ldr	r2, [r3, #0]
+ 134:	68fb      	ldr	r3, [r7, #12]
+ 136:	fa22 f203 	lsr.w	r2, r2, r3
+ 13a:	f240 0300 	movw	r3, #0	; 0x0
+ 13e:	f2c0 0300 	movt	r3, #0	; 0x0
+ 142:	601a      	str	r2, [r3, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:412
+}
+ 144:	f107 071c 	add.w	r7, r7, #28	; 0x1c
+ 148:	46bd      	mov	sp, r7
+ 14a:	bc80      	pop	{r7}
+ 14c:	4770      	bx	lr
+ 14e:	46c0      	nop			(mov r8, r8)
+Disassembly of section .text.SetSysClock:
+
+00000000 <SetSysClock>:
+SetSysClock():
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:420
+  * @brief  Configures the System clock frequency, HCLK, PCLK2 and PCLK1 prescalers.
+  * @param  None
+  * @retval None
+  */
+static void SetSysClock(void)
+{
+   0:	b580      	push	{r7, lr}
+   2:	af00      	add	r7, sp, #0
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:432
+#elif defined SYSCLK_FREQ_48MHz
+  SetSysClockTo48();
+#elif defined SYSCLK_FREQ_56MHz
+  SetSysClockTo56();  
+#elif defined SYSCLK_FREQ_72MHz
+  SetSysClockTo72();
+   4:	f7ff fffe 	bl	0 <SetSysClock>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:437
+#endif
+ 
+ /* If none of the define above is enabled, the HSI is used as System clock
+    source (default after reset) */ 
+}
+   8:	46bd      	mov	sp, r7
+   a:	bd80      	pop	{r7, pc}
+Disassembly of section .text.SetSysClockTo72:
+
+00000000 <SetSysClockTo72>:
+SetSysClockTo72():
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:988
+  * @note   This function should be used only after reset.
+  * @param  None
+  * @retval None
+  */
+static void SetSysClockTo72(void)
+{
+   0:	b480      	push	{r7}
+   2:	b083      	sub	sp, #12
+   4:	af00      	add	r7, sp, #0
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:989
+  __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+   6:	f04f 0300 	mov.w	r3, #0	; 0x0
+   a:	607b      	str	r3, [r7, #4]
+   c:	f04f 0300 	mov.w	r3, #0	; 0x0
+  10:	603b      	str	r3, [r7, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:993
+  
+  /* SYSCLK, HCLK, PCLK2 and PCLK1 configuration ---------------------------*/    
+  /* Enable HSE */    
+  RCC->CR |= ((uint32_t)RCC_CR_HSEON);
+  12:	f241 0200 	movw	r2, #4096	; 0x1000
+  16:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  1a:	f241 0300 	movw	r3, #4096	; 0x1000
+  1e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  22:	681b      	ldr	r3, [r3, #0]
+  24:	f443 3380 	orr.w	r3, r3, #65536	; 0x10000
+  28:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:998
+ 
+  /* Wait till HSE is ready and if Time out is reached exit */
+  do
+  {
+    HSEStatus = RCC->CR & RCC_CR_HSERDY;
+  2a:	f241 0300 	movw	r3, #4096	; 0x1000
+  2e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  32:	681b      	ldr	r3, [r3, #0]
+  34:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+  38:	603b      	str	r3, [r7, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:999
+    StartUpCounter++;  
+  3a:	687b      	ldr	r3, [r7, #4]
+  3c:	f103 0301 	add.w	r3, r3, #1	; 0x1
+  40:	607b      	str	r3, [r7, #4]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1000
+  } while((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
+  42:	683b      	ldr	r3, [r7, #0]
+  44:	2b00      	cmp	r3, #0
+  46:	d103      	bne.n	50 <SetSysClockTo72+0x50>
+  48:	687b      	ldr	r3, [r7, #4]
+  4a:	f5b3 6fa0 	cmp.w	r3, #1280	; 0x500
+  4e:	d1ec      	bne.n	2a <SetSysClockTo72+0x2a>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1002
+
+  if ((RCC->CR & RCC_CR_HSERDY) != RESET)
+  50:	f241 0300 	movw	r3, #4096	; 0x1000
+  54:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  58:	681b      	ldr	r3, [r3, #0]
+  5a:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+  5e:	2b00      	cmp	r3, #0
+  60:	d003      	beq.n	6a <SetSysClockTo72+0x6a>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1004
+  {
+    HSEStatus = (uint32_t)0x01;
+  62:	f04f 0301 	mov.w	r3, #1	; 0x1
+  66:	603b      	str	r3, [r7, #0]
+  68:	e002      	b.n	70 <SetSysClockTo72+0x70>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1008
+  }
+  else
+  {
+    HSEStatus = (uint32_t)0x00;
+  6a:	f04f 0300 	mov.w	r3, #0	; 0x0
+  6e:	603b      	str	r3, [r7, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1011
+  }  
+
+  if (HSEStatus == (uint32_t)0x01)
+  70:	683b      	ldr	r3, [r7, #0]
+  72:	2b01      	cmp	r3, #1
+  74:	f040 8092 	bne.w	19c <SetSysClockTo72+0x19c>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1014
+  {
+    /* Enable Prefetch Buffer */
+    FLASH->ACR |= FLASH_ACR_PRFTBE;
+  78:	f242 0200 	movw	r2, #8192	; 0x2000
+  7c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  80:	f242 0300 	movw	r3, #8192	; 0x2000
+  84:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  88:	681b      	ldr	r3, [r3, #0]
+  8a:	f043 0310 	orr.w	r3, r3, #16	; 0x10
+  8e:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1017
+
+    /* Flash 2 wait state */
+    FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);
+  90:	f242 0200 	movw	r2, #8192	; 0x2000
+  94:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  98:	f242 0300 	movw	r3, #8192	; 0x2000
+  9c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  a0:	681b      	ldr	r3, [r3, #0]
+  a2:	f023 0303 	bic.w	r3, r3, #3	; 0x3
+  a6:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1018
+    FLASH->ACR |= (uint32_t)FLASH_ACR_LATENCY_2;    
+  a8:	f242 0200 	movw	r2, #8192	; 0x2000
+  ac:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  b0:	f242 0300 	movw	r3, #8192	; 0x2000
+  b4:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  b8:	681b      	ldr	r3, [r3, #0]
+  ba:	f043 0302 	orr.w	r3, r3, #2	; 0x2
+  be:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1022
+
+ 
+    /* HCLK = SYSCLK */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;
+  c0:	f241 0200 	movw	r2, #4096	; 0x1000
+  c4:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  c8:	f241 0300 	movw	r3, #4096	; 0x1000
+  cc:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  d0:	685b      	ldr	r3, [r3, #4]
+  d2:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1025
+      
+    /* PCLK2 = HCLK */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;
+  d4:	f241 0200 	movw	r2, #4096	; 0x1000
+  d8:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  dc:	f241 0300 	movw	r3, #4096	; 0x1000
+  e0:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  e4:	685b      	ldr	r3, [r3, #4]
+  e6:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1028
+    
+    /* PCLK1 = HCLK */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;
+  e8:	f241 0200 	movw	r2, #4096	; 0x1000
+  ec:	f2c4 0202 	movt	r2, #16386	; 0x4002
+  f0:	f241 0300 	movw	r3, #4096	; 0x1000
+  f4:	f2c4 0302 	movt	r3, #16386	; 0x4002
+  f8:	685b      	ldr	r3, [r3, #4]
+  fa:	f443 6380 	orr.w	r3, r3, #1024	; 0x400
+  fe:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1054
+    RCC->CFGR &= (uint32_t)~(RCC_CFGR_PLLXTPRE | RCC_CFGR_PLLSRC | RCC_CFGR_PLLMULL);
+    RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLXTPRE_PREDIV1 | RCC_CFGR_PLLSRC_PREDIV1 | 
+                            RCC_CFGR_PLLMULL9); 
+#else    
+    /*  PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
+    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE |
+ 100:	f241 0200 	movw	r2, #4096	; 0x1000
+ 104:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 108:	f241 0300 	movw	r3, #4096	; 0x1000
+ 10c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 110:	685b      	ldr	r3, [r3, #4]
+ 112:	f423 137c 	bic.w	r3, r3, #4128768	; 0x3f0000
+ 116:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1056
+                                        RCC_CFGR_PLLMULL));
+    RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_HSE | RCC_CFGR_PLLMULL9);
+ 118:	f241 0200 	movw	r2, #4096	; 0x1000
+ 11c:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 120:	f241 0300 	movw	r3, #4096	; 0x1000
+ 124:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 128:	685b      	ldr	r3, [r3, #4]
+ 12a:	f443 13e8 	orr.w	r3, r3, #1900544	; 0x1d0000
+ 12e:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1060
+#endif /* STM32F10X_CL */
+
+    /* Enable PLL */
+    RCC->CR |= RCC_CR_PLLON;
+ 130:	f241 0200 	movw	r2, #4096	; 0x1000
+ 134:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 138:	f241 0300 	movw	r3, #4096	; 0x1000
+ 13c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 140:	681b      	ldr	r3, [r3, #0]
+ 142:	f043 7380 	orr.w	r3, r3, #16777216	; 0x1000000
+ 146:	6013      	str	r3, [r2, #0]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1063
+
+    /* Wait till PLL is ready */
+    while((RCC->CR & RCC_CR_PLLRDY) == 0)
+ 148:	f241 0300 	movw	r3, #4096	; 0x1000
+ 14c:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 150:	681b      	ldr	r3, [r3, #0]
+ 152:	f003 7300 	and.w	r3, r3, #33554432	; 0x2000000
+ 156:	2b00      	cmp	r3, #0
+ 158:	d0f6      	beq.n	148 <SetSysClockTo72+0x148>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1068
+    {
+    }
+    
+    /* Select PLL as system clock source */
+    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
+ 15a:	f241 0200 	movw	r2, #4096	; 0x1000
+ 15e:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 162:	f241 0300 	movw	r3, #4096	; 0x1000
+ 166:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 16a:	685b      	ldr	r3, [r3, #4]
+ 16c:	f023 0303 	bic.w	r3, r3, #3	; 0x3
+ 170:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1069
+    RCC->CFGR |= (uint32_t)RCC_CFGR_SW_PLL;    
+ 172:	f241 0200 	movw	r2, #4096	; 0x1000
+ 176:	f2c4 0202 	movt	r2, #16386	; 0x4002
+ 17a:	f241 0300 	movw	r3, #4096	; 0x1000
+ 17e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 182:	685b      	ldr	r3, [r3, #4]
+ 184:	f043 0302 	orr.w	r3, r3, #2	; 0x2
+ 188:	6053      	str	r3, [r2, #4]
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1072
+
+    /* Wait till PLL is used as system clock source */
+    while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS) != (uint32_t)0x08)
+ 18a:	f241 0300 	movw	r3, #4096	; 0x1000
+ 18e:	f2c4 0302 	movt	r3, #16386	; 0x4002
+ 192:	685b      	ldr	r3, [r3, #4]
+ 194:	f003 030c 	and.w	r3, r3, #12	; 0xc
+ 198:	2b08      	cmp	r3, #8
+ 19a:	d1f6      	bne.n	18a <SetSysClockTo72+0x18a>
+D:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x/system_stm32f10x.c:1080
+  }
+  else
+  { /* If HSE fails to start-up, the application will have wrong clock 
+         configuration. User can add here some code to deal with this error */
+  }
+}
+ 19c:	f107 070c 	add.w	r7, r7, #12	; 0xc
+ 1a0:	46bd      	mov	sp, r7
+ 1a2:	bc80      	pop	{r7}
+ 1a4:	4770      	bx	lr
+ 1a6:	46c0      	nop			(mov r8, r8)

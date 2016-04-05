@@ -1,0 +1,80 @@
+
+<ApplicationBuild Header="test_motor" Extern=".\test_motor.rapp" Path=".\test_motor.rapp" OutputFile=".\test_motor.elf" sate="96" >
+	<NodeC Path=".\test_motor.c" Header="test_motor.c" Marker="-1" OutputFile=".\test_motor.o" sate="2" />
+	<Options>
+		<Config Header="Standard" >
+			<Set Header="ApplicationBuild" >
+				<Section Header="General" >
+					<Property Header="TargetFamily" Value="ARM" />
+																																																																																																																																																																																																																																																																																																							
+				</Section>
+				<Section Header="Directories" >
+					<Property Header="IncDir" Value="C:\ST\STM32F1\Libraries\CMSIS\CM3\CoreSupport;C:\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x;C:\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc" Removable="1" />
+																																																																																																																																																																																																																																																																																														
+				</Section>
+																																																																																																																																																																																																																														
+			</Set>
+			<Set Header="Target" >
+				<Section Header="ProcessorARM" >
+					<Property Header="Processor" Value="STM32F103R8T6" />
+																																																																																																																																																																																																																																																																																																							
+				</Section>
+				<Section Header="ToolSetARM" >
+					<Property Header="BuildToolSetARM" Value="ARM\GNU.config" />
+																																																																																																																																																																																																																																																																																																							
+				</Section>
+																																																																																																																																																																																																																																					
+			</Set>
+			<Set Header="GCC" >
+				<Section Header="Defines" >
+					<Property Header="Defines" Value="USE_STDPERIPH_DRIVER;STM32F10X_MD" Removable="1" />
+																																																																																																																																																																																																																																																																																					
+				</Section>
+				<Section Header="OPTIMIZE" >
+					<Property Header="Optimize" Value="" Removable="1" />
+																																																																																																																																																																																																																																																										
+				</Section>
+																																																																																																																																																																																																		
+			</Set>
+			<Set Header="LD" >
+				<Section Header="Startup" >
+					<Property Header="DEFAULTSTARTUP" Value="No" Removable="1" />
+					<Property Header="File" Value="" Removable="1" />
+																																																																																																																																																																																																																																																																																					
+				</Section>
+				<Section Header="Scripts" >
+					<Property Header="StarterKitLimit" Value="No" Removable="1" />
+																																																																																																																																																																																																																																																																																					
+				</Section>
+				<Section Header="LIB" >
+					<Property Header="PRINTFTYPE" Value="1" Removable="1" />
+																																																																																																																																																																																																																																																										
+				</Section>
+																																																																																																																																																																																																		
+			</Set>
+																																																																																																																																							
+		</Config>
+																																																																																	
+	</Options>
+	<Group Header="Source" Marker="-1" OutputFile="" sate="96" >
+		<NodeASM Path="..\..\..\..\..\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\gcc_ride7\startup_stm32f10x_md.s" Header="startup_stm32f10x_md.s" Marker="-1" OutputFile=".\startup_stm32f10x_md.o" sate="0" />
+		<NodeC Path="..\..\..\..\..\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.c" Header="system_stm32f10x.c" Marker="-1" OutputFile=".\system_stm32f10x.o" sate="0" />
+		<NodeC Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Header="stm32f10x_rcc.c" Marker="-1" OutputFile=".\stm32f10x_rcc.o" sate="0" />
+		<NodeC Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Header="stm32f10x_gpio.c" Marker="-1" OutputFile=".\stm32f10x_gpio.o" sate="0" />
+		<NodeC Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c" Header="stm32f10x_exti.c" Marker="-1" OutputFile=".\stm32f10x_exti.o" sate="0" />
+		<NodeC Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Header="stm32f10x_tim.c" Marker="-1" OutputFile=".\stm32f10x_tim.o" sate="0" />
+		<NodeC Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Header="stm32f10x_usart.c" Marker="-1" OutputFile=".\stm32f10x_usart.o" sate="0" />
+		<NodeC Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" Header="misc.c" Marker="-1" OutputFile=".\misc.o" sate="0" />
+																																																																											
+	</Group>
+	<Group Header="Header" Marker="-1" OutputFile="" sate="96" >
+		<NodeH Path="..\..\..\..\..\ST\STM32F1\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h" Header="stm32f10x.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h" Header="stm32f10x_rcc.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h" Header="stm32f10x_gpio.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h" Header="stm32f10x_exti.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h" Header="stm32f10x_tim.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h" Header="stm32f10x_usart.h" Marker="-1" OutputFile="" sate="0" />
+		<NodeH Path="..\..\..\..\..\ST\STM32F1\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h" Header="misc.h" Marker="-1" OutputFile="" sate="0" />
+																																																																											
+	</Group>
+</ApplicationBuild>
